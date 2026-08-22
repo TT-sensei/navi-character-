@@ -1,0 +1,32 @@
+{
+  "name": "NAVI CHARACTER",
+  "purpose": "Navigation character images for TT-sensei elementary web learning materials",
+  "start_here": "https://github.com/TT-sensei/navi-character-/blob/main/AI-GUIDE.md",
+  "catalog": "https://github.com/TT-sensei/navi-character-/blob/main/catalog.json",
+  "public_catalog": "https://tt-sensei.github.io/navi-character-/",
+  "asset_roots": {
+    "characters": "https://tt-sensei.github.io/navi-character-/assets/characters/",
+    "groups": "https://tt-sensei.github.io/navi-character-/assets/groups/"
+  },
+  "characters": [
+    "riku",
+    "sora",
+    "kai",
+    "saku",
+    "tsuki",
+    "nami"
+  ],
+  "common_scenes": {
+    "start": "waving",
+    "correct": "correct",
+    "hint": "hint",
+    "retry": "retry",
+    "complete": "complete"
+  },
+  "rules": [
+    "Verify all IDs, filenames and paths in catalog.json before use.",
+    "Use characters as visual guidance, not as problem text or controls.",
+    "Keep image URLs centralized in the lesson application.",
+    "Use meaningful alt text or empty alt for decorative images."
+  ]
+}
