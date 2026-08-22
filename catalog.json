@@ -217,13 +217,15 @@
       "group-standing.png",
       "group-cheering.png",
       "group-studying.png",
-      "group-celebration.png"
+      "group-celebration.png",
+      "group-huddle.png"
     ],
     "usage": {
       "standing": "トップ画面・紹介ページ",
       "cheering": "正解・達成・スタート画面",
       "studying": "教材一覧・学習ポータル",
-      "celebration": "クリア画面・バッジ獲得"
+      "celebration": "クリア画面・バッジ獲得",
+      "huddle": "6人が肩を組む、仲間感のある集合画像"
     }
   }
 }
