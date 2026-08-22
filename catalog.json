@@ -5,21 +5,21 @@
     "riku": {
       "reference": "reference.jpeg",
       "fullbody": [
-        "01-waving",
-        "02-correct",
-        "03-hint",
-        "04-retry",
-        "05-complete",
-        "06-arms-crossed",
-        "07-hands-in-pockets",
-        "08-leaning",
-        "09-over-shoulder",
-        "10-pointing",
-        "11-hand-over-heart",
-        "12-reaching-out",
-        "13-chin-rest",
-        "14-looking-away",
-        "15-brushing-bangs"
+        "waving",
+        "correct",
+        "hint",
+        "retry",
+        "complete",
+        "arms-crossed",
+        "hands-in-pockets",
+        "leaning",
+        "over-shoulder",
+        "pointing",
+        "hand-over-heart",
+        "reaching-out",
+        "chin-rest",
+        "looking-away",
+        "brushing-bangs"
       ],
       "expressions": [
         "01-normal-smile",
@@ -208,7 +208,6 @@
     "10-confident"
   ],
   "notes": {
-    "riku": "表情の内容を画像で確認し、共通の表情名へ割り当て済み。",
     "saku": "表情10枚を共通の表情名へ整理済み。"
   },
   "groups": {
