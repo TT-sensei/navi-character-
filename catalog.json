@@ -210,5 +210,20 @@
   "notes": {
     "riku": "表情の内容を画像で確認し、共通の表情名へ割り当て済み。",
     "saku": "表情10枚を共通の表情名へ整理済み。"
+  },
+  "groups": {
+    "basePath": "assets/groups",
+    "files": [
+      "group-standing.png",
+      "group-cheering.png",
+      "group-studying.png",
+      "group-celebration.png"
+    ],
+    "usage": {
+      "standing": "トップ画面・紹介ページ",
+      "cheering": "正解・達成・スタート画面",
+      "studying": "教材一覧・学習ポータル",
+      "celebration": "クリア画面・バッジ獲得"
+    }
   }
 }

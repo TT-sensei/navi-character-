@@ -35,3 +35,12 @@ assets/characters/{character-id}/
 `01-normal-smile` / `02-happy` / `03-thinking` / `04-idea` / `05-surprised` / `06-troubled` / `07-encouraging` / `08-celebrating` / `09-frustrated` / `10-confident`
 
 画像一覧と実際にあるパスは [catalog.json](catalog.json) で確認できます。
+
+## 6人セット画像
+
+集合画像は `assets/groups/` にあります。
+
+- `group-standing.png`：基本集合写真
+- `group-cheering.png`：全員で応援
+- `group-studying.png`：一緒に学習
+- `group-celebration.png`：達成・お祝い
