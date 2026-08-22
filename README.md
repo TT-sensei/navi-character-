@@ -34,4 +34,4 @@ assets/characters/{character-id}/
 
 `01-normal-smile` / `02-happy` / `03-thinking` / `04-idea` / `05-surprised` / `06-troubled` / `07-encouraging` / `08-celebrating` / `09-frustrated` / `10-confident`
 
-各キャラクターにまだない素材は、フォルダを作らず追加待ちとしています。画像一覧と実際にあるパスは [catalog.json](catalog.json) で確認できます。
+画像一覧と実際にあるパスは [catalog.json](catalog.json) で確認できます。
