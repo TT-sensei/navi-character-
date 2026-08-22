@@ -12,9 +12,15 @@
     <a class="count" href="AI-GUIDE.md">AI GUIDE ↗</a>
   </header>
   <main>
-    <section class="intro-card"><div><p class="section-label">CHARACTER LIBRARY</p><h2>教材に合わせて、キャラクターを選ぼう。</h2><p>画像はそのまま掲載しています。キャラクターを選ぶと、教材に貼り付けるための基本コードを確認できます。AIで使うときは、まず<a href="AI-GUIDE.md">AI向けガイド</a>を確認してください。</p></div><div class="intro-mark" aria-hidden="true">✦</div></section>
+    <section class="intro-card"><div><p class="section-label">CHARACTER LIBRARY</p><h2>基本画像だけでなく、全ポーズ・全表情を見られます。</h2><p>キャラクターを選び、全身ポーズ・表情アップ・集合画像を一覧から確認できます。画像を選ぶと、教材に貼り付けるコードをコピーできます。AIで使うときは、まず<a href="AI-GUIDE.md">AI向けガイド</a>を確認してください。</p></div><div class="intro-mark" aria-hidden="true">✦</div></section>
     <section class="character-grid" id="characterGrid" aria-label="キャラクター一覧"></section>
-    <section class="usage-card" id="usageCard" hidden><div class="usage-preview"><img id="usageImage" alt=""></div><div class="usage-copy"><p class="section-label">USAGE</p><h2 id="usageTitle">キャラクターを選択</h2><p>管理用IDは画面には表示せず、教材側で画像を呼び出すときだけ使います。</p><div class="code-row"><code id="usageCode"></code><button id="copyButton" type="button">コードをコピー</button></div><p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p></div></section>
+    <section class="library-card" id="libraryCard" hidden>
+      <div class="library-head"><div><p class="section-label">CHARACTER LIBRARY</p><h2 id="libraryTitle">キャラクター素材</h2></div><span id="libraryCount"></span></div>
+      <div class="tabs" role="tablist"><button class="tab active" data-tab="fullbody" role="tab">全身ポーズ</button><button class="tab" data-tab="expressions" role="tab">表情アップ</button></div>
+      <div class="asset-grid" id="assetGrid"></div>
+    </section>
+    <section class="group-card"><div class="library-head"><div><p class="section-label">GROUP IMAGES</p><h2>6人セット画像</h2></div><span>5 files</span></div><div class="group-grid" id="groupGrid"></div></section>
+    <section class="usage-card" id="usageCard" hidden><div class="usage-preview"><img id="usageImage" alt=""></div><div class="usage-copy"><p class="section-label">USAGE</p><h2 id="usageTitle">画像を選択</h2><p>選択した画像の実在URLを使ったコードです。画像ファイルは教材側へコピーせず、公開URLを参照してください。</p><div class="code-row"><code id="usageCode"></code><button id="copyButton" type="button">コードをコピー</button></div><p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p></div></section>
   </main>
   <footer>TT-sensei / NAVI CHARACTER</footer>
   <script src="script.js"></script>
