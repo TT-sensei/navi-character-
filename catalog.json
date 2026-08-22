@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "basePath": "assets/characters",
+  "characters": {
+    "riku": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "01-waving",
+        "02-correct",
+        "03-hint",
+        "04-retry",
+        "05-complete",
+        "06-arms-crossed",
+        "07-hands-in-pockets",
+        "08-leaning",
+        "09-over-shoulder",
+        "10-pointing",
+        "11-hand-over-heart",
+        "12-reaching-out",
+        "13-chin-rest",
+        "14-looking-away",
+        "15-brushing-bangs"
+      ],
+      "expressions": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10"
+      ]
+    },
+    "sora": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "arms-up",
+        "complete",
+        "correct",
+        "dynamic",
+        "fists",
+        "greeting",
+        "hint",
+        "jumping",
+        "laughing",
+        "reaching",
+        "retry",
+        "running",
+        "stretching",
+        "thumbs-up",
+        "waving"
+      ],
+      "expressions": [
+        "01-normal-smile",
+        "02-happy",
+        "03-thinking",
+        "04-idea",
+        "05-surprised",
+        "06-troubled",
+        "07-encouraging",
+        "08-celebrating",
+        "09-frustrated",
+        "10-confident"
+      ]
+    },
+    "kai": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "adjusting-glasses",
+        "checking-note",
+        "chin-rest",
+        "complete",
+        "correct",
+        "hands-clasped",
+        "hint",
+        "looking-over-glasses",
+        "pointing",
+        "quiet-victory",
+        "reaching-out",
+        "reading",
+        "retry",
+        "thinking",
+        "waving"
+      ],
+      "expressions": [
+        "01-normal-smile",
+        "02-happy",
+        "03-thinking",
+        "04-idea",
+        "05-surprised",
+        "06-troubled",
+        "07-encouraging",
+        "08-celebrating",
+        "09-frustrated",
+        "10-confident"
+      ]
+    },
+    "saku": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "complete",
+        "correct",
+        "curtsy",
+        "finger-heart",
+        "hand-on-cheek",
+        "hands-behind-back",
+        "hands-clasped",
+        "head-tilt",
+        "heart-hands",
+        "hint",
+        "reading",
+        "retry",
+        "soft-wave",
+        "twirling",
+        "waving"
+      ],
+      "expressions": []
+    },
+    "tsuki": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "complete",
+        "correct",
+        "dynamic-pose",
+        "hands-on-hips",
+        "hands-up",
+        "hint",
+        "jumping",
+        "laughing",
+        "peace-sign",
+        "reaching-out",
+        "retry",
+        "running",
+        "stretching",
+        "tying-hair",
+        "waving"
+      ],
+      "expressions": [
+        "01-normal-smile",
+        "02-happy",
+        "03-thinking",
+        "04-idea",
+        "05-surprised",
+        "06-troubled",
+        "07-encouraging",
+        "08-celebrating",
+        "09-frustrated",
+        "10-confident"
+      ]
+    },
+    "nami": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "brush-hair",
+        "chin-rest",
+        "complete",
+        "correct",
+        "finger-to-lips",
+        "hand-over-heart",
+        "hands-behind-back",
+        "hint",
+        "holding-umbrella",
+        "looking-away",
+        "reaching-out",
+        "reading",
+        "retry",
+        "sitting",
+        "waving"
+      ],
+      "expressions": [
+        "01-normal-smile",
+        "02-happy",
+        "03-thinking",
+        "04-idea",
+        "05-surprised",
+        "06-troubled",
+        "07-encouraging",
+        "08-celebrating",
+        "09-frustrated",
+        "10-confident"
+      ]
+    }
+  },
+  "expressionNames": [
+    "01-normal-smile",
+    "02-happy",
+    "03-thinking",
+    "04-idea",
+    "05-surprised",
+    "06-troubled",
+    "07-encouraging",
+    "08-celebrating",
+    "09-frustrated",
+    "10-confident"
+  ],
+  "notes": {
+    "riku": "元データの表情10枚はランダムID名だったため、内容を推測せず 01〜10 の連番に整理。",
+    "saku": "表情アップは未追加。"
+  }
+}
