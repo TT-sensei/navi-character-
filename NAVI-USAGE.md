@@ -68,7 +68,7 @@ assets/characters/kai/fullbody/checking-note.png
 assets/web/characters/kai/fullbody/checking-note.webp
 ```
 
-WebP版は長辺最大512pxの配信用派生ファイルです。縦横比・透過状態を維持し、教材での52px前後の小表示から200〜400px程度の表示までを想定しています。`group-jumping`だけは、元画像がJPEGのため`assets/web/groups/group-jumping.png`を使用します。原本PNGは高解像度表示、印刷、制作・再編集、WebPでは不足する特殊用途に限定します。
+WebP版は長辺最大512pxの配信用派生ファイルです。縦横比・透過状態を維持し、教材での52px前後の小表示から200〜400px程度の表示までを想定しています。元画像がJPEGの`group-jumping`も、配信用版は`assets/web/groups/group-jumping.webp`として他の集合画像と統一しています。原本PNG・JPEGは高解像度表示、印刷、制作・再編集、WebPでは不足する特殊用途に限定します。
 
 AIが教材を作成・修正するときは、理由なく1〜2MBの原本PNGを直接参照せず、対応するWebP URLを選択してください。既存のPNG URLは互換性のため維持し、教材リポジトリを移行するときもパスを推測せず`catalog.json`で対応を確認します。
 
