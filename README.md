@@ -71,4 +71,4 @@ WebP版は長辺最大512pxで、縦横比と透過状態を維持した配信�
 - `group-studying.png`：一緒に学習
 - `group-celebration.png`：達成・お祝い
 
-集合画像のWeb利用時も、対応する`assets/web/groups/*.webp`を優先します。
+集合画像のWeb利用時も、対応する`assets/web/groups/`配下の配信用版を優先します。`group-jumping`だけは、元画像がJPEGのため小型PNG（`group-jumping.png`）を使用します。
