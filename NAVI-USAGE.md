@@ -59,6 +59,19 @@
 8. 強いアニメーションを常用しない。達成や重要なフィードバックに限定する。
 9. 実在する画像パスは必ず `catalog.json` で確認する。推測しない。
 
+## Web配信用画像のルール
+
+Web教材・GitHub Pagesからナビキャラを表示するときは、原則として`assets/web/`以下のWebP版を使用します。原本PNGと同じ相対パス・ファイル名で、拡張子だけが`.webp`になっています。
+
+```text
+assets/characters/kai/fullbody/checking-note.png
+assets/web/characters/kai/fullbody/checking-note.webp
+```
+
+WebP版は長辺最大512pxの配信用派生ファイルです。縦横比・透過状態を維持し、教材での52px前後の小表示から200〜400px程度の表示までを想定しています。原本PNGは高解像度表示、印刷、制作・再編集、WebPでは不足する特殊用途に限定します。
+
+AIが教材を作成・修正するときは、理由なく1〜2MBの原本PNGを直接参照せず、対応するWebP URLを選択してください。既存のPNG URLは互換性のため維持し、教材リポジトリを移行するときもパスを推測せず`catalog.json`で対応を確認します。
+
 ## 「相棒」機能の将来設計
 
 将来的に learning-portal などの入口で好きなキャラクターを1人選び、`localStorage` に保存する方式を推奨します。

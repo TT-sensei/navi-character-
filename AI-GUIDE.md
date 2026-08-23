@@ -13,6 +13,8 @@
 5. 同じ教材では、キャラクターIDと場面別画像URLを一か所に定義する。
 6. 画像には意味のある`alt`を付ける。装飾だけなら`alt=""`を使う。
 7. 画像は教材側に複製せず、このリポジトリの公開済みURLを参照する。
+8. Web教材・GitHub Pagesでは、原則として`assets/web/`以下のWebP版を使う。理由なく1〜2MBの原本PNGを直接参照しない。
+9. 原本PNGは高解像度、印刷、制作・再編集、またはWebPでは解像度が不足する特殊な用途に限る。原本の削除・上書き・再圧縮はしない。
 
 ## キャラクター
 
@@ -52,15 +54,15 @@
 実際に使う前に、下のIDとポーズが`catalog.json`にあることを確認します。
 
 ```js
-const NAVI_BASE = 'https://tt-sensei.github.io/navi-character-/assets/characters';
+const NAVI_BASE = 'https://tt-sensei.github.io/navi-character-/assets/web/characters';
 
 const navi = {
   id: 'kai',
-  start: `${NAVI_BASE}/kai/fullbody/waving.png`,
-  correct: `${NAVI_BASE}/kai/fullbody/correct.png`,
-  hint: `${NAVI_BASE}/kai/fullbody/hint.png`,
-  retry: `${NAVI_BASE}/kai/fullbody/retry.png`,
-  complete: `${NAVI_BASE}/kai/fullbody/complete.png`
+  start: `${NAVI_BASE}/kai/fullbody/waving.webp`,
+  correct: `${NAVI_BASE}/kai/fullbody/correct.webp`,
+  hint: `${NAVI_BASE}/kai/fullbody/hint.webp`,
+  retry: `${NAVI_BASE}/kai/fullbody/retry.webp`,
+  complete: `${NAVI_BASE}/kai/fullbody/complete.webp`
 };
 
 function setNavi(scene, alt) {

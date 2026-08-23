@@ -29,6 +29,22 @@ assets/characters/{character-id}/
 - 追加時も、既存のファイル名を優先してそろえてください。
 - 個別にしかないポーズは、内容が分かる英小文字・ハイフン区切りの名前です。
 
+## Web教材向けWebP
+
+Web教材・GitHub Pagesから表示するときは、原則として`assets/web/`以下のWebP版を使用します。
+原本PNGと同じ相対パス・ファイル名で、拡張子だけが`.webp`になっています。
+
+例：
+
+```text
+原本: assets/characters/kai/fullbody/checking-note.png
+Web用: assets/web/characters/kai/fullbody/checking-note.webp
+```
+
+WebP版は長辺最大512pxで、縦横比と透過状態を維持した配信用派生ファイルです。52px程度の正誤表示から、200〜400px程度の教材・トップ画面表示までを想定しています。安定したキャッシュを利用できるよう、ファイル名とURLは場当たり的に変更しません。
+
+原本PNGは削除・上書きせず、高解像度表示、印刷、制作・再編集、WebPでは解像度が不足する特殊な用途に限定して使用します。
+
 ## キャラクターID
 
 | 名前 | ID |
@@ -54,3 +70,5 @@ assets/characters/{character-id}/
 - `group-cheering.png`：全員で応援
 - `group-studying.png`：一緒に学習
 - `group-celebration.png`：達成・お祝い
+
+集合画像のWeb利用時も、対応する`assets/web/groups/*.webp`を優先します。
