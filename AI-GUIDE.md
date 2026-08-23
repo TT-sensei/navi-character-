@@ -13,9 +13,10 @@
 5. 同じ教材では、キャラクターIDと場面別画像URLを一か所に定義する。
 6. 画像には意味のある`alt`を付ける。装飾だけなら`alt=""`を使う。
 7. 画像は教材側に複製せず、このリポジトリの公開済みURLを参照する。
-8. Web教材・GitHub Pagesでは、原則として`assets/web/`以下のWebP版を使う。理由なく1〜2MBの原本PNGを直接参照しない。
-9. 原本PNGは高解像度、印刷、制作・再編集、またはWebPでは解像度が不足する特殊な用途に限る。原本の削除・上書き・再圧縮はしない。
+8. **Web教材・GitHub Pagesでは `assets/web/` 以下の軽量WebPを最優先で使用する。軽量版が存在する場合、原本PNG/JPGを通常表示に使わない。**
+9. 原本PNG/JPGは高解像度ダウンロード、印刷、制作・再編集、またはWebPでは解像度が不足する特殊な用途に限る。原本の削除・上書き・再圧縮はしない。
 10. 集合画像を含むWeb教材用画像は、対応する`assets/web/`のWebPを使用する。個人画像で白背景を透明化したものも、原本ではなく`assets/web/`の派生版である。
+11. WebPのパスも推測せず、実在を確認する。対応する軽量版が存在しない場合のみ原本へフォールバックする。
 
 ## キャラクター
 
@@ -40,9 +41,9 @@
 | まちがい後の声かけ | retry |
 | 単元・チャレンジ完了 | complete |
 
-表情アップは`expressions/01-normal-smile.png`から`10-confident.png`の共通名を使用します。顔アップが読みやすい場所だけに使い、問題画面には全身画像を優先します。
+表情アップは`expressions/01-normal-smile.png`から`10-confident.png`の共通名を使用します。顔アップが読みやすい場所だけに使い、問題画面には全身画像を優先します。Web表示時は対応する`assets/web/.../*.webp`へ読み替えます。
 
-6人の集合画像は`assets/groups/`にあります。
+6人の集合画像は`assets/groups/`にあります。Web表示では対応する`assets/web/groups/*.webp`を優先します。
 
 - `group-standing.png`：トップ画面・紹介
 - `group-cheering.png`：スタート・正解
@@ -93,8 +94,10 @@ function setNavi(scene, alt) {
 ## AIへの短い依頼文
 
 ```text
-制作前に https://github.com/TT-sensei/edu-kit と https://github.com/TT-sensei/navi-character- を確認してください。
+制作前にEDU KITとnavi-character-を確認してください。
 キャラクターを使う場合はcatalog.jsonでID・画像名・実在パスを確認し、推測でURLやポーズを作らないでください。
+Web教材・GitHub Pagesではassets/web/以下の軽量WebPを最優先し、軽量版がある場合は大容量の原本PNG/JPGを通常表示に使わないでください。
+原本は高解像度ダウンロード、印刷、制作・再編集など必要な用途に限定してください。
 キャラクターは案内、ヒント、正解、再挑戦、達成の補助に限定し、問題文と操作を最優先にしてください。
 画像に文字を埋め込まず、教材側のHTMLでテキスト・操作・アクセシビリティを提供してください。
 ```
