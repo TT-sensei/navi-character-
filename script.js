@@ -15,15 +15,8 @@ const fantasyCharacters=[
   {id:'tsuki',label:'つき',job:'アーチャー',base:'tsuki-archer',standing:'tsuki-archer'}
 ].map(c=>({...c,fullbody:'standing'}));
 const fantasyMonsterSets=[
-  {label:'雑魚モンスター',path:'enemies',names:['happa-squirrel-leafy','hinoko-ember-newt','kinoko-apple-mushroom','komorin-little-night-bat','koro-golem-pebble-golem','mofu-wolf-frost-pup','purun-little-magic-slime','yukimaru-snow-puff']},
-  {label:'雑魚・派生種',path:'enemy-variants',names:['acorn-leafy','ember-frost-pup','forest-puru','moss-pebble-golem','sakura-snow-puff','sand-ember-newt','snow-mushroom','star-bat']},
-  {label:'雑魚・第2派生',path:'enemy-variants-2',names:['autumn-mushroom','berry-leafy','night-snow-puff','rainy-bat','spring-moss-pup','sunset-puru','sunstone-golem','tidal-newt']},
-  {label:'中ボス',path:'midboss',names:['aqua-slime-king','bakuretsu-boar','crystal-golem','forest-horn-king','thunder-griffon','twilight-cat-mage']},
-  {label:'中ボス・派生種',path:'midboss-variants',names:['autumn-horn-king','berry-boar-king','dawn-cat-mage','moon-crystal-golem','solar-griffon-king','tide-slime-king']},
-  {label:'中ボス・第2派生',path:'midboss-variants-2',names:['aurora-slime-king','dream-cat-mage','moss-ruin-horn-king','prism-crystal-golem','sky-ruin-griffon','volcano-boar-king']},
-  {label:'大ボス',path:'grandboss',names:['azure-sky-dragon','flare-leo','lumina-moon-phoenix']},
-  {label:'大ボス・派生種',path:'grandboss-variants',names:['crimson-inferno-dragon-v2','frost-crystal-lion-v3','eclipse-shadow-phoenix']},
-  {label:'ラスボス',path:'finalboss',names:['noxstella-star-eater']}
+  {label:'ザコモンスター',path:'monsters/zako',names:['happa-squirrel-leafy','hinoko-ember-newt','kinoko-apple-mushroom','komorin-little-night-bat','koro-golem-pebble-golem','mofu-wolf-frost-pup','purun-little-magic-slime','yukimaru-snow-puff','acorn-leafy','ember-frost-pup','forest-puru','moss-pebble-golem','sakura-snow-puff','sand-ember-newt','snow-mushroom','star-bat','autumn-mushroom','berry-leafy','night-snow-puff','rainy-bat','spring-moss-pup','sunset-puru','sunstone-golem','tidal-newt']},
+  {label:'ボスモンスター',path:'monsters/boss',names:['aqua-slime-king','bakuretsu-boar','crystal-golem','forest-horn-king','thunder-griffon','twilight-cat-mage','autumn-horn-king','berry-boar-king','dawn-cat-mage','moon-crystal-golem','solar-griffon-king','tide-slime-king','aurora-slime-king','dream-cat-mage','moss-ruin-horn-king','prism-crystal-golem','sky-ruin-griffon','volcano-boar-king','azure-sky-dragon','flare-leo','lumina-moon-phoenix','crimson-inferno-dragon','frost-crystal-lion','eclipse-shadow-phoenix','noxstella-star-eater']}
 ];
 const groups=[
   ['group-standing','基本集合・紹介'],['group-cheering','スタート・正解'],['group-studying','教材一覧・学習ポータル'],['group-celebration','クリア・バッジ獲得'],['group-huddle','協力・仲間感'],['group-jumping','ジャンプ・一体感']

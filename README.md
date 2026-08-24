@@ -72,3 +72,31 @@ WebP版は長辺最大512pxで、縦横比と透過状態を維持した配信�
 - `group-celebration.png`：達成・お祝い
 
 集合画像のWeb利用時も、対応する`assets/web/groups/*.webp`を優先します。元画像がJPEGの`group-jumping`も、Web版は他の集合画像と同じWebPに統一しています。
+
+## ファンタジー素材
+
+ファンタジー部門には、6人の立ち絵・ATTACK・DAMAGE・SPECIALと、モンスター素材があります。モンスターは派生回数では分けず、用途が分かりやすい2分類に統一しています。
+
+```text
+assets/fantasy/monsters/
+├── zako/                   # ザコモンスター 24体
+└── boss/                   # 中ボス・大ボス・ラスボス 25体
+
+assets/web/fantasy/monsters/
+├── zako/                   # Web用WebP 24体
+└── boss/                   # Web用WebP 25体
+```
+
+- 原本は`assets/fantasy/monsters/`以下のPNGです。
+- Web教材やGitHub Pagesでは、同名の`assets/web/fantasy/monsters/`以下のWebPを使用します。
+- 原本とWeb用は、分類とファイル名が1対1で対応しています。
+- 派生種も個別のモンスターとして扱い、`variants`や`v2`などの世代フォルダ・重複名は使用しません。
+
+例：
+
+```text
+原本: assets/fantasy/monsters/boss/crimson-inferno-dragon.png
+Web用: assets/web/fantasy/monsters/boss/crimson-inferno-dragon.webp
+```
+
+ファンタジー素材を追加するときは、ザコなら`zako`、ボスなら`boss`へ原本PNGとWeb用WebPを同じファイル名で追加し、サイトの`fantasyMonsterSets`と[catalog.json](catalog.json)も更新してください。
