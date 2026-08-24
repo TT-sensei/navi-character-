@@ -7,12 +7,12 @@ const characters=[
   {id:'nami',label:'なみ',fullbody:['brush-hair','chin-rest','complete','correct','finger-to-lips','hand-over-heart','hands-behind-back','hint','holding-umbrella','looking-away','reaching-out','reading','retry','sitting','waving']}
 ].map(c=>({...c,expressions:['01-normal-smile','02-happy','03-thinking','04-idea','05-surprised','06-troubled','07-encouraging','08-celebrating','09-frustrated','10-confident']}));
 const fantasyCharacters=[
-  {id:'kai',label:'かい',job:'魔導士',base:'kai-mage'},
-  {id:'sora',label:'そら',job:'剣士',base:'sora-swordsman'},
-  {id:'riku',label:'りく',job:'忍者',base:'riku-ninja'},
-  {id:'nami',label:'なみ',job:'騎士',base:'nami-knight'},
-  {id:'saku',label:'さく',job:'僧侶',base:'saku-cleric'},
-  {id:'tsuki',label:'つき',job:'アーチャー',base:'tsuki-archer'}
+  {id:'kai',label:'かい',job:'魔導士',base:'kai-mage',standing:'kai-mage'},
+  {id:'sora',label:'そら',job:'剣士',base:'sora-swordsman',standing:'sora-swordsman'},
+  {id:'riku',label:'りく',job:'忍者',base:'riku-ninja',standing:'riku-ninja'},
+  {id:'nami',label:'なみ',job:'騎士',base:'nami-knight',standing:'nami-guardian-knight'},
+  {id:'saku',label:'さく',job:'僧侶',base:'saku-cleric',standing:'saku-cleric-healer'},
+  {id:'tsuki',label:'つき',job:'アーチャー',base:'tsuki-archer',standing:'tsuki-archer'}
 ].map(c=>({...c,fullbody:'standing'}));
 const groups=[
   ['group-standing','基本集合・紹介'],['group-cheering','スタート・正解'],['group-studying','教材一覧・学習ポータル'],['group-celebration','クリア・バッジ獲得'],['group-huddle','協力・仲間感'],['group-jumping','ジャンプ・一体感']
@@ -24,7 +24,7 @@ const base='assets/characters';
 const webBase='assets/web/characters';
 const webAssetPath=(id,type,name)=>`${webBase}/${id}/${type}/${name}.webp`;
 const originalAssetPath=(id,type,name)=>`${base}/${id}/${type}/${name}.png`;
-function renderCards(){const list=mode==='fantasy'?fantasyCharacters:characters;grid.innerHTML=list.map((c,i)=>{const image=mode==='fantasy'?`assets/web/fantasy/${c.base}.webp`:webAssetPath(c.id,'fullbody','waving');const detail=mode==='fantasy'?`${c.job} / 立ち絵・ATTACK・DAMAGE・SPECIAL`:`${c.fullbody.length}ポーズ / ${c.expressions.length}表情`;return`<article class="character-card ${selected?.id===c.id?'selected':''}" data-id="${c.id}"><button class="character-button" type="button"><img class="character-image" src="${image}" alt="${c.label}"><div class="character-info"><div class="character-index">${mode==='fantasy'?'FANTASY':'CHARACTER'} ${String(i+1).padStart(2,'0')}</div><h3>${c.label}</h3><p>${detail}</p></div></button></article>`}).join('');}
+function renderCards(){const list=mode==='fantasy'?fantasyCharacters:characters;grid.innerHTML=list.map((c,i)=>{const image=mode==='fantasy'?`assets/web/fantasy/${c.standing}.webp`:webAssetPath(c.id,'fullbody','waving');const detail=mode==='fantasy'?`${c.job} / 立ち絵・ATTACK・DAMAGE・SPECIAL`:`${c.fullbody.length}ポーズ / ${c.expressions.length}表情`;return`<article class="character-card ${selected?.id===c.id?'selected':''}" data-id="${c.id}"><button class="character-button" type="button"><img class="character-image" src="${image}" alt="${c.label}"><div class="character-info"><div class="character-index">${mode==='fantasy'?'FANTASY':'CHARACTER'} ${String(i+1).padStart(2,'0')}</div><h3>${c.label}</h3><p>${detail}</p></div></button></article>`}).join('');}
 function renderAssets(){if(!selected)return;const names=mode==='fantasy'?['立ち絵','ATTACK','DAMAGE','SPECIAL']:selected[tab].map(name=>name);assetGrid.innerHTML=names.map(name=>{const type=mode==='fantasy'?(name==='立ち絵'?'standing':name.toLowerCase()):tab;const suffix=type==='standing'?'':`-${type}`;const webPath=mode==='fantasy'?`assets/web/fantasy/${selected.base}${suffix}.webp`:webAssetPath(selected.id,type,name);const originalPath=mode==='fantasy'?`assets/fantasy/${type==='standing'?'':`${type}/`}${selected.base}${suffix}.png`:originalAssetPath(selected.id,type,name);return`<button class="asset-item ${mode==='fantasy'?'fantasy-asset':''}" data-path="${webPath}" data-original="${originalPath}" data-label="${selected.label}・${name}"><img src="${webPath}" alt="${selected.label} ${name}"><span>${esc(name)}</span></button>`}).join('');count.textContent=`${names.length} files`;tabs.hidden=mode==='fantasy';}
 function selectCharacter(id){const list=mode==='fantasy'?fantasyCharacters:characters;selected=list.find(c=>c.id===id);if(!selected)return;renderCards();library.hidden=false;title.textContent=mode==='fantasy'?`${selected.label}｜${selected.job}のファンタジー素材`:`${selected.label}の素材`;tab=mode==='fantasy'?'standing':'fullbody';renderAssets();library.scrollIntoView({behavior:'smooth',block:'start'});}
 function setDownload(link,path){link.href=path;link.download=path.split('/').pop();}
