@@ -22,7 +22,7 @@ const fantasyMonsterSets=[
   {label:'中ボス・派生種',path:'midboss-variants',names:['autumn-horn-king','berry-boar-king','dawn-cat-mage','moon-crystal-golem','solar-griffon-king','tide-slime-king']},
   {label:'中ボス・第2派生',path:'midboss-variants-2',names:['aurora-slime-king','dream-cat-mage','moss-ruin-horn-king','prism-crystal-golem','sky-ruin-griffon','volcano-boar-king']},
   {label:'大ボス',path:'grandboss',names:['azure-sky-dragon','flare-leo','lumina-moon-phoenix']},
-  {label:'大ボス・派生種',path:'grandboss-variants',names:['crimson-inferno-dragon-v2','frost-crystal-lion-v2','eclipse-shadow-phoenix']},
+  {label:'大ボス・派生種',path:'grandboss-variants',names:['crimson-inferno-dragon-v2','frost-crystal-lion-v3','eclipse-shadow-phoenix']},
   {label:'ラスボス',path:'finalboss',names:['noxstella-star-eater']}
 ];
 const groups=[
