@@ -286,6 +286,57 @@
         "eclipse-shadow-phoenix",
         "noxstella-star-eater"
       ]
-    }
+    },
+    "backgrounds": {
+      "basePath": "assets/fantasy/backgrounds",
+      "webBasePath": "assets/web/fantasy/backgrounds",
+      "files": [
+        "forest",
+        "grassland",
+        "cave",
+        "riverbank",
+        "sea",
+        "volcano",
+        "ruins",
+        "sky-island"
+      ]
+    },
+    "presets": [
+      {
+        "id": "forest-zako",
+        "label": "森のザコ戦",
+        "background": "forest",
+        "action": "attack",
+        "monster": "purun-little-magic-slime"
+      },
+      {
+        "id": "cave-midboss",
+        "label": "洞窟の中ボス戦",
+        "background": "cave",
+        "action": "attack",
+        "monster": "crystal-golem"
+      },
+      {
+        "id": "ruins-boss",
+        "label": "遺跡のボス戦",
+        "background": "ruins",
+        "action": "attack",
+        "monster": "forest-horn-king"
+      },
+      {
+        "id": "volcano-grandboss",
+        "label": "火山の大ボス戦",
+        "background": "volcano",
+        "action": "special",
+        "monster": "crimson-inferno-dragon"
+      },
+      {
+        "id": "sky-special",
+        "label": "浮島のSPECIAL戦",
+        "background": "sky-island",
+        "action": "special",
+        "monster": "azure-sky-dragon"
+      }
+    ]
   }
 }
