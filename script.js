@@ -31,7 +31,7 @@ const fantasyPresets=[
   {id:'volcano-grandboss',label:'火山の大ボス戦',background:'volcano',characterMode:'random',action:'special',monsterMode:'selected',monster:'crimson-inferno-dragon'},
   {id:'sky-special',label:'浮島のSPECIAL戦',background:'sky-island',characterMode:'random',action:'special',monsterMode:'selected',monster:'azure-sky-dragon'}
 ];
-const fantasyBackgrounds=[['forest','森'],['grassland','草原'],['cave','洞窟'],['riverbank','河原'],['sea','海'],['volcano','火山'],['ruins','遺跡'],['sky-island','浮島・空']];
+const fantasyBackgrounds=[['forest','森'],['grassland','草原'],['cave','洞窟'],['riverbank','河原'],['sea','海'],['volcano','火山'],['ruins','遺跡'],['sky-island','浮島・空'],['town','町・スタート'],['training-ground','練習広場']];
 const previewStage=document.querySelector('#fantasyStage'),previewPreset=document.querySelector('#previewPreset'),previewBackground=document.querySelector('#previewBackground'),previewCharacterMode=document.querySelector('#previewCharacterMode'),previewCharacterSelect=document.querySelector('#previewCharacterSelect'),previewCharacterAction=document.querySelector('#previewCharacterAction'),previewMonsterMode=document.querySelector('#previewMonsterMode'),previewMonsterSelect=document.querySelector('#previewMonsterSelect'),previewBackgroundImage=document.querySelector('#previewBackgroundImage'),previewCharacterImage=document.querySelector('#previewCharacterImage'),previewMonsterImage=document.querySelector('#previewMonsterImage'),previewRandomize=document.querySelector('#previewRandomize');
 const allFantasyMonsters=fantasyMonsterSets.flatMap(set=>set.names.map(name=>({name,set:set.label,path:set.path})));
 function randomItem(list){return list[Math.floor(Math.random()*list.length)];}
