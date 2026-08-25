@@ -99,7 +99,7 @@ assets/web/fantasy/monsters/
 ├── zako/                   # Web用WebP 24体
 └── boss/                   # Web用WebP 25体
 
-assets/fantasy/backgrounds/ # バトル背景8種
+assets/fantasy/backgrounds/ # ファンタジー背景10種（バトル・スタート・練習）
 assets/web/fantasy/backgrounds/ # Web用WebP
 
 サイトの配置プレビューには、次のバトルプリセットを登録しています。
