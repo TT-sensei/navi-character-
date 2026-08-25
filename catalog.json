@@ -298,7 +298,9 @@
         "sea",
         "volcano",
         "ruins",
-        "sky-island"
+        "sky-island",
+        "town",
+        "training-ground"
       ]
     },
     "presets": [
