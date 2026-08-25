@@ -20,6 +20,12 @@
       <button class="fantasy-subtab active" data-fantasy-view="characters" type="button">キャラクター</button>
       <button class="fantasy-subtab" data-fantasy-view="monsters" type="button">モンスター</button>
     </nav>
+
+    <section class="fantasy-stage" id="fantasyStage" hidden>
+      <div class="library-head"><div><p class="section-label">FANTASY PREVIEW</p><h2>背景にキャラとモンスターを配置</h2><p>背景・キャラクター・モンスターを選択できます。ランダム指定ならボタンで組み合わせを入れ替えられます。</p></div><button id="previewRandomize" class="preview-randomize" type="button">ランダム配置</button></div>
+      <div class="preview-controls"><label>背景<select id="previewBackground"></select></label><label>キャラクター<select id="previewCharacterMode"><option value="random">ランダム</option><option value="selected">選択</option></select></label><label>キャラ選択<select id="previewCharacterSelect"></select></label><label>モンスター<select id="previewMonsterMode"><option value="random">ランダム</option><option value="selected">選択</option></select></label><label>モンスター選択<select id="previewMonsterSelect"></select></label></div>
+      <div class="fantasy-preview-scene" id="previewScene"><img class="preview-background" id="previewBackgroundImage" alt=""><img class="preview-character" id="previewCharacterImage" alt=""><img class="preview-monster" id="previewMonsterImage" alt=""><div class="preview-caption" id="previewCaption"></div></div>
+    </section>
     <section class="intro-card"><div><p class="section-label">CHARACTER LIBRARY</p><h2>基本画像だけでなく、全ポーズ・全表情を見られます。</h2><p>キャラクターを選び、全身ポーズ・表情アップ・集合画像を一覧から確認できます。画像を選ぶと、教材に貼り付けるコードをコピーできます。AIで使うときは、まず<a href="AI-GUIDE.md">AI向けガイド</a>を確認してください。</p></div><div class="intro-mark" aria-hidden="true">✦</div></section>
     <section class="character-grid" id="characterGrid" aria-label="キャラクター一覧"></section>
     <section class="monster-library" id="monsterLibrary" hidden>
