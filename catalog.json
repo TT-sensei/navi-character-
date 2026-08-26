@@ -257,7 +257,21 @@
         "spring-moss-pup",
         "sunset-puru",
         "sunstone-golem",
-        "tidal-newt"
+        "tidal-newt",
+        "mizutama-kappa",
+        "clover-mandragora",
+        "coral-bubble-crab",
+        "lantern-firefly",
+        "thunder-spark-fox",
+        "moon-moth",
+        "cloud-rain-rabbit",
+        "honeycomb-bee",
+        "vine-chameleon",
+        "pebble-ram",
+        "ember-lantern-salamander",
+        "dusk-feather-owl",
+        "rainbow-shell-snail",
+        "puddle-mudling"
       ],
       "boss": [
         "aqua-slime-king",
@@ -284,7 +298,13 @@
         "crimson-inferno-dragon",
         "frost-crystal-lion",
         "eclipse-shadow-phoenix",
-        "noxstella-star-eater"
+        "noxstella-star-eater",
+        "coral-tide-serpent",
+        "stormcloud-owl-king",
+        "verdant-shell-titan",
+        "amber-dune-scarab",
+        "aurora-ice-moth",
+        "void-moon-wyvern"
       ]
     },
     "backgrounds": {

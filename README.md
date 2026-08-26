@@ -92,12 +92,12 @@ ATTACK・DAMAGE・SPECIALは、バトル演出用です。通常の案内・ヒ�
 
 ```text
 assets/fantasy/monsters/
-├── zako/                   # ザコモンスター 24体
-└── boss/                   # 中ボス・大ボス・ラスボス 25体
+├── zako/                   # ザコモンスター 38体
+└── boss/                   # 中ボス・大ボス・ラスボス 31体
 
 assets/web/fantasy/monsters/
-├── zako/                   # Web用WebP 24体
-└── boss/                   # Web用WebP 25体
+├── zako/                   # Web用WebP 38体
+└── boss/                   # Web用WebP 31体
 
 assets/fantasy/backgrounds/ # ファンタジー背景10種（バトル・スタート・練習）
 assets/web/fantasy/backgrounds/ # Web用WebP
