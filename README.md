@@ -93,7 +93,7 @@ ATTACK・DAMAGE・SPECIALは、バトル演出用です。通常の案内・ヒ�
 
 ```text
 assets/fantasy/monsters/
-├── zako/                   # ザコモンスター 38体
+├── zako/                   # ザコモンスター 68体
 ├── zako-evolved/           # ザコ進化系 38体
 └── boss/                   # 中ボス・大ボス・ラスボス 31体
 
