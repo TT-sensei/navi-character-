@@ -1,50 +1,174 @@
-/* NAVI Fantasy Sticker Effects
- * 既存の透過PNG/WebPを加工せず、モンスター図鑑・獲得演出・コレクションを
- * 「集めたくなるステッカー」にする共通CSS。
+/* NAVI Fantasy Sticker Effects — silhouette-following only
+ * Existing transparent PNG/WebP stays untouched.
+ * Outline, resin, gloss, holo and pearl effects follow the visible monster alpha silhouette.
  */
-.fantasy-sticker{--sticker-outline:#fff;--sticker-shadow:rgba(20,24,45,.28);position:relative;display:inline-grid;place-items:center;isolation:isolate;transform-origin:50% 80%;-webkit-tap-highlight-color:transparent}
-.fantasy-sticker__image{position:relative;z-index:2;display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(3px 0 0 var(--sticker-outline)) drop-shadow(-3px 0 0 var(--sticker-outline)) drop-shadow(0 3px 0 var(--sticker-outline)) drop-shadow(0 -3px 0 var(--sticker-outline)) drop-shadow(0 7px 7px var(--sticker-shadow))}
 
-/* 縁取りカラー */
-.fantasy-sticker--edge-white{--sticker-outline:#fff}.fantasy-sticker--edge-sky{--sticker-outline:#9eeaff;--sticker-shadow:rgba(31,142,180,.30)}.fantasy-sticker--edge-mint{--sticker-outline:#a8f4cf;--sticker-shadow:rgba(33,139,96,.28)}.fantasy-sticker--edge-pink{--sticker-outline:#ffc1dd;--sticker-shadow:rgba(177,67,118,.28)}.fantasy-sticker--edge-purple{--sticker-outline:#d5bcff;--sticker-shadow:rgba(102,66,171,.30)}.fantasy-sticker--edge-red{--sticker-outline:#ffaaa4;--sticker-shadow:rgba(171,55,48,.30)}.fantasy-sticker--edge-gold{--sticker-outline:#ffe38a;--sticker-shadow:rgba(150,107,18,.34)}.fantasy-sticker--edge-silver{--sticker-outline:#e6edf5;--sticker-shadow:rgba(76,91,111,.32)}
-.fantasy-sticker--rare{--sticker-outline:#e8f0ff}.fantasy-sticker--sr{--sticker-outline:#ffe38a}.fantasy-sticker--secret{--sticker-outline:#fff;--sticker-shadow:rgba(68,46,120,.38)}
+.fantasy-sticker{
+  --sticker-outline:#fff;
+  --sticker-shadow:rgba(20,24,45,.28);
+  --sticker-mask:none;
+  position:relative;
+  display:inline-grid;
+  place-items:center;
+  isolation:isolate;
+  transform-origin:50% 80%;
+  -webkit-tap-highlight-color:transparent;
+}
 
-/* 任意の常時モーション（図鑑一覧では基本使わない） */
-.fantasy-sticker--idle{animation:fantasy-sticker-idle 3.2s ease-in-out infinite}.fantasy-sticker--puku{animation:fantasy-sticker-puku 2.8s ease-in-out infinite}.fantasy-sticker--float{animation:fantasy-sticker-float 3.8s ease-in-out infinite}
-@keyframes fantasy-sticker-idle{0%,100%{transform:translateY(0) rotate(-.35deg)}50%{transform:translateY(-3px) rotate(.35deg) scale(1.012)}}
-@keyframes fantasy-sticker-puku{0%,100%{transform:scale(1)}45%{transform:scale(1.035,.975)}62%{transform:scale(.985,1.035) translateY(-2px)}}
-@keyframes fantasy-sticker-float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+.fantasy-sticker__image{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter:
+    drop-shadow(3px 0 0 var(--sticker-outline))
+    drop-shadow(-3px 0 0 var(--sticker-outline))
+    drop-shadow(0 3px 0 var(--sticker-outline))
+    drop-shadow(0 -3px 0 var(--sticker-outline))
+    drop-shadow(0 7px 7px var(--sticker-shadow));
+}
 
-/* 常時ホロ */
-.fantasy-sticker--holo::after,.fantasy-sticker--holo-rainbow::after,.fantasy-sticker--holo-stars::after{content:'';position:absolute;z-index:3;inset:6%;pointer-events:none;border-radius:44%;mix-blend-mode:screen}
-.fantasy-sticker--holo::after{background:linear-gradient(115deg,transparent 14%,rgba(255,90,135,.10) 28%,rgba(255,238,120,.18) 38%,rgba(110,245,220,.17) 48%,rgba(120,165,255,.18) 58%,rgba(210,120,255,.14) 68%,transparent 83%);background-size:220% 220%;animation:fantasy-holo-sweep 4.8s ease-in-out infinite}
-.fantasy-sticker--holo-rainbow::after{background:linear-gradient(120deg,transparent 8%,rgba(255,80,120,.20),rgba(255,220,70,.18),rgba(80,245,190,.18),rgba(80,170,255,.20),rgba(190,100,255,.18),transparent 92%);background-size:300% 300%;animation:fantasy-holo-rainbow 3.6s linear infinite}
-.fantasy-sticker--holo-stars::after{background:radial-gradient(circle at 22% 28%,#fff 0 1.2%,transparent 2.2%),radial-gradient(circle at 72% 22%,#fff5b4 0 1%,transparent 2%),radial-gradient(circle at 82% 66%,#beebff 0 1.3%,transparent 2.4%),radial-gradient(circle at 38% 78%,#ffcdf5 0 1.5%,transparent 2.8%);animation:fantasy-stars-twinkle 2.2s ease-in-out infinite alternate}
-@keyframes fantasy-holo-sweep{0%,100%{background-position:0 50%;opacity:.38}50%{background-position:100% 50%;opacity:.86}}@keyframes fantasy-holo-rainbow{to{background-position:100% 50%}}@keyframes fantasy-stars-twinkle{from{opacity:.18}to{opacity:.8;transform:scale(1.02)}}
+/* Outline colors */
+.fantasy-sticker--edge-white{--sticker-outline:#fff}
+.fantasy-sticker--edge-sky{--sticker-outline:#9eeaff;--sticker-shadow:rgba(31,142,180,.30)}
+.fantasy-sticker--edge-mint{--sticker-outline:#a8f4cf;--sticker-shadow:rgba(33,139,96,.28)}
+.fantasy-sticker--edge-pink{--sticker-outline:#ffc1dd;--sticker-shadow:rgba(177,67,118,.28)}
+.fantasy-sticker--edge-purple{--sticker-outline:#d5bcff;--sticker-shadow:rgba(102,66,171,.30)}
+.fantasy-sticker--edge-red{--sticker-outline:#ffaaa4;--sticker-shadow:rgba(171,55,48,.30)}
+.fantasy-sticker--edge-gold{--sticker-outline:#ffe38a;--sticker-shadow:rgba(150,107,18,.34)}
+.fantasy-sticker--edge-silver{--sticker-outline:#e6edf5;--sticker-shadow:rgba(76,91,111,.32)}
 
-/* ぷっくり透明シール・オーラ */
-.fantasy-sticker--bubble::before,.fantasy-sticker--aura::before,.fantasy-sticker--secret::before{content:'';position:absolute;z-index:1;pointer-events:none}
-.fantasy-sticker--bubble::before{inset:4%;border-radius:46%;background:radial-gradient(circle at 34% 22%,rgba(255,255,255,.78),rgba(255,255,255,.15) 28%,transparent 63%);box-shadow:inset 0 0 18px rgba(255,255,255,.34),0 7px 16px rgba(55,70,100,.13);opacity:.82}
-.fantasy-sticker--aura::before,.fantasy-sticker--secret::before{inset:6%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(172,150,255,.18) 42%,transparent 72%);filter:blur(9px);animation:fantasy-aura-pulse 3.4s ease-in-out infinite}
-@keyframes fantasy-aura-pulse{0%,100%{opacity:.3;transform:scale(.95)}50%{opacity:.72;transform:scale(1.06)}}
+/* Every finish layer uses the monster itself as a mask. */
+.fantasy-sticker[data-outline-mask]::before,
+.fantasy-sticker[data-outline-mask]::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  -webkit-mask-image:var(--sticker-mask);
+  mask-image:var(--sticker-mask);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-size:contain;
+  mask-size:contain;
+}
 
-/* タップ時だけ発動する3層エフェクト */
+/* Puffy resin: highlight + subtle depth, fully silhouette-bound. */
+.fantasy-sticker--resin::before{
+  z-index:4;
+  background:
+    radial-gradient(circle at 32% 19%,rgba(255,255,255,.95) 0 4%,rgba(255,255,255,.42) 12%,transparent 30%),
+    linear-gradient(155deg,rgba(255,255,255,.32),transparent 42%,rgba(60,90,150,.12) 77%,rgba(25,40,75,.20));
+  mix-blend-mode:screen;
+  opacity:.88;
+}
+.fantasy-sticker--resin::after{
+  z-index:1;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(25,35,70,.26));
+  transform:translateY(2px) scale(.985);
+  filter:blur(.7px);
+  opacity:.48;
+}
+
+/* Gloss: a bright sweep only through opaque monster pixels. */
+.fantasy-sticker--gloss::before{
+  z-index:4;
+  background:linear-gradient(112deg,transparent 25%,rgba(255,255,255,.04) 37%,rgba(255,255,255,.98) 49%,rgba(190,240,255,.5) 55%,transparent 70%);
+  background-size:260% 100%;
+  mix-blend-mode:screen;
+  animation:fantasy-mask-gloss 3.9s ease-in-out infinite;
+}
+@keyframes fantasy-mask-gloss{
+  0%,32%{background-position:130% 0;opacity:0}
+  43%{opacity:.96}
+  66%,100%{background-position:-80% 0;opacity:0}
+}
+
+/* Hologram: rainbow reflection remains inside the silhouette. */
+.fantasy-sticker--holo::after{
+  z-index:4;
+  background:linear-gradient(120deg,rgba(255,80,120,.24),rgba(255,220,70,.22),rgba(80,245,190,.22),rgba(80,170,255,.24),rgba(190,100,255,.22),rgba(255,80,155,.20));
+  background-size:300% 300%;
+  mix-blend-mode:screen;
+  opacity:.74;
+  animation:fantasy-mask-holo 4.2s linear infinite;
+}
+@keyframes fantasy-mask-holo{from{background-position:0% 50%}to{background-position:100% 50%}}
+
+/* Pearl: calmer iridescent finish. */
+.fantasy-sticker--pearl::after{
+  z-index:4;
+  background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(180,235,255,.30),rgba(255,205,235,.26),rgba(255,245,175,.22),rgba(255,255,255,.12));
+  background-size:220% 220%;
+  mix-blend-mode:screen;
+  opacity:.76;
+  animation:fantasy-mask-pearl 5.6s ease-in-out infinite;
+}
+@keyframes fantasy-mask-pearl{0%,100%{background-position:0% 30%}50%{background-position:100% 70%}}
+
+/* Tap: puffy pop + silhouette-bound flash. Sparkles alone may leave the silhouette. */
 .fantasy-sticker--tap-pop{animation:fantasy-tap-pop .72s cubic-bezier(.2,.85,.3,1.25)}
-.fantasy-sticker--tap-shine::before{content:'';position:absolute;z-index:4;inset:-4%;pointer-events:none;border-radius:44%;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.15) 42%,rgba(255,255,255,.92) 50%,rgba(160,235,255,.45) 56%,transparent 68%);background-size:260% 100%;mix-blend-mode:screen;animation:fantasy-tap-shine .72s ease-out both}
-.fantasy-sticker--tap-sparkle::after{content:'';position:absolute;z-index:5;inset:-10%;pointer-events:none;background:radial-gradient(circle at 18% 25%,#fff 0 1.4%,transparent 2.6%),radial-gradient(circle at 78% 18%,#fff2a6 0 1.7%,transparent 3%),radial-gradient(circle at 90% 62%,#bff3ff 0 1.4%,transparent 2.7%),radial-gradient(circle at 26% 82%,#ffd0f1 0 1.5%,transparent 2.8%),radial-gradient(circle at 58% 8%,#fff 0 1%,transparent 2%);animation:fantasy-tap-sparkle .82s ease-out both}
-@keyframes fantasy-tap-pop{0%{transform:scale(1) rotate(0)}28%{transform:scale(.94,1.06) rotate(-1deg)}55%{transform:scale(1.09,.94) rotate(1.5deg)}78%{transform:scale(.99,1.02) rotate(-.4deg)}100%{transform:scale(1) rotate(0)}}
+.fantasy-sticker--tap-shine::before{
+  z-index:5;
+  background:linear-gradient(112deg,transparent 28%,rgba(255,255,255,.10) 39%,rgba(255,255,255,1) 50%,rgba(150,230,255,.58) 56%,transparent 70%)!important;
+  background-size:260% 100%!important;
+  mix-blend-mode:screen;
+  animation:fantasy-tap-shine .72s ease-out both!important;
+}
+.fantasy-sticker__sparkles{
+  display:none;
+  position:absolute;
+  z-index:6;
+  inset:-9%;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 18% 25%,#fff 0 1.4%,transparent 2.6%),
+    radial-gradient(circle at 78% 18%,#fff2a6 0 1.7%,transparent 3%),
+    radial-gradient(circle at 90% 62%,#bff3ff 0 1.4%,transparent 2.7%),
+    radial-gradient(circle at 26% 82%,#ffd0f1 0 1.5%,transparent 2.8%),
+    radial-gradient(circle at 58% 8%,#fff 0 1%,transparent 2%);
+  animation:fantasy-tap-sparkle .82s ease-out both;
+}
+.fantasy-sticker--tap-sparkle>.fantasy-sticker__sparkles{display:block}
+@keyframes fantasy-tap-pop{
+  0%{transform:scale(1) rotate(0)}
+  28%{transform:scale(.94,1.06) rotate(-1deg)}
+  55%{transform:scale(1.09,.94) rotate(1.5deg)}
+  78%{transform:scale(.99,1.02) rotate(-.4deg)}
+  100%{transform:scale(1) rotate(0)}
+}
 @keyframes fantasy-tap-shine{0%{background-position:130% 0;opacity:0}18%{opacity:1}100%{background-position:-80% 0;opacity:0}}
 @keyframes fantasy-tap-sparkle{0%{opacity:0;transform:scale(.72) rotate(-5deg)}35%{opacity:1}100%{opacity:0;transform:scale(1.16) rotate(5deg)}}
 
-/* 発見・獲得時 */
-.fantasy-sticker--reveal{animation:fantasy-sticker-reveal .58s cubic-bezier(.2,.85,.25,1.25) both}.fantasy-sticker--discover{animation:fantasy-sticker-discover .85s cubic-bezier(.16,.9,.25,1.2) both}
-@keyframes fantasy-sticker-reveal{0%{opacity:0;transform:scale(.55) rotate(-7deg)}65%{opacity:1;transform:scale(1.08) rotate(2deg)}100%{transform:scale(1)}}@keyframes fantasy-sticker-discover{0%{opacity:0;transform:scale(.2) rotate(-12deg);filter:brightness(2)}45%{opacity:1;transform:scale(1.14) rotate(3deg);filter:brightness(1.35)}100%{transform:scale(1);filter:brightness(1)}}
+/* Discovery / collection */
+.fantasy-sticker--discover{animation:fantasy-sticker-discover .85s cubic-bezier(.16,.9,.25,1.2) both}
+@keyframes fantasy-sticker-discover{0%{opacity:0;transform:scale(.2) rotate(-12deg);filter:brightness(2)}45%{opacity:1;transform:scale(1.14) rotate(3deg);filter:brightness(1.35)}100%{transform:scale(1);filter:brightness(1)}}
 
-/* 図鑑カード */
-.fantasy-sticker-card{--card-edge:rgba(255,255,255,.72);position:relative;display:grid;place-items:center;overflow:hidden;border:2px solid var(--card-edge);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(245,247,255,.54));box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 7px 18px rgba(32,42,70,.12)}.fantasy-sticker-card--gold{--card-edge:#f3cf66;background:linear-gradient(145deg,#fffaf0,#fff0bd)}.fantasy-sticker-card--silver{--card-edge:#cbd6e3;background:linear-gradient(145deg,#fbfdff,#e7eef6)}
+/* Uncollected: silhouette only, no finish or tap effect. */
+.fantasy-sticker--locked{cursor:default}
+.fantasy-sticker--locked .fantasy-sticker__image{
+  filter:grayscale(1) brightness(.16) opacity(.72)
+    drop-shadow(2px 0 0 rgba(255,255,255,.48))
+    drop-shadow(-2px 0 0 rgba(255,255,255,.48))
+    drop-shadow(0 2px 0 rgba(255,255,255,.48))
+    drop-shadow(0 -2px 0 rgba(255,255,255,.48));
+}
+.fantasy-sticker--locked::before,
+.fantasy-sticker--locked::after,
+.fantasy-sticker--locked .fantasy-sticker__sparkles{display:none!important}
 
-/* 未獲得。JS側もこのclassを見てタップ演出を拒否する。 */
-.fantasy-sticker--locked{cursor:default}.fantasy-sticker--locked .fantasy-sticker__image{filter:grayscale(1) brightness(.16) opacity(.72) drop-shadow(2px 0 0 rgba(255,255,255,.48)) drop-shadow(-2px 0 0 rgba(255,255,255,.48)) drop-shadow(0 2px 0 rgba(255,255,255,.48)) drop-shadow(0 -2px 0 rgba(255,255,255,.48))}.fantasy-sticker--locked::before,.fantasy-sticker--locked::after{display:none!important}
+@supports not ((mask-image:url("x")) or (-webkit-mask-image:url("x"))){
+  .fantasy-sticker[data-outline-mask]::before,
+  .fantasy-sticker[data-outline-mask]::after{display:none!important}
+}
 
-.fantasy-sticker--static,.fantasy-sticker--static::before,.fantasy-sticker--static::after{animation:none!important}
-@media(prefers-reduced-motion:reduce){.fantasy-sticker,.fantasy-sticker::before,.fantasy-sticker::after,.fantasy-sticker-card{animation:none!important;transition:none!important}}
+@media(prefers-reduced-motion:reduce){
+  .fantasy-sticker,.fantasy-sticker::before,.fantasy-sticker::after,.fantasy-sticker__sparkles{animation:none!important;transition:none!important}
+}
