@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NAVI CHARACTER</title>
-  <link rel="stylesheet" href="style.css?v=20260826-sticker-lab">
-  <link rel="stylesheet" href="effects/fantasy-sticker.css?v=20260826-sticker-lab">
-  <link rel="stylesheet" href="effects/sticker-lab.css?v=20260826-sticker-lab">
+  <link rel="stylesheet" href="style.css?v=20260826-sticker-mask">
+  <link rel="stylesheet" href="effects/fantasy-sticker.css?v=20260826-sticker-mask">
+  <link rel="stylesheet" href="effects/sticker-lab.css?v=20260826-sticker-mask">
 </head>
 <body>
   <header class="site-header">
@@ -31,23 +31,24 @@
 
       <section class="sticker-lab" id="stickerLab" aria-labelledby="stickerLabTitle">
         <div class="sticker-lab__head">
-          <div><p class="section-label">STICKER LAB</p><h3 id="stickerLabTitle">モンスターをステッカーにする！</h3><p>モンスター・ふち色・エフェクトを選んで試せます。ステッカーをタップすると、ぷくっ＋キラッの反応も見られます。</p></div>
-          <span class="sticker-lab__badge">CSS EFFECT</span>
+          <div><p class="section-label">STICKER LAB</p><h3 id="stickerLabTitle">モンスターをステッカーにする！</h3><p>すべての仕上げがモンスターの透過輪郭に追従します。ふち色と、ぷっくり樹脂・ツヤ・ホログラム・パールを組み合わせて試せます。</p></div>
+          <span class="sticker-lab__badge">SILHOUETTE EFFECT</span>
         </div>
         <div class="sticker-lab__body">
           <div>
             <div class="sticker-lab__preview">
-              <span class="fantasy-sticker sticker-lab__sticker" id="stickerPreview" data-sticker-tap data-unlocked="true" role="button" tabindex="0" aria-label="ステッカーをタップしてエフェクトを再生">
+              <span class="fantasy-sticker sticker-lab__sticker" id="stickerPreview" data-outline-mask data-sticker-tap data-unlocked="true" role="button" tabindex="0" aria-label="ステッカーをタップしてエフェクトを再生">
                 <img class="fantasy-sticker__image" id="stickerPreviewImage" src="" alt="">
+                <span class="fantasy-sticker__sparkles" aria-hidden="true"></span>
               </span>
             </div>
-            <p class="sticker-lab__hint">↑ ステッカーをタップしてみよう</p>
+            <p class="sticker-lab__hint">↑ ステッカーをタップすると、ぷくっ・輪郭内フラッシュ・キラキラ</p>
           </div>
           <div>
             <div class="sticker-lab__controls">
               <label>モンスター<select id="stickerMonster"></select></label>
               <label>ふち色<select id="stickerEdge"></select></label>
-              <label>エフェクト<select id="stickerEffect"></select></label>
+              <label>仕上げ<select id="stickerEffect"></select></label>
             </div>
             <div class="sticker-lab__actions">
               <button class="sticker-lab__make" id="stickerMake" type="button">ステッカーにする！</button>
@@ -75,8 +76,9 @@
     <section class="usage-card" id="usageCard" hidden><div class="usage-preview"><img id="usageImage" alt=""></div><div class="usage-copy"><p class="section-label">USAGE</p><h2 id="usageTitle">画像を選択</h2><p>表示と教材利用は軽量なWeb用画像が標準です。高画質原本は印刷・制作・再編集など、必要なときだけダウンロードしてください。</p><div class="download-row"><a id="webDownload" class="download-button primary" href="#" download>Web用をダウンロード</a><a id="originalDownload" class="download-button" href="#" download>高画質原本をダウンロード</a></div><div class="code-row"><code id="usageCode"></code><button id="copyButton" type="button">Web用コードをコピー</button></div><p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p></div></section>
   </main>
   <footer>TT-sensei / NAVI CHARACTER</footer>
-  <script src="script.js?v=20260826-sticker-lab"></script>
-  <script src="effects/fantasy-sticker.js?v=20260826-sticker-lab"></script>
-  <script src="effects/sticker-lab.js?v=20260826-sticker-lab"></script>
+  <script src="script.js?v=20260826-sticker-mask"></script>
+  <script src="effects/fantasy-sticker-mask.js?v=20260826-sticker-mask"></script>
+  <script src="effects/fantasy-sticker.js?v=20260826-sticker-mask"></script>
+  <script src="effects/sticker-lab.js?v=20260826-sticker-mask"></script>
 </body>
 </html>
