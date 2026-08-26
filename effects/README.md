@@ -4,48 +4,57 @@
 
 ## Fantasy Sticker
 
-`fantasy-sticker.css` は、Fantasyモンスターなどの透過画像をステッカー風に表示します。
+Fantasyモンスターの透過PNG/WebPを、その輪郭に沿ってステッカー化します。
+
+### 基本方針
+
+- 白・色付き縁取りは `drop-shadow()` で透過輪郭に追従。
+- ぷっくり樹脂、ツヤ、ホログラム、パールは同じ画像をCSS `mask-image` として使い、**モンスターの見えている部分だけ**に乗せる。
+- 四角・丸・楕円の疑似レイヤーで「ぷっくり」に見せる方式は使わない。
+- キラキラだけはステッカーの周囲に飛ばす演出なので輪郭外に出してよい。
+- 未獲得 (`fantasy-sticker--locked`) では装飾エフェクトを発動しない。
 
 ### 読み込み
 
 ```html
 <link rel="stylesheet" href="https://tt-sensei.github.io/navi-character-/effects/fantasy-sticker.css">
+<script src="https://tt-sensei.github.io/navi-character-/effects/fantasy-sticker-mask.js" defer></script>
+<script src="https://tt-sensei.github.io/navi-character-/effects/fantasy-sticker.js" defer></script>
 ```
 
-### 基本
+### 基本HTML
 
 ```html
-<span class="fantasy-sticker fantasy-sticker--idle">
+<span class="fantasy-sticker fantasy-sticker--resin fantasy-sticker--gloss" data-outline-mask data-sticker-tap data-unlocked="true" tabindex="0" role="button">
   <img class="fantasy-sticker__image" src="MONSTER_WEBP_URL" alt="モンスター名">
+  <span class="fantasy-sticker__sparkles" aria-hidden="true"></span>
 </span>
 ```
 
-Web教材では `assets/web/fantasy/monsters/` 以下に実在する軽量WebPを確認して使用してください。URLやファイル名を推測しないでください。
+Web教材では `assets/web/fantasy/monsters/` 以下に実在する軽量WebPを確認して使用してください。
 
-### レア度・演出
+### エフェクト
 
-- `fantasy-sticker--rare` : 明るい銀白系のステッカー
-- `fantasy-sticker--sr` : やや金色の縁・影
-- `fantasy-sticker--secret` : 特別な光を追加
-- `fantasy-sticker--holo` : 虹色のホログラム反射
-- `fantasy-sticker--idle` : ごく小さな上下・傾きの待機モーション
-- `fantasy-sticker--reveal` : 獲得時の一度だけのポップ演出
-- `fantasy-sticker--locked` : 図鑑の未獲得シルエット
-- `fantasy-sticker--static` : 一覧表示などでアニメーション停止
+- `fantasy-sticker--resin` : 輪郭追従のぷっくり樹脂
+- `fantasy-sticker--gloss` : 輪郭内を光が走るツヤ
+- `fantasy-sticker--holo` : 輪郭内だけのレインボーホログラム
+- `fantasy-sticker--pearl` : 淡い偏光パール
+- `fantasy-sticker--edge-*` : 白・水色・ミント・ピンク・紫・赤・金・銀の輪郭色
 
-組み合わせ例:
+タップすると `fantasy-sticker.js` が、獲得済みだけに短いポップ・光・キラキラを再生します。
+
+### 未獲得
 
 ```html
-<span class="fantasy-sticker fantasy-sticker--sr fantasy-sticker--holo fantasy-sticker--idle">
-  <img class="fantasy-sticker__image" src="MONSTER_WEBP_URL" alt="モンスター名">
+<span class="fantasy-sticker fantasy-sticker--locked" data-outline-mask data-sticker-tap data-unlocked="false" aria-disabled="true">
+  <img class="fantasy-sticker__image" src="MONSTER_WEBP_URL" alt="未発見モンスター">
+  <span class="fantasy-sticker__sparkles" aria-hidden="true"></span>
 </span>
 ```
 
-## 運用方針
+## 運用
 
 - 元画像は編集・複製しない。
 - 教材では軽量WebPを優先する。
-- ホログラムを常時すべての画像へ付けない。レア報酬や獲得演出など、意味のある場面に限定する。
-- モンスター図鑑の大量一覧では `--static` を基本にし、選択中の1体だけ動かすと軽い。
-- `prefers-reduced-motion` では自動的にアニメーションを停止する。
-- ステッカーは装飾。問題文・正誤・操作など学習上必要な情報を画像だけに持たせない。
+- 図鑑一覧は基本静止。選択・タップ時に短く反応させる。
+- `prefers-reduced-motion` ではアニメーションを止める。
