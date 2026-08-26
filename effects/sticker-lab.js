@@ -1,4 +1,4 @@
-/* Monster Sticker Lab */
+/* Monster Sticker Lab — silhouette-following finishes only */
 (function(){
   'use strict';
 
@@ -24,20 +24,22 @@
     ['fantasy-sticker--edge-gold','金'],
     ['fantasy-sticker--edge-silver','銀']
   ];
+
   const effectOptions=[
-    {id:'puku',label:'ぷくぷく',classes:['fantasy-sticker--puku']},
-    {id:'sparkle',label:'キラキラ',classes:['fantasy-sticker--holo-stars']},
-    {id:'holo',label:'ホログラム',classes:['fantasy-sticker--holo']},
-    {id:'rainbow',label:'レインボーホロ',classes:['fantasy-sticker--holo-rainbow']},
-    {id:'bubble',label:'ぷっくり透明シール',classes:['fantasy-sticker--bubble']},
-    {id:'aura',label:'ふわっとオーラ',classes:['fantasy-sticker--aura','fantasy-sticker--float']},
-    {id:'mix',label:'キラぷくホロ',classes:['fantasy-sticker--puku','fantasy-sticker--holo-stars','fantasy-sticker--holo']}
+    {id:'resin',label:'ぷっくり樹脂',classes:['fantasy-sticker--resin']},
+    {id:'gloss',label:'つやキラ',classes:['fantasy-sticker--gloss']},
+    {id:'holo',label:'輪郭ホログラム',classes:['fantasy-sticker--holo']},
+    {id:'pearl',label:'偏光パール',classes:['fantasy-sticker--pearl']},
+    {id:'resin-gloss',label:'ぷっくり＋つや',classes:['fantasy-sticker--resin','fantasy-sticker--gloss']},
+    {id:'resin-holo',label:'ぷっくり＋ホロ',classes:['fantasy-sticker--resin','fantasy-sticker--holo']},
+    {id:'resin-pearl',label:'ぷっくり＋パール',classes:['fantasy-sticker--resin','fantasy-sticker--pearl']},
+    {id:'plain',label:'ふちだけ',classes:[]}
   ];
+
   const removable=[
     ...edgeOptions.map(x=>x[0]),
-    'fantasy-sticker--puku','fantasy-sticker--float','fantasy-sticker--idle',
-    'fantasy-sticker--holo','fantasy-sticker--holo-rainbow','fantasy-sticker--holo-stars',
-    'fantasy-sticker--bubble','fantasy-sticker--aura','fantasy-sticker--rare','fantasy-sticker--sr','fantasy-sticker--secret'
+    'fantasy-sticker--resin','fantasy-sticker--gloss','fantasy-sticker--holo','fantasy-sticker--pearl',
+    'fantasy-sticker--tap-pop','fantasy-sticker--tap-shine','fantasy-sticker--tap-sparkle'
   ];
 
   function allMonsters(){
@@ -55,20 +57,28 @@
     const initial=monsters.find(m=>m.name==='purun-little-magic-slime')||monsters[0];
     if(initial){monsterSelect.value=initial.name;setMonster(initial);}
     edgeSelect.value='fantasy-sticker--edge-white';
-    effectSelect.value='puku';
+    effectSelect.value='resin-gloss';
     applyCurrent(false);
   }
 
-  function selectedMonster(){
-    return allMonsters().find(m=>m.name===monsterSelect.value)||allMonsters()[0];
+  function selectedMonster(){return allMonsters().find(m=>m.name===monsterSelect.value)||allMonsters()[0];}
+
+  function refreshMask(){
+    if(window.FantasyStickerMask)window.FantasyStickerMask.apply(sticker);
   }
+
   function setMonster(monster){
     if(!monster)return;
     image.src=monsterPath(monster);
     image.alt=monster.name.replace(/-/g,' ');
     monsterSelect.value=monster.name;
+    if(image.complete)refreshMask();
   }
+
+  image.addEventListener('load',refreshMask);
+
   function clearEffects(){removable.forEach(cls=>sticker.classList.remove(cls));}
+
   function applyCurrent(play=true){
     const monster=selectedMonster();
     if(monster)setMonster(monster);
@@ -78,9 +88,12 @@
     if(edge)sticker.classList.add(edge);
     sticker.classList.add(...effect.classes);
     sticker.dataset.unlocked='true';
-    result.textContent=(monster?monster.name.replace(/-/g,' ')+' ｜ ':'')+edgeOptions.find(x=>x[0]===edge)?.[1]+'ふち ＋ '+effect.label;
+    refreshMask();
+    const edgeLabel=edgeOptions.find(x=>x[0]===edge)?.[1]||'';
+    result.textContent=(monster?monster.name.replace(/-/g,' ')+' ｜ ':'')+edgeLabel+'ふち ＋ '+effect.label+'（輪郭追従）';
     if(play&&window.FantasySticker)window.FantasySticker.play(sticker);
   }
+
   function randomize(){
     const monster=randomItem(allMonsters());
     const edge=randomItem(edgeOptions);
