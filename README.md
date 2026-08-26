@@ -89,14 +89,17 @@ ATTACK・DAMAGE・SPECIALは、バトル演出用です。通常の案内・ヒ�
 - さく：僧侶
 
 モンスターは派生回数では分けず、用途が分かりやすい2分類に統一しています。
+進化系は`assets/fantasy/monsters/zako-evolved/`にまとめ、各`*-evolved`ファイルを元の`zako`モンスターへ1対1で対応させています。通常のザコより少し動きのあるポーズですが、ボス分類には含めません。
 
 ```text
 assets/fantasy/monsters/
 ├── zako/                   # ザコモンスター 38体
+├── zako-evolved/           # ザコ進化系 38体
 └── boss/                   # 中ボス・大ボス・ラスボス 31体
 
 assets/web/fantasy/monsters/
 ├── zako/                   # Web用WebP 38体
+├── zako-evolved/           # ザコ進化系Web用WebP 38体
 └── boss/                   # Web用WebP 31体
 
 assets/fantasy/backgrounds/ # ファンタジー背景10種（バトル・スタート・練習）
@@ -123,4 +126,4 @@ assets/web/fantasy/backgrounds/ # Web用WebP
 Web用: assets/web/fantasy/monsters/boss/crimson-inferno-dragon.webp
 ```
 
-ファンタジー素材を追加するときは、ザコなら`zako`、ボスなら`boss`へ原本PNGとWeb用WebPを同じファイル名で追加し、サイトの`fantasyMonsterSets`と[catalog.json](catalog.json)も更新してください。
+ファンタジー素材を追加するときは、通常のザコなら`zako`、ザコの進化系なら`zako-evolved`、ボスなら`boss`へ原本PNGとWeb用WebPを同じファイル名で追加し、サイトの`fantasyMonsterSets`と[catalog.json](catalog.json)も更新してください。
