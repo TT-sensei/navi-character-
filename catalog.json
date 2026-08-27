@@ -469,6 +469,24 @@
         "action": "special",
         "monster": "azure-sky-dragon"
       }
-    ]
+    ],
+    "groups": {
+      "basePath": "assets/fantasy/groups",
+      "webBasePath": "assets/web/fantasy/groups",
+      "files": [
+        "group-fantasy-town.png",
+        "group-fantasy-adventure.png",
+        "group-fantasy-battle.png",
+        "group-fantasy-celebration.png",
+        "group-fantasy-training.png"
+      ],
+      "usage": {
+        "group-fantasy-town": "ファンタジーの町・出発",
+        "group-fantasy-adventure": "森の探索・冒険",
+        "group-fantasy-battle": "遺跡・戦闘準備",
+        "group-fantasy-celebration": "クエスト成功・お祝い",
+        "group-fantasy-training": "練習場・作戦会議"
+      }
+    }
   }
 }

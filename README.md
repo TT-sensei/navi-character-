@@ -104,6 +104,8 @@ assets/web/fantasy/monsters/
 
 assets/fantasy/backgrounds/ # ファンタジー背景10種（バトル・スタート・練習）
 assets/web/fantasy/backgrounds/ # Web用WebP
+assets/fantasy/groups/ # ファンタジー6人集合画像5種
+assets/web/fantasy/groups/ # Web用WebP
 
 サイトの配置プレビューには、次のバトルプリセットを登録しています。
 
@@ -125,5 +127,7 @@ assets/web/fantasy/backgrounds/ # Web用WebP
 原本: assets/fantasy/monsters/boss/crimson-inferno-dragon.png
 Web用: assets/web/fantasy/monsters/boss/crimson-inferno-dragon.webp
 ```
+
+ファンタジー集合画像は、町・冒険・戦闘準備・お祝い・練習の5パターンです。6人の人間キャラクターのポーズと配置を場面ごとに変えています。
 
 ファンタジー素材を追加するときは、通常のザコなら`zako`、ザコの進化系なら`zako-evolved`、ボスなら`boss`へ原本PNGとWeb用WebPを同じファイル名で追加し、サイトの`fantasyMonsterSets`と[catalog.json](catalog.json)も更新してください。
