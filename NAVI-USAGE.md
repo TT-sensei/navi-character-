@@ -112,6 +112,11 @@ assets/web/characters/{character-id}/
 - group-celebration：クリア、達成、バッジ獲得
 - group-huddle：協力、仲間感、作戦
 - group-jumping：大きな達成、記録更新
+- group-presenting：中央のタイトル・説明・ボタンを案内
+- group-start-dash：挑戦開始、ゲーム開始
+- group-thinking：ヒント、解説、考える場面
+- group-peeking：結果カード、ポップアップ周囲の装飾
+- group-moving-forward：次の単元、次のステージへの案内
 
 ルール：
 

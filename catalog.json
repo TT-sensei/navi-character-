@@ -220,7 +220,12 @@
       "group-studying.png",
       "group-celebration.png",
       "group-huddle.png",
-      "group-jumping.jpg"
+      "group-jumping.jpg",
+      "group-presenting.png",
+      "group-start-dash.png",
+      "group-thinking.png",
+      "group-peeking.png",
+      "group-moving-forward.png"
     ],
     "usage": {
       "standing": "トップ画面・紹介ページ",
@@ -228,7 +233,12 @@
       "studying": "教材一覧・学習ポータル",
       "celebration": "クリア画面・バッジ獲得",
       "huddle": "6人が肩を組む、仲間感のある集合画像",
-      "jumping": "青空と芝生の下で6人が手をつないでジャンプする集合画像"
+      "jumping": "青空と芝生の下で6人が手をつないでジャンプする集合画像",
+      "presenting": "中央のタイトル・説明・ボタンを6人で案内する透過集合画像",
+      "start-dash": "6人が前へ駆け出す、挑戦開始向けの透過集合画像",
+      "thinking": "6人がそれぞれ考える、ヒント・解説向けの透過集合画像",
+      "peeking": "6人が画面端から中央をのぞく、カード装飾向けの透過集合画像",
+      "moving-forward": "6人が同じ方向へ歩く、次の単元・ステージ向けの透過集合画像"
     },
     "daily": {
       "basePath": "assets/groups/daily",
