@@ -43,7 +43,9 @@ alt、サイズ、配置、読み込み方法を決める
 - ポーズ名、表情名、分類がカタログに存在する
 - WebPが同じ相対パスで存在する
 - 通常版とファンタジー版を取り違えていない
+- 日常背景・集合画像のファイル名がカタログに存在する
 - モンスターが zako / zako-evolved / boss のどこに属するか
+- モンスターの日本語表示名とグループ番号1〜3をカタログから取得できる
 - 進化系と元モンスターの対応が必要か
 - その画像が学習を助けるか、単なる飾りになっていないか
 
@@ -110,7 +112,67 @@ URLを組み立てるだけで終わらせず、catalog.jsonで実際のファ�
 
 通常の正誤表示では、キャラクター画像は52px前後を基準にします。大きく表示する場合も、問題文や入力欄を押し下げないことを優先します。
 
-## 4. 日常・学習シーンの選び方
+## 4. 通常版の集合画像・日常背景・学習シーン
+
+### 基本・用途別の集合画像
+
+~~~text
+assets/web/groups/
+  group-standing.webp
+  group-cheering.webp
+  group-studying.webp
+  group-celebration.webp
+  group-huddle.webp
+  group-jumping.webp
+  group-presenting.webp
+  group-start-dash.webp
+  group-thinking.webp
+  group-peeking.webp
+  group-moving-forward.webp
+~~~
+
+| 素材 | 使う場面 | 配置のポイント |
+| --- | --- | --- |
+| group-presenting | トップ、タイトル、開始ボタン | 中央の余白にHTMLのタイトルやボタンを重ねる |
+| group-start-dash | 挑戦開始、ゲーム開始 | 問題開始前だけに使い、問題画面では小さくする |
+| group-thinking | ヒント、解説 | 考え方の文章と併用する |
+| group-peeking | 結果カード、ポップアップ | 中央の余白をカード用に残す |
+| group-moving-forward | 次の単元、次のステージ | 6人全員が右へ進む構図を保つ |
+
+集合画像は意味のある場面で1枚だけ使い、問題文・入力欄・開始ボタンより大きくしません。文字や吹き出しは画像に追加せず、必ずHTMLで重ねます。
+
+### 日常背景
+
+通常版ナビキャラや集合画像を重ねて使う、16:9の背景です。
+
+~~~text
+assets/web/backgrounds/daily/
+  daily-classroom.webp
+  daily-gymnasium.webp
+  daily-library.webp
+  daily-cafe.webp
+  daily-shopping-street.webp
+  daily-bedroom.webp
+  daily-park.webp
+  daily-schoolyard.webp
+  daily-living-room.webp
+  daily-riverside.webp
+~~~
+
+~~~js
+const DAILY_BACKGROUND_WEB =
+  'https://tt-sensei.github.io/navi-character-/assets/web/backgrounds/daily';
+
+const dailyBackgroundUrl = (id) =>
+  DAILY_BACKGROUND_WEB + '/' + id + '.webp';
+~~~
+
+- 背景は場面を示すために使い、人物・文字・操作UIは教材側で重ねる
+- キャラクターの足元を床・道・芝生の位置に合わせる
+- 問題文や入力欄の下には十分な不透明度のパネルを置き、背景の上でも読めるようにする
+- 日常背景にファンタジー衣装のキャラクターやモンスターを混ぜない
+
+### 日常・学習シーン
 
 日常シーン：
 
@@ -259,12 +321,33 @@ const evolutionMap = catalog.fantasy.monsters.evolutionMap;
 const parentId = evolutionMap['purun-little-magic-slime-evolved'];
 ~~~
 
+### 日本語名とグループ1〜3
+
+モンスターの英語IDは、画像URL・データキー・localStorageの保存キーとして固定です。画面に見せる日本語名とカテゴリ内のグループ番号は、必ずカタログから取得します。
+
+~~~js
+const monsters = catalog.fantasy.monsters;
+const category = 'zako'; // zako / zakoEvolved / boss
+const monsterId = 'purun-little-magic-slime';
+
+const displayName = monsters.displayNamesJa[monsterId];
+const group = monsters.groupAssignments[category][monsterId]; // 1 / 2 / 3
+~~~
+
+- 画面の見出し、カード名、`alt` には `displayNamesJa[id]` を使う
+- URL・ファイル名・保存キーには英語IDを使い、日本語名へ置き換えない
+- `zakoEvolved` はカタログ上のキー名で、画像フォルダ名は `zako-evolved`
+- ザコ進化系のグループ番号は、対応する元ザコと同じ。対応元は `evolutionMap` で確認する
+- 図鑑やステージ選択では、カテゴリを選んだ後にグループ1〜3で絞り込む
+- グループ番号を名前・色・見た目から推測したり、教材側で振り直したりしない
+
 モンスター図鑑を作るときの基本：
 
 - zako、zako-evolved、bossを別カテゴリとして表示する
 - 未発見・未獲得と獲得済みを区別する
 - 撃破回数や初回獲得日は教材側のlocalStorageで管理する
 - モンスター画像に名前や説明文を直接埋め込まない
+- 表示名は displayNamesJa、グループは groupAssignments を参照する
 - Web表示には assets/web/fantasy/monsters/ 以下のWebPを使う
 - 図鑑の画像一覧は基本静止にし、タップ時だけ短い反応を加える
 
@@ -361,7 +444,7 @@ effects/ は、元のモンスター画像を加工せず、教材側でステ�
 - 進化系：monsters/zako-evolved
 - ボス：monsters/boss
 
-モンスターを追加する場合、似た色、形、名前、シルエットが続かないようにします。進化系を追加する場合は、元モンスターとの1対1対応を evolutionMap に登録します。
+モンスターを追加する場合、似た色、形、名前、シルエットが続かないようにします。進化系を追加する場合は、元モンスターとの1対1対応を evolutionMap に登録し、`displayNamesJa` とカテゴリ内の `groupAssignments` も追加します。進化系は元ザコと同じグループ番号にします。
 
 ## 12. やってはいけないこと
 
@@ -375,6 +458,7 @@ effects/ は、元のモンスター画像を加工せず、教材側でステ�
 - つきをエルフ化する
 - さくへ宗教記号を追加する
 - モンスターの進化系をボスに分類する
+- モンスターの日本語名やグループ番号を推測・再採番する
 - 未獲得モンスターへステッカー演出を発動する
 - キャラクターを問題文や操作ボタンより目立たせる
 - アニメーションを常時動かし続ける
