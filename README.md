@@ -28,10 +28,11 @@ AIや教材制作で使用するときは、AI-GUIDE.md、画像の実在確認�
 - 基準全身画像 reference.jpeg
 - 共通の全身ポーズ
 - 共通の表情10種
-- 6人の集合画像
+- 6人の基本・用途別集合画像11種
 - 日常生活の集合画像5種
 - 教科別の学習シーン8種
 - 二人組の相談・交流シーン2種
+- 通常版ナビキャラを重ねて使える日常背景10種
 
 キャラクターIDは次のとおりです。
 
@@ -140,6 +141,8 @@ assets/web/backgrounds/daily/   # Web配信用WebP
 - daily-riverside：川沿い・散歩
 
 背景の上に個人キャラを置くときは、キャラの足元が床や道に乗る位置に合わせ、必要に応じて薄い接地影を追加します。背景を全面に敷き、問題文や入力欄の可読性を優先してください。
+
+背景はキャラクターを描き込まない「場」の素材です。人物・集合画像・文字・ボタンは教材側で重ね、背景の中へ問題や説明を焼き込まないでください。通常のWeb教材では、原本PNGではなく同名の `assets/web/backgrounds/daily/*.webp` を使います。
 
 ### 学習シーン
 
@@ -307,6 +310,23 @@ assets/fantasy/monsters/
 
 代表的なボスには、aqua-slime-king、crystal-golem、forest-horn-king、thunder-griffon、azure-sky-dragon、crimson-inferno-dragon、lumina-moon-phoenix、noxstella-star-eater、abyssal-mirror-leviathan、gloomthorn-forest-titan、nightveil-raven-king、obsidian-comet-wyvern、phantom-lantern-dragon などがあります。
 
+### 日本語名とグループ1〜3
+
+画像ファイル名・英語IDは変更せず、画面に表示する名前だけを `catalog.json` の `fantasy.monsters.displayNamesJa` から取得します。たとえば `purun-little-magic-slime` の表示名は「ぷるんスライム」です。
+
+各モンスターには、カテゴリ内のグループ番号1〜3を `fantasy.monsters.groupAssignments` に登録しています。
+
+| 目的 | 参照するカタログ項目 | 例 |
+| --- | --- | --- |
+| 画像URL・保存キー | 英語ID | `purun-little-magic-slime` |
+| 画面の名前・alt | `displayNamesJa[id]` | ぷるんスライム |
+| カテゴリ | `zako` / `zakoEvolved` / `boss` | `zako` |
+| カテゴリ内の絞り込み | `groupAssignments[category][id]` | `1` |
+
+ザコ進化系は、対応する元ザコと同じグループ番号です。進化元は `evolutionMap`、グループ番号は `groupAssignments.zakoEvolved` で確認します。名前、見た目、ファイル名から推測して振り分けません。
+
+教材の図鑑では、まずザコ・進化系・ボスを分け、その中でグループ1〜3を選べるようにすると、180体を無理なく扱えます。日本語名は画面上の表示と `alt` に使用し、URL・ファイル名・localStorageのキーは英語IDのままにします。
+
 モンスターの画風は、通常版ナビキャラと同じ世界の素材として並べられることを優先します。
 
 - 2.5〜3頭身程度
@@ -382,7 +402,7 @@ WebPが存在しない場合は、catalog.jsonと実際の公開パスを確認�
 
 ## カタログと公開サイト
 
-catalog.json は、キャラクターID、ポーズ名、表情名、集合画像、ファンタジー素材、モンスター分類、進化対応、背景、プリセットを確認するための正本です。
+catalog.json は、キャラクターID、ポーズ名、表情名、集合画像、日常背景、ファンタジー素材、モンスター分類、日本語表示名、グループ1〜3、進化対応、プリセットを確認するための正本です。
 
 公開サイトでは、素材のプレビュー、Web用URL、高画質原本のダウンロード、モンスター図鑑、ファンタジー素材の配置確認を行えます。
 
