@@ -27,3 +27,9 @@ main,.site-header,footer{width:100%;min-width:0}
 .monster-item img{max-width:100%;height:clamp(108px,14vw,150px)}
 .monster-item span{min-width:0;min-height:2.7em;line-height:1.35;white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
 .monster-item small{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.monster-groups{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:5px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.monster-group{min-height:36px;flex:1 1 120px;border-radius:10px;background:#f5f7fb;color:var(--muted);font-size:12px}
+.monster-group.active{background:#172033;color:#fff}
+.monster-group:hover{filter:none;background:#e9eefc;color:var(--blue)}
+.monster-group.active:hover{background:#172033;color:#fff}
