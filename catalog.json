@@ -486,6 +486,24 @@
         "group-fantasy-battle": "遺跡・戦闘準備",
         "group-fantasy-celebration": "クエスト成功・お祝い",
         "group-fantasy-training": "練習場・作戦会議"
+      },
+      "initial": {
+        "basePath": "assets/fantasy/groups/initial",
+        "webBasePath": "assets/web/fantasy/groups/initial",
+        "files": [
+          "group-fantasy-town.png",
+          "group-fantasy-adventure.png",
+          "group-fantasy-battle.png",
+          "group-fantasy-celebration.png",
+          "group-fantasy-training.png"
+        ],
+        "usage": {
+          "group-fantasy-town": "初期案・ファンタジーの町",
+          "group-fantasy-adventure": "初期案・森の冒険",
+          "group-fantasy-battle": "初期案・遺跡の戦闘準備",
+          "group-fantasy-celebration": "初期案・クエスト成功",
+          "group-fantasy-training": "初期案・練習場"
+        }
       }
     }
   }
