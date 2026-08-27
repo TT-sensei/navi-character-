@@ -92,6 +92,11 @@ assets/web/characters/{character-id}/
 | group-celebration.png | クリア、達成、バッジ獲得 |
 | group-huddle.png | 協力、仲間感、作戦を考える場面 |
 | group-jumping.png | 大きな達成、記録更新、躍動感のある場面 |
+| group-presenting.png | 中央のタイトルやボタンを6人で案内する場面 |
+| group-start-dash.png | 挑戦開始、ゲーム開始、学習スタート |
+| group-thinking.png | ヒント、解説、いっしょに考える場面 |
+| group-peeking.png | 結果カードやポップアップの周囲を飾る場面 |
+| group-moving-forward.png | 次の単元、次のステージ、学習終了後の案内 |
 
 集合画像は、タイトルや学習開始ボタンより大きく目立たせません。教材のトップ画面では6人集合を第一候補にしますが、学習中は必要に応じて個人画像や学習シーン画像を使います。
 
