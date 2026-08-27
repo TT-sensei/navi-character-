@@ -20,7 +20,27 @@ const fantasyMonsterSets=[
   {id:'boss',label:'ボスモンスター',path:'monsters/boss',names:['aqua-slime-king','bakuretsu-boar','crystal-golem','forest-horn-king','thunder-griffon','twilight-cat-mage','autumn-horn-king','berry-boar-king','dawn-cat-mage','moon-crystal-golem','solar-griffon-king','tide-slime-king','aurora-slime-king','dream-cat-mage','moss-ruin-horn-king','prism-crystal-golem','sky-ruin-griffon','volcano-boar-king','azure-sky-dragon','flare-leo','lumina-moon-phoenix','crimson-inferno-dragon','frost-crystal-lion','eclipse-shadow-phoenix','noxstella-star-eater','coral-tide-serpent','stormcloud-owl-king','verdant-shell-titan','amber-dune-scarab','aurora-ice-moth','void-moon-wyvern']}
 ];
 const groups=[
-  ['group-standing','基本集合・紹介'],['group-cheering','スタート・正解'],['group-studying','教材一覧・学習ポータル'],['group-celebration','クリア・バッジ獲得'],['group-huddle','協力・仲間感'],['group-jumping','ジャンプ・一体感']
+  {path:'group-standing',label:'基本集合・紹介',category:'集合'},
+  {path:'group-cheering',label:'スタート・正解',category:'集合'},
+  {path:'group-studying',label:'教材一覧・学習ポータル',category:'集合'},
+  {path:'group-celebration',label:'クリア・バッジ獲得',category:'集合'},
+  {path:'group-huddle',label:'協力・仲間感',category:'集合'},
+  {path:'group-jumping',label:'ジャンプ・一体感',category:'集合',originalExt:'jpg'},
+  {path:'daily/group-daily-arrival',label:'登校・朝の出会い',category:'日常'},
+  {path:'daily/group-daily-classroom',label:'教室・授業前の準備',category:'日常'},
+  {path:'daily/group-daily-study',label:'協力して学ぶ時間',category:'日常'},
+  {path:'daily/group-daily-recess',label:'休み時間・遊び',category:'日常'},
+  {path:'daily/group-daily-cleanup',label:'掃除・協力',category:'日常'},
+  {path:'learning/group-learning-japanese-reading',label:'国語①・文章を読む',category:'学習'},
+  {path:'learning/group-learning-japanese-discussion',label:'国語②・考えを伝え合う',category:'学習'},
+  {path:'learning/group-learning-math-diagram',label:'算数①・図を使って考える',category:'学習'},
+  {path:'learning/group-learning-math-shapes',label:'算数②・図形を調べる',category:'学習'},
+  {path:'learning/group-learning-science-observation',label:'理科①・観察する',category:'学習'},
+  {path:'learning/group-learning-science-experiment',label:'理科②・実験して確かめる',category:'学習'},
+  {path:'learning/group-learning-social-map',label:'社会①・地図から調べる',category:'学習'},
+  {path:'learning/group-learning-social-sources',label:'社会②・資料を比べて考える',category:'学習'},
+  {path:'learning/group-learning-pair-consulting',label:'二人組①・机を並べて相談',category:'学習'},
+  {path:'learning/group-learning-pair-exchange',label:'二人組②・立って考えを交流',category:'学習'}
 ];
 const grid=document.querySelector('#characterGrid'),library=document.querySelector('#libraryCard'),assetGrid=document.querySelector('#assetGrid'),groupGrid=document.querySelector('#groupGrid'),usage=document.querySelector('#usageCard'),usageImage=document.querySelector('#usageImage'),usageTitle=document.querySelector('#usageTitle'),usageCode=document.querySelector('#usageCode'),copyButton=document.querySelector('#copyButton'),copyStatus=document.querySelector('#copyStatus'),webDownload=document.querySelector('#webDownload'),originalDownload=document.querySelector('#originalDownload'),title=document.querySelector('#libraryTitle'),count=document.querySelector('#libraryCount'),modeTabs=document.querySelector('.mode-tabs'),tabs=document.querySelector('.tabs'),monsterLibrary=document.querySelector('#monsterLibrary'),monsterGrid=document.querySelector('#monsterGrid'),monsterCount=document.querySelector('#monsterCount'),monsterFilters=document.querySelector('#monsterFilters'),groupLibrary=document.querySelector('#groupLibrary');
 let mode='standard',selected=null,tab='fullbody',monsterFilter='all';
@@ -112,7 +132,7 @@ monsterFilters.addEventListener('click',e=>{
 });
 assetGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 monsterGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
-groups.forEach(([name,label])=>{const originalExt=name==='group-jumping'?'jpg':'png';const webPath=`assets/web/groups/${name}.webp`;const originalPath=`assets/groups/${name}.${originalExt}`;groupGrid.insertAdjacentHTML('beforeend',`<button class="group-item" data-path="${webPath}" data-original="${originalPath}" data-label="${label}"><img src="${webPath}" alt="${label}"><span>${label}<small>${name}.webp / 原本をダウンロード可</small></span></button>`);});
+groups.forEach(group=>{const webPath='assets/web/groups/'+group.path+'.webp';const originalPath='assets/groups/'+group.path+'.'+(group.originalExt||'png');groupGrid.insertAdjacentHTML('beforeend','<button class="group-item" data-path="'+webPath+'" data-original="'+originalPath+'" data-label="'+group.label+'"><img src="'+webPath+'" alt="'+group.label+'"><span>'+group.label+'<small>'+group.category+' / '+group.path+'.webp / 原本をダウンロード可</small></span></button>');});
 groupGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 copyButton.addEventListener('click',async()=>{if(!usageCode.textContent)return;try{await navigator.clipboard.writeText(usageCode.textContent);copyStatus.textContent='コードをコピーしました。';}catch{copyStatus.textContent='コピーできませんでした。コードを選択してください。';}});
 renderCards();

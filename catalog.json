@@ -245,6 +245,34 @@
         "group-daily-recess": "休み時間・遊び",
         "group-daily-cleanup": "掃除・協力"
       }
+    },
+    "learning": {
+      "basePath": "assets/groups/learning",
+      "webBasePath": "assets/web/groups/learning",
+      "files": [
+        "group-learning-japanese-reading.png",
+        "group-learning-japanese-discussion.png",
+        "group-learning-math-diagram.png",
+        "group-learning-math-shapes.png",
+        "group-learning-science-observation.png",
+        "group-learning-science-experiment.png",
+        "group-learning-social-map.png",
+        "group-learning-social-sources.png",
+        "group-learning-pair-consulting.png",
+        "group-learning-pair-exchange.png"
+      ],
+      "usage": {
+        "group-learning-japanese-reading": "国語①・みんなで文章を読む",
+        "group-learning-japanese-discussion": "国語②・自分の考えを伝え合う",
+        "group-learning-math-diagram": "算数①・図を使って考える",
+        "group-learning-math-shapes": "算数②・図形を調べる",
+        "group-learning-science-observation": "理科①・観察する",
+        "group-learning-science-experiment": "理科②・実験して確かめる",
+        "group-learning-social-map": "社会①・地図から調べる",
+        "group-learning-social-sources": "社会②・資料を比べて考える",
+        "group-learning-pair-consulting": "二人組①・机を並べて相談",
+        "group-learning-pair-exchange": "二人組②・立って考えを交流"
+      }
     }
   },
   "fantasy": {
