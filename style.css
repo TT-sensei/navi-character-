@@ -26,6 +26,11 @@
 .background-item small{display:block;padding:0 3px 2px;color:var(--muted);font-size:10px}
 @media(max-width:600px){.background-library{padding:18px}.background-grid{grid-template-columns:1fr}.background-item span{font-size:13px}}
 
+/* Fantasy group images: show the complete team in the fantasy character tab */
+.fantasy-group-card{border-color:#d9d4ef;background:linear-gradient(145deg,#fff,#faf8ff)}
+.fantasy-group-card .section-label{color:#6f55bf}
+.fantasy-group-item img{background:linear-gradient(135deg,#f4f1ff,#fbf8ff)}
+
 
 /* Documentation links in the public catalog header */
 .guide-links{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap}
