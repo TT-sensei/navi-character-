@@ -70,8 +70,12 @@ WebP版は長辺最大512pxで、縦横比と透過状態を維持した配信�
 - `group-cheering.png`：全員で応援
 - `group-studying.png`：一緒に学習
 - `group-celebration.png`：達成・お祝い
+- `assets/groups/daily/`：日常の6人集合画像5種
+- `assets/web/groups/daily/`：Web用WebP
 
-集合画像のWeb利用時も、対応する`assets/web/groups/*.webp`を優先します。元画像がJPEGの`group-jumping`も、Web版は他の集合画像と同じWebPに統一しています。
+集合画像のWeb利用時も、対応する`assets/web/groups/*.webp`を優先します。
+
+日常の集合画像は、登校・教室・学習・休み時間・掃除の5パターンです。6人の動きと配置を場面ごとに変えています。元画像がJPEGの`group-jumping`も、Web版は他の集合画像と同じWebPに統一しています。
 
 ## ファンタジー素材
 

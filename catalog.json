@@ -227,6 +227,24 @@
       "celebration": "クリア画面・バッジ獲得",
       "huddle": "6人が肩を組む、仲間感のある集合画像",
       "jumping": "青空と芝生の下で6人が手をつないでジャンプする集合画像"
+    },
+    "daily": {
+      "basePath": "assets/groups/daily",
+      "webBasePath": "assets/web/groups/daily",
+      "files": [
+        "group-daily-arrival.png",
+        "group-daily-classroom.png",
+        "group-daily-study.png",
+        "group-daily-recess.png",
+        "group-daily-cleanup.png"
+      ],
+      "usage": {
+        "group-daily-arrival": "登校・朝の出会い",
+        "group-daily-classroom": "教室・授業前の準備",
+        "group-daily-study": "協力して学ぶ時間",
+        "group-daily-recess": "休み時間・遊び",
+        "group-daily-cleanup": "掃除・協力"
+      }
     }
   },
   "fantasy": {
