@@ -11,3 +11,8 @@
 .monster-filter:hover{filter:none;background:#eef2ff;color:var(--blue)}
 .monster-filter.active:hover{background:var(--blue);color:#fff}
 @media(max-width:520px){.mode-tabs{gap:6px;padding:5px}.mode-tab{padding:0 6px;font-size:12px}.monster-filter{flex-basis:calc(50% - 8px)}}
+
+
+/* Documentation links in the public catalog header */
+.guide-links{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap}
+@media(max-width:760px){.guide-links{justify-content:flex-start}}
