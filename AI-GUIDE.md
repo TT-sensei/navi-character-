@@ -240,11 +240,11 @@ assets/web/fantasy/groups/
 
 | フォルダ | 体数 | 役割 |
 | --- | ---: | --- |
-| zako | 68 | 通常のザコ |
-| zako-evolved | 68 | ザコの進化系 |
-| boss | 36 | 中ボス、大ボス、ラスボス |
+| zako | 71 | 通常のザコ |
+| zako-evolved | 71 | ザコの進化系 |
+| boss | 38 | 中ボス、大ボス、ラスボス |
 
-catalog.jsonで管理されている合計は172体です。
+catalog.jsonで管理されている合計は180体です。
 
 Web用URLの形式：
 

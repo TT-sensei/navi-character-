@@ -265,12 +265,12 @@ assets/fantasy/groups/initial/
 
 ~~~text
 assets/fantasy/monsters/
-├── zako/          # ザコモンスター 68体
-├── zako-evolved/ # ザコの進化系 68体
-└── boss/         # 中ボス・大ボス・ラスボス 36体
+├── zako/          # ザコモンスター 71体
+├── zako-evolved/ # ザコの進化系 71体
+└── boss/         # 中ボス・大ボス・ラスボス 38体
 ~~~
 
-合計172体です。
+合計180体です。
 
 - zako：通常のザコ敵
 - zako-evolved：既存ザコに対応する進化系

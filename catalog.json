@@ -209,7 +209,7 @@
   ],
   "notes": {
     "saku": "表情10枚を共通の表情名へ整理済み。",
-    "monsterExpansion": "未進化だったザコ30体の進化系と、新規ボス5体を追加。進化系は各ザコと1対1で対応。"
+    "monsterExpansion": "未進化だったザコ30体の進化系と、新規ボス5体に加え、メカ系ザコ3体・進化系3体・ボス2体を追加。進化系は各ザコと1対1で対応。"
   },
   "groups": {
     "basePath": "assets/groups",
@@ -348,7 +348,10 @@
         "cogwheel-beetle",
         "paper-crane-spirit",
         "mossy-porcupine",
-        "violet-reef-seahorse"
+        "violet-reef-seahorse",
+        "gearbit-mouse",
+        "steam-sprocket-mole",
+        "rivet-bloom-beetle"
       ],
       "boss": [
         "aqua-slime-king",
@@ -386,7 +389,9 @@
         "gloomthorn-forest-titan",
         "nightveil-raven-king",
         "obsidian-comet-wyvern",
-        "phantom-lantern-dragon"
+        "phantom-lantern-dragon",
+        "ironclock-colossus",
+        "magitech-gear-dragon"
       ],
       "zakoEvolved": [
         "happa-squirrel-leafy-evolved",
@@ -456,7 +461,10 @@
         "thunderclaw-ram-evolved",
         "violet-reef-seahorse-evolved",
         "whispering-mask-imp-evolved",
-        "aurora-shell-lizard-evolved"
+        "aurora-shell-lizard-evolved",
+        "gearbit-mouse-evolved",
+        "steam-sprocket-mole-evolved",
+        "rivet-bloom-beetle-evolved"
       ],
       "evolutionMap": {
         "happa-squirrel-leafy-evolved": "happa-squirrel-leafy",
@@ -526,7 +534,10 @@
         "thunderclaw-ram-evolved": "thunderclaw-ram",
         "violet-reef-seahorse-evolved": "violet-reef-seahorse",
         "whispering-mask-imp-evolved": "whispering-mask-imp",
-        "aurora-shell-lizard-evolved": "aurora-shell-lizard"
+        "aurora-shell-lizard-evolved": "aurora-shell-lizard",
+        "gearbit-mouse-evolved": "gearbit-mouse",
+        "steam-sprocket-mole-evolved": "steam-sprocket-mole",
+        "rivet-bloom-beetle-evolved": "rivet-bloom-beetle"
       }
     },
     "backgrounds": {
