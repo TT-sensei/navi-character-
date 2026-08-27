@@ -119,6 +119,28 @@ assets/groups/daily/
 - recess：休み時間・遊び
 - cleanup：掃除・協力
 
+### 日常背景
+
+通常版ナビキャラを重ねて使える、16:9の背景プレート10種です。太い輪郭線・やわらかなセル塗り・明るい色面を通常版のイラストに合わせ、中央から手前にキャラを置ける余白と自然な接地感を確保しています。
+
+~~~text
+assets/backgrounds/daily/       # 高画質PNG
+assets/web/backgrounds/daily/   # Web配信用WebP
+~~~
+
+- daily-classroom：教室・授業
+- daily-gymnasium：体育館・運動
+- daily-library：図書室・読書
+- daily-cafe：カフェ・ひと休み
+- daily-shopping-street：まち・商店街
+- daily-bedroom：自分の部屋・勉強
+- daily-park：公園・遊び
+- daily-schoolyard：校庭・放課後
+- daily-living-room：リビング・団らん
+- daily-riverside：川沿い・散歩
+
+背景の上に個人キャラを置くときは、キャラの足元が床や道に乗る位置に合わせ、必要に応じて薄い接地影を追加します。背景を全面に敷き、問題文や入力欄の可読性を優先してください。
+
 ### 学習シーン
 
 キャラクターが教科の記号を持つだけでなく、実際に学習活動をしていることが伝わるようにした素材です。教科専用の衣装には変更せず、通常版の6人であることを優先しています。

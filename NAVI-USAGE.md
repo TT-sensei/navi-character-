@@ -164,6 +164,30 @@ assets/web/groups/daily/
 - group-daily-recess：休み時間・遊び
 - group-daily-cleanup：掃除・協力
 
+### 日常背景
+
+通常版6人を重ねて使うための横長背景です。すべて16:9で、キャラの太い輪郭線に合わせた明確な輪郭と控えめなセル塗りに統一しています。中央〜手前に広い接地面を残しているので、立ち絵や2〜3人の組み合わせを配置できます。
+
+~~~text
+assets/backgrounds/daily/       # PNG原本
+assets/web/backgrounds/daily/   # WebP軽量版
+~~~
+
+収録している場面：
+
+- daily-classroom：教室・授業
+- daily-gymnasium：体育館・運動
+- daily-library：図書室・読書
+- daily-cafe：カフェ・ひと休み
+- daily-shopping-street：まち・商店街
+- daily-bedroom：自分の部屋・勉強
+- daily-park：公園・遊び
+- daily-schoolyard：校庭・放課後
+- daily-living-room：リビング・団らん
+- daily-riverside：川沿い・散歩
+
+背景とキャラを組み合わせるときは、キャラの足元を床・地面の遠近に合わせます。キャラが浮いて見える場合は、背景を暗くするのではなく、足元に薄い楕円形の接地影を1枚だけ置いてください。問題文、ボタン、入力欄を覆う位置にはキャラや装飾を置きません。
+
 ### 学習シーン
 
 ~~~text

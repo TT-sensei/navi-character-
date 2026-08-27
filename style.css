@@ -12,6 +12,20 @@
 .monster-filter.active:hover{background:var(--blue);color:#fff}
 @media(max-width:520px){.mode-tabs{gap:6px;padding:5px}.mode-tab{padding:0 6px;font-size:12px}.monster-filter{flex-basis:calc(50% - 8px)}}
 
+/* Daily background library: wide plates designed for layering NAVI characters */
+.mode-tab.daily-tab.active{background:linear-gradient(135deg,#e8794f,#d4517a)}
+.background-library{margin-top:28px;padding:24px;border:1px solid #f0d9dc;border-radius:24px;background:linear-gradient(145deg,#fff,#fff8f8);box-shadow:0 12px 40px rgba(88,35,51,.07)}
+.background-library .library-head{align-items:start}
+.background-library .library-head>div{min-width:0}
+.background-library .library-head p:not(.section-label){margin:8px 0 0;color:var(--muted);line-height:1.7}
+.background-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.background-item{min-width:0;overflow:hidden;padding:9px;border:1px solid #eadfe2;border-radius:16px;background:#fff;color:inherit;text-align:left;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.background-item:hover,.background-item:focus-visible{transform:translateY(-3px);border-color:#e4a7b4;box-shadow:0 10px 24px rgba(88,35,51,.12);outline:none}
+.background-item img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;background:#f8f1ef}
+.background-item span{display:block;padding:10px 3px 2px;font-size:14px;font-weight:800}
+.background-item small{display:block;padding:0 3px 2px;color:var(--muted);font-size:10px}
+@media(max-width:600px){.background-library{padding:18px}.background-grid{grid-template-columns:1fr}.background-item span{font-size:13px}}
+
 
 /* Documentation links in the public catalog header */
 .guide-links{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap}

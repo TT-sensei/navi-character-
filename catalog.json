@@ -287,6 +287,37 @@
       }
     }
   },
+  "backgrounds": {
+    "daily": {
+      "basePath": "assets/backgrounds/daily",
+      "webBasePath": "assets/web/backgrounds/daily",
+      "aspectRatio": "16:9",
+      "files": [
+        "daily-classroom.png",
+        "daily-gymnasium.png",
+        "daily-library.png",
+        "daily-cafe.png",
+        "daily-shopping-street.png",
+        "daily-bedroom.png",
+        "daily-park.png",
+        "daily-schoolyard.png",
+        "daily-living-room.png",
+        "daily-riverside.png"
+      ],
+      "usage": {
+        "daily-classroom": "教室・授業",
+        "daily-gymnasium": "体育館・運動",
+        "daily-library": "図書室・読書",
+        "daily-cafe": "カフェ・ひと休み",
+        "daily-shopping-street": "まち・商店街",
+        "daily-bedroom": "自分の部屋・勉強",
+        "daily-park": "公園・遊び",
+        "daily-schoolyard": "校庭・放課後",
+        "daily-living-room": "リビング・団らん",
+        "daily-riverside": "川沿い・散歩"
+      }
+    }
+  },
   "fantasy": {
     "monsterBasePath": "assets/fantasy/monsters",
     "monsterWebBasePath": "assets/web/fantasy/monsters",
