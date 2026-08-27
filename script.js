@@ -64,7 +64,12 @@ const fantasyGroups=[
   {id:'group-fantasy-adventure',label:'森の探索・冒険'},
   {id:'group-fantasy-battle',label:'遺跡・戦闘準備'},
   {id:'group-fantasy-celebration',label:'クエスト成功・お祝い'},
-  {id:'group-fantasy-training',label:'練習場・作戦会議'}
+  {id:'group-fantasy-training',label:'練習場・作戦会議'},
+  {id:'initial/group-fantasy-town',label:'初期案｜ファンタジーの町・出発'},
+  {id:'initial/group-fantasy-adventure',label:'初期案｜森の探索・冒険'},
+  {id:'initial/group-fantasy-battle',label:'初期案｜遺跡・戦闘準備'},
+  {id:'initial/group-fantasy-celebration',label:'初期案｜クエスト成功・お祝い'},
+  {id:'initial/group-fantasy-training',label:'初期案｜練習場・作戦会議'}
 ];
 const grid=document.querySelector('#characterGrid'),library=document.querySelector('#libraryCard'),assetGrid=document.querySelector('#assetGrid'),groupGrid=document.querySelector('#groupGrid'),backgroundLibrary=document.querySelector('#backgroundLibrary'),backgroundGrid=document.querySelector('#backgroundGrid'),backgroundCount=document.querySelector('#backgroundCount'),usage=document.querySelector('#usageCard'),usageImage=document.querySelector('#usageImage'),usageTitle=document.querySelector('#usageTitle'),usageCode=document.querySelector('#usageCode'),copyButton=document.querySelector('#copyButton'),copyStatus=document.querySelector('#copyStatus'),webDownload=document.querySelector('#webDownload'),originalDownload=document.querySelector('#originalDownload'),title=document.querySelector('#libraryTitle'),count=document.querySelector('#libraryCount'),modeTabs=document.querySelector('.mode-tabs'),tabs=document.querySelector('.tabs'),monsterLibrary=document.querySelector('#monsterLibrary'),monsterGrid=document.querySelector('#monsterGrid'),monsterCount=document.querySelector('#monsterCount'),monsterFilters=document.querySelector('#monsterFilters'),monsterGroups=document.querySelector('#monsterGroups'),groupLibrary=document.querySelector('#groupLibrary');
 const fantasyGroupLibrary=document.querySelector('#fantasyGroupLibrary'),fantasyGroupGrid=document.querySelector('#fantasyGroupGrid'),fantasyGroupCount=document.querySelector('#fantasyGroupCount');
