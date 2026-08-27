@@ -266,11 +266,11 @@ assets/fantasy/groups/initial/
 ~~~text
 assets/fantasy/monsters/
 ├── zako/          # ザコモンスター 68体
-├── zako-evolved/ # ザコの進化系 38体
-└── boss/         # 中ボス・大ボス・ラスボス 31体
+├── zako-evolved/ # ザコの進化系 68体
+└── boss/         # 中ボス・大ボス・ラスボス 36体
 ~~~
 
-合計137体です。
+合計172体です。
 
 - zako：通常のザコ敵
 - zako-evolved：既存ザコに対応する進化系
@@ -278,7 +278,7 @@ assets/fantasy/monsters/
 
 進化系は、ファイル名の末尾に -evolved を付け、元のザコと1対1で対応しています。進化系はボスではありません。分類はフォルダ名と catalog.json を基準にし、見た目だけで分類を推測しないでください。
 
-代表的なボスには、aqua-slime-king、crystal-golem、forest-horn-king、thunder-griffon、azure-sky-dragon、crimson-inferno-dragon、lumina-moon-phoenix、noxstella-star-eater などがあります。
+代表的なボスには、aqua-slime-king、crystal-golem、forest-horn-king、thunder-griffon、azure-sky-dragon、crimson-inferno-dragon、lumina-moon-phoenix、noxstella-star-eater、abyssal-mirror-leviathan、gloomthorn-forest-titan、nightveil-raven-king、obsidian-comet-wyvern、phantom-lantern-dragon などがあります。
 
 モンスターの画風は、通常版ナビキャラと同じ世界の素材として並べられることを優先します。
 
