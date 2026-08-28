@@ -207,6 +207,11 @@ assets/web/groups/learning/
 - group-learning-social-sources：社会、資料を比べて考える
 - group-learning-pair-consulting：二人組で相談する
 - group-learning-pair-exchange：二人組で考えを交流する
+- group-learning-pair-diagram：二人組で図を使って考え方を説明する
+- group-learning-pair-reading：二人組で音読を聞き合う
+- group-learning-pair-observation：二人組で観察して記録する
+- group-learning-pair-map：二人組で地図と資料を調べる
+- group-learning-pair-tablet：二人組でタブレットを見ながら相談する
 
 これらは教科のマークを見せる素材ではなく、キャラクター自身が学習活動をしている場面です。画像の内容に合わせて、HTML側に短い説明や見出しを添えます。
 

@@ -199,6 +199,11 @@ assets/web/groups/learning/
   group-learning-social-sources.webp
   group-learning-pair-consulting.webp
   group-learning-pair-exchange.webp
+  group-learning-pair-diagram.webp
+  group-learning-pair-reading.webp
+  group-learning-pair-observation.webp
+  group-learning-pair-map.webp
+  group-learning-pair-tablet.webp
 ~~~
 
 画像だけで学習内容を判断させず、見出しやHTMLの説明文を必ず併用します。画像内の文字を読み取らせる設計にはしません。

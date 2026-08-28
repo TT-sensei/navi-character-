@@ -271,7 +271,12 @@
         "group-learning-social-map.png",
         "group-learning-social-sources.png",
         "group-learning-pair-consulting.png",
-        "group-learning-pair-exchange.png"
+        "group-learning-pair-exchange.png",
+        "group-learning-pair-diagram.png",
+        "group-learning-pair-reading.png",
+        "group-learning-pair-observation.png",
+        "group-learning-pair-map.png",
+        "group-learning-pair-tablet.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -283,7 +288,12 @@
         "group-learning-social-map": "社会①・地図から調べる",
         "group-learning-social-sources": "社会②・資料を比べて考える",
         "group-learning-pair-consulting": "二人組①・机を並べて相談",
-        "group-learning-pair-exchange": "二人組②・立って考えを交流"
+        "group-learning-pair-exchange": "二人組②・立って考えを交流",
+        "group-learning-pair-diagram": "二人組③・図で考え方を説明",
+        "group-learning-pair-reading": "二人組④・音読を聞き合う",
+        "group-learning-pair-observation": "二人組⑤・観察して記録する",
+        "group-learning-pair-map": "二人組⑥・地図と資料を調べる",
+        "group-learning-pair-tablet": "二人組⑦・タブレットで相談"
       }
     }
   },

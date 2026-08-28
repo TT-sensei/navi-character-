@@ -45,7 +45,12 @@ const groups=[
   {path:'learning/group-learning-social-map',label:'社会①・地図から調べる',category:'学習'},
   {path:'learning/group-learning-social-sources',label:'社会②・資料を比べて考える',category:'学習'},
   {path:'learning/group-learning-pair-consulting',label:'二人組①・机を並べて相談',category:'学習'},
-  {path:'learning/group-learning-pair-exchange',label:'二人組②・立って考えを交流',category:'学習'}
+  {path:'learning/group-learning-pair-exchange',label:'二人組②・立って考えを交流',category:'学習'},
+  {path:'learning/group-learning-pair-diagram',label:'二人組③・図で考え方を説明',category:'学習'},
+  {path:'learning/group-learning-pair-reading',label:'二人組④・音読を聞き合う',category:'学習'},
+  {path:'learning/group-learning-pair-observation',label:'二人組⑤・観察して記録する',category:'学習'},
+  {path:'learning/group-learning-pair-map',label:'二人組⑥・地図と資料を調べる',category:'学習'},
+  {path:'learning/group-learning-pair-tablet',label:'二人組⑦・タブレットで相談',category:'学習'}
 ];
 const dailyBackgrounds=[
   {id:'daily-classroom',label:'教室・授業'},
