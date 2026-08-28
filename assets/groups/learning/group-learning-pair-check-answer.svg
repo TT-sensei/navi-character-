@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="512" viewBox="0 0 768 512" role="img" aria-label="かいとつきが答えを一緒に確認する学習場面">
+  <ellipse cx="385" cy="454" rx="250" ry="22" fill="#dfe8ef" opacity=".55"/>
+  <rect x="235" y="330" width="300" height="18" rx="9" fill="#d7b58e"/>
+  <rect x="262" y="347" width="18" height="90" rx="7" fill="#bb8d65"/>
+  <rect x="490" y="347" width="18" height="90" rx="7" fill="#bb8d65"/>
+  <g transform="rotate(4 384 314)">
+    <rect x="318" y="281" width="132" height="76" rx="8" fill="#fff" stroke="#88a7c1" stroke-width="3"/>
+    <circle cx="338" cy="302" r="7" fill="none" stroke="#6aa87a" stroke-width="3"/>
+    <path d="M334 302l4 4 8-10" fill="none" stroke="#6aa87a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="355" y1="302" x2="430" y2="302" stroke="#acc0d2" stroke-width="3"/>
+    <circle cx="338" cy="326" r="7" fill="none" stroke="#6aa87a" stroke-width="3"/>
+    <line x1="355" y1="326" x2="420" y2="326" stroke="#acc0d2" stroke-width="3"/>
+  </g>
+  <image href="https://tt-sensei.github.io/navi-character-/assets/characters/kai/fullbody/checking-note.png" x="72" y="78" width="310" height="370" preserveAspectRatio="xMidYMid meet"/>
+  <image href="https://tt-sensei.github.io/navi-character-/assets/characters/tsuki/fullbody/reaching-out.png" x="402" y="80" width="300" height="366" preserveAspectRatio="xMidYMid meet"/>
+</svg>
