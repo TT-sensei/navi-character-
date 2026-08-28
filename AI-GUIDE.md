@@ -470,3 +470,11 @@ effects/ は、元のモンスター画像を加工せず、教材側でステ�
 - キャラクター画像だけで学習内容や判定を伝える
 
 迷った場合は、catalog.jsonに戻り、既存の命名、分類、WebP対応、NAVI-USAGE.mdの運用方針を確認してください。
+
+### 今回追加したWeb用画像
+
+- group-learning-pair-blackboard.webp
+- group-learning-pair-measure-length.webp
+- group-learning-pair-carry-tools.webp
+- group-learning-pair-balance.webp
+- group-learning-pair-measure-shadow.webp

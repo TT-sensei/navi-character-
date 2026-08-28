@@ -50,7 +50,12 @@ const groups=[
   {path:'learning/group-learning-pair-reading',label:'二人組④・音読を聞き合う',category:'学習'},
   {path:'learning/group-learning-pair-observation',label:'二人組⑤・観察して記録する',category:'学習'},
   {path:'learning/group-learning-pair-map',label:'二人組⑥・地図と資料を調べる',category:'学習'},
-  {path:'learning/group-learning-pair-tablet',label:'二人組⑦・タブレットで相談',category:'学習'}
+  {path:'learning/group-learning-pair-tablet',label:'二人組⑦・タブレットで相談',category:'学習'},
+  {path:'learning/group-learning-pair-blackboard',label:'二人組⑧・黒板の前で説明',category:'学習'},
+  {path:'learning/group-learning-pair-measure-length',label:'二人組⑨・長さを測る',category:'学習'},
+  {path:'learning/group-learning-pair-carry-tools',label:'二人組⑩・学習道具を運ぶ',category:'学習'},
+  {path:'learning/group-learning-pair-balance',label:'二人組⑪・はかりで重さを測る',category:'学習'},
+  {path:'learning/group-learning-pair-measure-shadow',label:'二人組⑫・影の長さを測る',category:'学習'}
 ];
 const dailyBackgrounds=[
   {id:'daily-classroom',label:'教室・授業'},

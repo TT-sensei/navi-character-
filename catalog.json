@@ -276,7 +276,12 @@
         "group-learning-pair-reading.png",
         "group-learning-pair-observation.png",
         "group-learning-pair-map.png",
-        "group-learning-pair-tablet.png"
+        "group-learning-pair-tablet.png",
+        "group-learning-pair-blackboard.png",
+        "group-learning-pair-measure-length.png",
+        "group-learning-pair-carry-tools.png",
+        "group-learning-pair-balance.png",
+        "group-learning-pair-measure-shadow.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -293,7 +298,12 @@
         "group-learning-pair-reading": "二人組④・音読を聞き合う",
         "group-learning-pair-observation": "二人組⑤・観察して記録する",
         "group-learning-pair-map": "二人組⑥・地図と資料を調べる",
-        "group-learning-pair-tablet": "二人組⑦・タブレットで相談"
+        "group-learning-pair-tablet": "二人組⑦・タブレットで相談",
+        "group-learning-pair-blackboard": "二人組⑧・黒板の前で説明",
+        "group-learning-pair-measure-length": "二人組⑨・長さを測る",
+        "group-learning-pair-carry-tools": "二人組⑩・学習道具を運ぶ",
+        "group-learning-pair-balance": "二人組⑪・はかりで重さを測る",
+        "group-learning-pair-measure-shadow": "二人組⑫・影の長さを測る"
       }
     }
   },

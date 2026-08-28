@@ -579,3 +579,11 @@ function showAnswerResult(isCorrect) {
 - [ ] prefers-reduced-motionに対応している
 
 迷った場合は、まず学習画面を見て、キャラクターを小さくする、減らす、静かにする方向で調整します。トップ画面では、シリーズの顔として6人集合画像を優先的に検討します。
+
+### 今回追加した二人組の学習シーン
+
+- group-learning-pair-blackboard：二人組で黒板の前で考え方を説明する
+- group-learning-pair-measure-length：二人組で長さを測る
+- group-learning-pair-carry-tools：二人組で学習道具を運ぶ
+- group-learning-pair-balance：二人組ではかりで重さを測る
+- group-learning-pair-measure-shadow：二人組で影の長さを測る
