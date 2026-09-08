@@ -28,7 +28,7 @@
     asset.innerHTML=list.map(x=>`<option value="${escapeHtml(x.value)}">${escapeHtml(x.label)}</option>`).join('');
     setCard(list[0]);
   }
-  function escapeHtml(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+  function escapeHtml(s){return String(s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;','\\':'&#92;'}[c]));}
   function current(){return (assets[type.value]||[]).find(x=>x.value===asset.value)||assets[type.value]?.[0];}
   function setCard(item,reset=true){
     if(!item)return;
@@ -84,7 +84,10 @@
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flipCard()}});
 
   document.querySelector('.mode-tabs')?.addEventListener('click',event=>{
-    if(event.target.closest('[data-mode="cards"]')){
+    const cardButton=event.target.closest('[data-mode="cards"]');
+    if(cardButton){
+      event.preventDefault();
+      event.stopImmediatePropagation();
       lab.hidden=false;
       ['.intro-card','#characterGrid','#libraryCard','#groupLibrary','#backgroundLibrary','.usage-card','#fantasyStage','#fantasyGroupLibrary','#monsterLibrary'].forEach(sel=>{const el=document.querySelector(sel);if(el)el.hidden=true;});
     }else{
