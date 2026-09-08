@@ -7,8 +7,6 @@
   const lab=document.querySelector('#cardLab');
   if(!lab)return;
 
-  // On the main NAVI CHARACTER page, CARD LAB is now a standalone page.
-  // Open it in a separate browser tab and keep the embedded legacy section inactive.
   const mainTabs=document.querySelector('.mode-tabs');
   if(mainTabs){
     mainTabs.addEventListener('click',event=>{
@@ -49,16 +47,52 @@
     rare:`${cardRoot}frame/95c63908-e79e-4ec7-8c3a-1608dc052dc0.png`,
     'super-rare':`${cardRoot}frame/super-rare.png`
   };
-  const assets={
-    character:(typeof characters!=='undefined'?characters:[]).flatMap(c=>c.fullbody.slice(0,5).map(p=>({value:`character:${c.id}:${p}`,label:`${c.label}｜${p}`,url:`${root}characters/${c.id}/fullbody/${p}.webp`,name:c.label,type:'NAVI CHARACTER'}))),
-    fantasy:(typeof fantasyCharacters!=='undefined'?fantasyCharacters:[]).map(c=>({value:`fantasy:${c.id}`,label:`${c.label}｜${c.job}`,url:`${root}fantasy/${c.standing}.webp`,name:`${c.label}｜${c.job}`,type:'FANTASY NAVI'})),
-    monster:(typeof fantasyMonsterSets!=='undefined'?fantasyMonsterSets:[]).flatMap(set=>set.names.map(n=>({value:`monster:${set.id}:${n}`,label:`${n.replace(/-/g,' ')}｜${set.label}`,url:`${root}fantasy/${set.path}/${n}.webp`,name:n.replace(/-/g,' '),type:set.label})))
-  };
   const styleLabels={normal:'NORMAL',holo:'RARE',rainbow:'SUPER RARE'};
   const bgLabels={sunset:'夕焼け','starry-sky':'星空',waterfall:'滝',grassland:'草原',hill:'丘',volcano:'火山',forest:'森',palace:'宮殿'};
   const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   let orientationBound=false;
-  function escapeHtml(s){return String(s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}
+  let monsterNamesJa={};
+
+  function collectMonsterNames(node){
+    if(!node||typeof node!=='object')return;
+    if(node.displayNamesJa&&typeof node.displayNamesJa==='object'){
+      monsterNamesJa={...monsterNamesJa,...node.displayNamesJa};
+    }
+    Object.values(node).forEach(value=>{
+      if(value&&typeof value==='object')collectMonsterNames(value);
+    });
+  }
+
+  async function loadMonsterNames(){
+    try{
+      const response=await fetch('catalog.json',{cache:'no-store'});
+      if(!response.ok)throw new Error(`catalog.json: ${response.status}`);
+      collectMonsterNames(await response.json());
+    }catch(error){
+      console.warn('CARD LAB: catalog.json の日本語名を読み込めませんでした。',error);
+    }
+  }
+
+  function monsterDisplayName(id){return monsterNamesJa[id]||id.replace(/-/g,' ');}
+
+  const assets={
+    character:(typeof characters!=='undefined'?characters:[]).flatMap(c=>c.fullbody.slice(0,5).map(p=>({value:`character:${c.id}:${p}`,label:`${c.label}｜${p}`,url:`${root}characters/${c.id}/fullbody/${p}.webp`,name:c.label,type:'NAVI CHARACTER'}))),
+    fantasy:(typeof fantasyCharacters!=='undefined'?fantasyCharacters:[]).map(c=>({value:`fantasy:${c.id}`,label:`${c.label}｜${c.job}`,url:`${root}fantasy/${c.standing}.webp`,name:`${c.label}｜${c.job}`,type:'FANTASY NAVI'})),
+    monster:(typeof fantasyMonsterSets!=='undefined'?fantasyMonsterSets:[]).flatMap(set=>set.names.map(n=>({value:`monster:${set.id}:${n}`,label:`${monsterDisplayName(n)}｜${set.label}`,url:`${root}fantasy/${set.path}/${n}.webp`,name:monsterDisplayName(n),type:set.label})))
+  };
+
+  function refreshMonsterNames(){
+    (assets.monster||[]).forEach(item=>{
+      const id=item.value.split(':').pop();
+      const setId=item.value.split(':')[1];
+      const set=(typeof fantasyMonsterSets!=='undefined'?fantasyMonsterSets:[]).find(x=>x.id===setId);
+      item.name=monsterDisplayName(id);
+      item.label=`${item.name}｜${set?.label||item.type}`;
+    });
+    if(type.value==='monster')fillAssets();
+  }
+
+  function escapeHtml(s){return String(s).replace(/[&<>\\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\"':'&quot;'}[c]));}
   function current(){return (assets[type.value]||[]).find(x=>x.value===asset.value)||(assets[type.value]||[])[0];}
   function prepareSelects(){
     if(style)style.innerHTML=Object.entries(styleLabels).map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
@@ -147,4 +181,5 @@
     const preferred=assets.monster.find(x=>x.value.includes('komorin-little-night-bat'))||assets.monster[0];
     asset.value=preferred.value;style.value='rainbow';bg.value='starry-sky';holo.value='strong';setCard(preferred);
   }
+  loadMonsterNames().then(refreshMonsterNames);
 })();
