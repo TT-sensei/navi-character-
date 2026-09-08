@@ -6,6 +6,20 @@
   'use strict';
   const lab=document.querySelector('#cardLab');
   if(!lab)return;
+
+  // On the main NAVI CHARACTER page, CARD LAB is now a standalone page.
+  // Open it in a separate browser tab and keep the embedded legacy section inactive.
+  const mainTabs=document.querySelector('.mode-tabs');
+  if(mainTabs){
+    mainTabs.addEventListener('click',event=>{
+      const cardButton=event.target.closest('[data-mode="cards"]');
+      if(!cardButton)return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      window.open('card-lab.html','_blank','noopener');
+    },true);
+  }
+
   const type=lab.querySelector('#cardAssetType');
   const asset=lab.querySelector('#cardAsset');
   const style=lab.querySelector('#cardStyle');
@@ -128,13 +142,6 @@
   card.addEventListener('pointerleave',resetTilt);card.addEventListener('pointercancel',resetTilt);
   card.addEventListener('dblclick',flipCard);card.addEventListener('pointerdown',requestMotionPermission,{once:true});
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flipCard();}});
-  document.querySelector('.mode-tabs')?.addEventListener('click',event=>{
-    const cardButton=event.target.closest('[data-mode="cards"]');
-    if(cardButton){
-      event.preventDefault();event.stopImmediatePropagation();lab.hidden=false;
-      ['.intro-card','#characterGrid','#libraryCard','#groupLibrary','#backgroundLibrary','.usage-card','#fantasyStage','#fantasyGroupLibrary','#monsterLibrary'].forEach(sel=>{const el=document.querySelector(sel);if(el)el.hidden=true;});
-    }else lab.hidden=true;
-  },true);
   prepareSelects();type.value='monster';fillAssets();
   if((assets.monster||[]).length){
     const preferred=assets.monster.find(x=>x.value.includes('komorin-little-night-bat'))||assets.monster[0];
