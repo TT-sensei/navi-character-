@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>CARD LAB | NAVI CHARACTER</title>
+  <link rel="stylesheet" href="style.css?v=20260828-fantasy-groups">
+  <link rel="stylesheet" href="effects/card-lab.css?v=20260908-card-lab">
+  <style>
+    .card-lab-page{max-width:1280px;margin:0 auto;padding:28px 20px 64px}
+    .card-lab-page__nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}
+    .card-lab-page__back{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid rgba(17,24,39,.16);border-radius:999px;text-decoration:none;font-weight:700;background:#fff;color:inherit}
+    .card-lab-page .card-lab{display:block}
+    .card-lab-page .card-lab__body{min-height:680px}
+    @media (max-width:760px){.card-lab-page{padding:16px 12px 40px}.card-lab-page__nav{align-items:flex-start}.card-lab-page .card-lab__body{min-height:0}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">NAVI CHARACTER · CARD LAB</p>
+      <h1>🎴 CARD LAB</h1>
+      <p class="lead">ナビキャラ・ファンタジーキャラ・モンスターを、ホログラムカードに。</p>
+    </div>
+  </header>
+
+  <main class="card-lab-page">
+    <div class="card-lab-page__nav">
+      <div>
+        <p class="section-label">STANDALONE CARD LAB</p>
+        <h2>カードを自由に組み立てよう ✨</h2>
+      </div>
+      <a class="card-lab-page__back" href="index.html">← NAVI CHARACTERへ戻る</a>
+    </div>
+
+    <section class="card-lab" id="cardLab" aria-labelledby="cardLabTitle">
+      <div class="card-lab__head">
+        <div>
+          <p class="section-label">CARD LAB</p>
+          <h2 id="cardLabTitle">キャラ・モンスターをホログラムカードにする ✨</h2>
+          <p>背景・光・キャラクター・ホログラムを別レイヤーで重ね、指やマウスの動きに合わせてカードを立体的に動かします。</p>
+        </div>
+        <span class="card-lab__badge">LAYERED HOLO</span>
+      </div>
+
+      <div class="card-lab__body">
+        <div class="card-lab__preview" aria-label="インタラクティブカードプレビュー">
+          <div class="holo-card-wrap">
+            <article class="holo-card" id="holoCard" tabindex="0" data-bg="starry-sky" data-holo="strong" aria-label="ホログラムカード。指やマウスで動かせます。">
+              <div class="holo-card__face holo-card__front">
+                <div class="holo-card__layer holo-card__bg" aria-hidden="true"></div>
+                <div class="holo-card__layer holo-card__pattern" aria-hidden="true"></div>
+                <div class="holo-card__layer holo-card__aura" aria-hidden="true"></div>
+                <img class="holo-card__asset" id="holoCardImage" src="" alt="">
+                <div class="holo-card__layer holo-card__shine" aria-hidden="true"></div>
+                <div class="holo-card__layer holo-card__holo" aria-hidden="true"></div>
+                <div class="holo-card__layer holo-card__sparkles" aria-hidden="true"></div>
+                <div class="holo-card__layer holo-card__frame" aria-hidden="true"></div>
+                <div class="holo-card__title"><span class="holo-card__name" id="holoCardName">カード</span><span class="holo-card__type" id="holoCardType">NAVI</span></div>
+              </div>
+              <div class="holo-card__face holo-card__back">
+                <div class="holo-card__back-inner"><div><div class="holo-card__back-mark">✦</div><div class="holo-card__back-title">NAVI CHARACTER</div><p>学びを応援するカード</p></div></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-lab__controls">
+            <label>素材タイプ<select id="cardAssetType"><option value="character">通常ナビキャラ</option><option value="fantasy">ファンタジーキャラ</option><option value="monster">モンスター</option></select></label>
+            <label>素材<select id="cardAsset"></select></label>
+            <label>カードスタイル<select id="cardStyle"><option value="normal">NORMAL</option><option value="holo">RARE</option><option value="rainbow">SUPER RARE</option></select></label>
+            <label>背景<select id="cardBackground"></select></label>
+            <label>ホログラム強度<select id="cardHologram"><option value="soft">やわらか</option><option value="strong">強め</option><option value="none">なし</option></select></label>
+          </div>
+          <div class="card-lab__actions"><button id="cardFlip" type="button">カードを裏返す</button><button id="cardRandom" type="button">ランダムで作る</button></div>
+          <p class="card-lab__status" id="cardLabStatus" role="status" aria-live="polite"></p>
+          <div class="card-lab__legend" aria-hidden="true"><span>背景</span><span>キャラ</span><span>光</span><span>ホロ</span><span>フレーム</span></div>
+          <p class="card-lab__help">カードを指やマウスで動かすと、レイヤーごとに光と奥行きが変化します。ダブルタップ・ダブルクリック、Enter / Spaceで裏返せます。iPhoneでは端末の傾きにも対応します。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js?v=20260908-card-lab"></script>
+  <script src="effects/card-lab.js?v=20260908-card-lab"></script>
+</body>
+</html>
