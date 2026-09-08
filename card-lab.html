@@ -13,10 +13,6 @@
     .card-lab-page__back{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid rgba(17,24,39,.16);border-radius:999px;text-decoration:none;font-weight:700;background:#fff;color:inherit}
     .card-lab-page .card-lab{display:block}
     .card-lab-page .card-lab__body{min-height:680px}
-    .card-lab__download{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .card-lab__download button{appearance:none;border:0;border-radius:12px;padding:11px 16px;font:inherit;font-weight:800;cursor:pointer;background:#111827;color:#fff;box-shadow:0 6px 14px rgba(17,24,39,.14)}
-    .card-lab__download button:disabled{opacity:.6;cursor:wait}
-    .card-lab__download-note{margin:7px 0 0;font-size:.82rem;opacity:.68}
     @media (max-width:760px){.card-lab-page{padding:16px 12px 40px}.card-lab-page__nav{align-items:flex-start}.card-lab-page .card-lab__body{min-height:0}}
   </style>
 </head>
@@ -79,8 +75,6 @@
             <label>ホログラム強度<select id="cardHologram"><option value="soft">やわらか</option><option value="strong">強め</option><option value="none">なし</option></select></label>
           </div>
           <div class="card-lab__actions"><button id="cardFlip" type="button">カードを裏返す</button><button id="cardRandom" type="button">ランダムで作る</button></div>
-          <div class="card-lab__download"><button id="cardDownload" type="button">⬇ カードをPNG保存</button></div>
-          <p class="card-lab__download-note">表示中のカードをPNG画像として保存します。カードを動かして好きな角度にしてから保存できます。</p>
           <p class="card-lab__status" id="cardLabStatus" role="status" aria-live="polite"></p>
           <div class="card-lab__legend" aria-hidden="true"><span>背景</span><span>キャラ</span><span>光</span><span>ホロ</span><span>フレーム</span></div>
           <p class="card-lab__help">カードを指やマウスで動かすと、レイヤーごとに光と奥行きが変化します。ダブルタップ・ダブルクリック、Enter / Spaceで裏返せます。iPhoneでは端末の傾きにも対応します。</p>
@@ -89,9 +83,7 @@
     </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="script.js?v=20260908-card-lab"></script>
-  <script src="effects/card-lab.js?v=20260908-card-lab-download"></script>
-  <script src="effects/card-download.js?v=20260908"></script>
+  <script src="effects/card-lab.js?v=20260908-card-lab"></script>
 </body>
 </html>
