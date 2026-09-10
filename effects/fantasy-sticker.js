@@ -46,6 +46,19 @@
     replayTapEffect(sticker);
   });
 
+  // 種族総称を「ナビアン」に統一。既存データ・内部ID・画像パスは変更しない。
+  const monsterLibrary = document.querySelector('#monsterLibrary');
+  if (monsterLibrary) {
+    const heading = monsterLibrary.querySelector('.library-head h2');
+    if (heading) heading.textContent = heading.textContent.replaceAll('ドリナビス', 'ナビアン');
+
+    const description = monsterLibrary.querySelector('.library-head > div > p:not(.section-label)');
+    if (description) description.textContent = description.textContent.replaceAll('ドリナビス', 'ナビアン');
+
+    const filters = document.querySelector('#monsterFilters');
+    if (filters) filters.setAttribute('aria-label', 'ナビアン分類');
+  }
+
   window.FantasySticker = Object.freeze({
     play: replayTapEffect,
     isUnlocked: isUnlocked
