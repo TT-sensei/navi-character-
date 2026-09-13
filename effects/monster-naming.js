@@ -5,32 +5,27 @@
     boss: 'ボスナビ'
   };
 
+  const setText = (el, text) => {
+    if (el && el.textContent !== text) el.textContent = text;
+  };
+
   const replaceText = () => {
-    document.querySelectorAll('[data-monster-filter="zako"]').forEach(el => { el.textContent = names.zako; });
-    document.querySelectorAll('[data-monster-filter="zakoEvolved"]').forEach(el => { el.textContent = names.zakoEvolved; });
-    document.querySelectorAll('[data-monster-filter="boss"]').forEach(el => { el.textContent = names.boss; });
-
-    const heading = document.querySelector('#monsterLibrary .library-head h2');
-    if (heading) heading.textContent = 'ナビアン図鑑';
-
-    const intro = document.querySelector('#monsterLibrary .library-head p:not(.section-label)');
-    if (intro) intro.textContent = 'ナビアン・エボナビ・ボスナビを分類ごとに確認できます。';
-
+    observer.disconnect();
+    document.querySelectorAll('[data-monster-filter="zako"]').forEach(el => setText(el, names.zako));
+    document.querySelectorAll('[data-monster-filter="zakoEvolved"]').forEach(el => setText(el, names.zakoEvolved));
+    document.querySelectorAll('[data-monster-filter="boss"]').forEach(el => setText(el, names.boss));
+    setText(document.querySelector('#monsterLibrary .library-head h2'), 'ナビアン図鑑');
+    setText(document.querySelector('#monsterLibrary .library-head p:not(.section-label)'), 'ナビアン・エボナビ・ボスナビを分類ごとに確認できます。');
     document.querySelector('#monsterFilters')?.setAttribute('aria-label', 'ナビアン分類');
-
     document.querySelectorAll('#monsterGrid .monster-item small').forEach(el => {
-      el.textContent = el.textContent
-        .replace('ザコ進化系', names.zakoEvolved)
-        .replace('ザコモンスター', names.zako)
-        .replace('ボスモンスター', names.boss);
+      const replaced = el.textContent.replace('ザコ進化系', names.zakoEvolved).replace('ザコモンスター', names.zako).replace('ボスモンスター', names.boss);
+      setText(el, replaced);
     });
-
     document.querySelectorAll('#previewMonsterSelect option').forEach(option => {
-      option.textContent = option.textContent
-        .replace('ザコ進化系', names.zakoEvolved)
-        .replace('ザコモンスター', names.zako)
-        .replace('ボスモンスター', names.boss);
+      const replaced = option.textContent.replace('ザコ進化系', names.zakoEvolved).replace('ザコモンスター', names.zako).replace('ボスモンスター', names.boss);
+      setText(option, replaced);
     });
+    observer.observe(document.body, { childList: true, subtree: true });
   };
 
   const observer = new MutationObserver(replaceText);
