@@ -248,14 +248,20 @@
         "group-daily-classroom.png",
         "group-daily-study.png",
         "group-daily-recess.png",
-        "group-daily-cleanup.png"
+        "group-daily-cleanup.png",
+        "group-daily-gymnasium.jpeg",
+        "group-daily-recess-play.jpeg",
+        "group-daily-outdoor-pe.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
         "group-daily-classroom": "教室・授業前の準備",
         "group-daily-study": "協力して学ぶ時間",
         "group-daily-recess": "休み時間・遊び",
-        "group-daily-cleanup": "掃除・協力"
+        "group-daily-cleanup": "掃除・協力",
+        "group-daily-gymnasium": "体育館での体育・運動",
+        "group-daily-recess-play": "休み時間・外遊び",
+        "group-daily-outdoor-pe": "校庭など屋外での体育・運動"
       }
     },
     "learning": {
