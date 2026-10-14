@@ -199,6 +199,15 @@ monsterFilters.addEventListener('click',e=>{
 assetGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 monsterGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 groups.forEach(group=>{const webPath='assets/web/groups/'+group.path+'.webp';const originalPath='assets/groups/'+group.path+'.'+(group.originalExt||'png');groupGrid.insertAdjacentHTML('beforeend','<button class="group-item" data-path="'+webPath+'" data-original="'+originalPath+'" data-label="'+group.label+'"><img src="'+webPath+'" alt="'+group.label+'"><span>'+group.label+'<small>'+group.category+' / '+group.path+'.webp / 原本をダウンロード可</small></span></button>');});
+const dailyGroupImages=[
+  {file:'group-daily-gymnasium.jpeg',label:'体育館での体育',usage:'体育館で運動する6人',ext:'jpeg'},
+  {file:'group-daily-recess-play.jpeg',label:'休み時間・外遊び',usage:'休み時間の様子',ext:'jpeg'},
+  {file:'group-daily-outdoor-pe.png',label:'校庭での体育',usage:'屋外で運動する様子',ext:'png'}
+];
+dailyGroupImages.forEach(item=>{
+  const originalPath='assets/groups/daily/'+item.file;
+  groupGrid.insertAdjacentHTML('beforeend','<button class="group-item" data-path="'+originalPath+'" data-original="'+originalPath+'" data-label="'+item.label+'"><img src="'+originalPath+'" alt="'+item.label+'" loading="lazy"><span>'+item.label+'<small>日常・体育 / '+item.usage+' / 原本</small></span></button>');
+});
 groupGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 backgroundGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 fantasyGroupGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
