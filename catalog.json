@@ -1061,5 +1061,26 @@
         }
       }
     }
+  },
+  "selectionPolicy": {
+    "default": "random",
+    "characterIds": [
+      "riku",
+      "sora",
+      "kai",
+      "saku",
+      "tsuki",
+      "nami"
+    ],
+    "appliesTo": "standard individual character image selection",
+    "poseSelection": "choose a scene-appropriate pose separately from the character ID",
+    "rotationRequired": false,
+    "persistentSelectionRequired": false,
+    "notes": [
+      "Do not assign one character to a subject or event by default",
+      "Avoid duplicate characters when displaying multiple individuals together where practical",
+      "Respect explicit character choices and fixed story roles",
+      "Verify that the selected pose exists for the chosen character"
+    ]
   }
 }
