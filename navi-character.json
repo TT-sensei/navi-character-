@@ -27,6 +27,9 @@
     "Verify all IDs, filenames and paths in catalog.json before use.",
     "Use characters as visual guidance, not as problem text or controls.",
     "Keep image URLs centralized in the lesson application.",
-    "Use meaningful alt text or empty alt for decorative images."
+    "Use meaningful alt text or empty alt for decorative images.",
+    "For standard individual character images, choose randomly from all six character IDs by default instead of assigning one character to each subject or event.",
+    "Choose the scene-appropriate pose separately from the character ID; verify pose availability in catalog.json.",
+    "A full rotation or persistent random order is not required; avoid duplicates among simultaneously displayed characters when practical."
   ]
 }
