@@ -277,7 +277,10 @@
         "pair-daily-rain-nami-riku.png",
         "trio-daily-snow-kai-tsuki-saku.png",
         "trio-daily-entrance-riku-saku-nami.png",
-        "trio-daily-graduation-sora-tsuki-kai.png"
+        "trio-daily-graduation-sora-tsuki-kai.png",
+        "trio-daily-drill-riku-tsuki-nami.png",
+        "trio-daily-schooltrip-sora-kai-nami.png",
+        "pair-daily-checkup-tsuki-saku.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -313,7 +316,10 @@
         "pair-daily-rain-nami-riku": "雨の日の帰り道（nami・rikuの2人）",
         "trio-daily-snow-kai-tsuki-saku": "雪だるま作り（kai・tsuki・sakuの3人）",
         "trio-daily-entrance-riku-saku-nami": "入学式（riku・saku・namiの3人）",
-        "trio-daily-graduation-sora-tsuki-kai": "卒業式（sora・tsuki・kaiの3人）"
+        "trio-daily-graduation-sora-tsuki-kai": "卒業式（sora・tsuki・kaiの3人）",
+        "trio-daily-drill-riku-tsuki-nami": "避難訓練（riku・tsuki・namiの3人）",
+        "trio-daily-schooltrip-sora-kai-nami": "修学旅行（sora・kai・namiの3人）",
+        "pair-daily-checkup-tsuki-saku": "身体測定（tsuki・sakuの2人）"
       }
     },
     "learning": {
@@ -352,7 +358,8 @@
         "pair-learning-art-saku-nami.png",
         "trio-learning-english-riku-sora-kai.png",
         "pair-learning-calligraphy-tsuki-saku.png",
-        "pair-learning-cooking-kai-saku.png"
+        "pair-learning-cooking-kai-saku.png",
+        "pair-learning-sewing-saku-kai.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -387,7 +394,8 @@
         "pair-learning-art-saku-nami": "図工（saku・namiの2人）",
         "trio-learning-english-riku-sora-kai": "外国語（riku・sora・kaiの3人）",
         "pair-learning-calligraphy-tsuki-saku": "書写（tsuki・sakuの2人）",
-        "pair-learning-cooking-kai-saku": "家庭科・調理実習（kai・sakuの2人）"
+        "pair-learning-cooking-kai-saku": "家庭科・調理実習（kai・sakuの2人）",
+        "pair-learning-sewing-saku-kai": "家庭科・裁縫（saku・kaiの2人）"
       }
     }
   },
