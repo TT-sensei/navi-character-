@@ -307,7 +307,9 @@
         "trio-daily-bigcleaning-sora-riku-nami.png",
         "pair-daily-feeding-tsuki-saku.png",
         "trio-daily-cheering-kai-nami-sora.png",
-        "trio-daily-campfire-riku-tsuki-nami.png"
+        "trio-daily-campfire-riku-tsuki-nami.png",
+        "trio-daily-fireworks-sora-tsuki-nami.png",
+        "pair-daily-riceharvest-kai-tsuki.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -373,7 +375,9 @@
         "trio-daily-bigcleaning-sora-riku-nami": "大掃除（sora・riku・namiの3人）",
         "pair-daily-feeding-tsuki-saku": "飼育当番（tsuki・sakuの2人）",
         "trio-daily-cheering-kai-nami-sora": "運動会の応援（kai・nami・soraの3人）",
-        "trio-daily-campfire-riku-tsuki-nami": "キャンプファイヤー（riku・tsuki・namiの3人）"
+        "trio-daily-campfire-riku-tsuki-nami": "キャンプファイヤー（riku・tsuki・namiの3人）",
+        "trio-daily-fireworks-sora-tsuki-nami": "花火大会（sora・tsuki・namiの3人）",
+        "pair-daily-riceharvest-kai-tsuki": "稲刈り体験（kai・tsukiの2人）"
       }
     },
     "learning": {
@@ -435,7 +439,8 @@
         "pair-learning-interview-nami-riku.png",
         "pair-learning-shapes-kai-tsuki.png",
         "pair-learning-wordcards-sora-saku.png",
-        "pair-learning-kanji-saku-riku.png"
+        "pair-learning-kanji-saku-riku.png",
+        "pair-learning-melodica-riku-kai.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -493,7 +498,8 @@
         "pair-learning-interview-nami-riku": "インタビュー（nami・rikuの2人）",
         "pair-learning-shapes-kai-tsuki": "図形を組み立てる（kai・tsukiの2人）",
         "pair-learning-wordcards-sora-saku": "絵カードで学習（sora・sakuの2人）",
-        "pair-learning-kanji-saku-riku": "漢字を練習する（saku・rikuの2人）"
+        "pair-learning-kanji-saku-riku": "漢字を練習する（saku・rikuの2人）",
+        "pair-learning-melodica-riku-kai": "鍵盤ハーモニカ（riku・kaiの2人）"
       }
     }
   },
