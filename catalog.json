@@ -280,7 +280,10 @@
         "trio-daily-graduation-sora-tsuki-kai.png",
         "trio-daily-drill-riku-tsuki-nami.png",
         "trio-daily-schooltrip-sora-kai-nami.png",
-        "pair-daily-checkup-tsuki-saku.png"
+        "pair-daily-checkup-tsuki-saku.png",
+        "trio-daily-endurance-riku-sora-tsuki.png",
+        "trio-daily-seatchange-kai-saku-nami.png",
+        "pair-daily-broadcast-nami-sora.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -319,7 +322,10 @@
         "trio-daily-graduation-sora-tsuki-kai": "卒業式（sora・tsuki・kaiの3人）",
         "trio-daily-drill-riku-tsuki-nami": "避難訓練（riku・tsuki・namiの3人）",
         "trio-daily-schooltrip-sora-kai-nami": "修学旅行（sora・kai・namiの3人）",
-        "pair-daily-checkup-tsuki-saku": "身体測定（tsuki・sakuの2人）"
+        "pair-daily-checkup-tsuki-saku": "身体測定（tsuki・sakuの2人）",
+        "trio-daily-endurance-riku-sora-tsuki": "持久走（riku・sora・tsukiの3人）",
+        "trio-daily-seatchange-kai-saku-nami": "席替え（kai・saku・namiの3人）",
+        "pair-daily-broadcast-nami-sora": "放送委員会（nami・soraの2人）"
       }
     },
     "learning": {
@@ -364,7 +370,8 @@
         "trio-learning-newspaper-tsuki-saku-riku.png",
         "pair-learning-painting-tsuki-kai.png",
         "pair-learning-tablet-sora-nami.png",
-        "pair-learning-carving-sora-nami.png"
+        "pair-learning-carving-sora-nami.png",
+        "trio-learning-discussion-riku-saku-kai.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -405,7 +412,8 @@
         "trio-learning-newspaper-tsuki-saku-riku": "新聞づくり（tsuki・saku・rikuの3人）",
         "pair-learning-painting-tsuki-kai": "絵の具で描く（tsuki・kaiの2人）",
         "pair-learning-tablet-sora-nami": "タブレット学習（sora・namiの2人）",
-        "pair-learning-carving-sora-nami": "版画づくり（sora・namiの2人）"
+        "pair-learning-carving-sora-nami": "版画づくり（sora・namiの2人）",
+        "trio-learning-discussion-riku-saku-kai": "班で話し合い（riku・saku・kaiの3人）"
       }
     }
   },
