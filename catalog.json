@@ -254,7 +254,17 @@
         "group-daily-outdoor-pe.png",
         "pair-daily-library-nami-kai.png",
         "pair-daily-cleaning-riku-saku.png",
-        "pair-daily-study-sora-tsuki.png"
+        "pair-daily-study-sora-tsuki.png",
+        "trio-daily-arrival-riku-sora-tsuki.png",
+        "pair-daily-greeting-kai-saku.png",
+        "pair-daily-recess-nami-riku.png",
+        "trio-daily-schoolyard-sora-saku-nami.png",
+        "pair-daily-goinghome-tsuki-kai.png",
+        "pair-daily-class-saku-sora.png",
+        "trio-daily-music-riku-kai-nami.png",
+        "pair-daily-morning-tsuki-saku.png",
+        "pair-daily-lunch-kai-tsuki.png",
+        "trio-daily-bye-riku-sora-nami.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -267,7 +277,17 @@
         "group-daily-outdoor-pe": "校庭など屋外での体育・運動",
         "pair-daily-library-nami-kai": "図書室で調べもの（nami・kaiの2人）",
         "pair-daily-cleaning-riku-saku": "掃除の時間（riku・sakuの2人）",
-        "pair-daily-study-sora-tsuki": "教室で勉強を教え合う（sora・tsukiの2人）"
+        "pair-daily-study-sora-tsuki": "教室で勉強を教え合う（sora・tsukiの2人）",
+        "trio-daily-arrival-riku-sora-tsuki": "登校（riku・sora・tsukiの3人）",
+        "pair-daily-greeting-kai-saku": "朝のあいさつ（kai・sakuの2人）",
+        "pair-daily-recess-nami-riku": "休み時間の窓辺（nami・rikuの2人）",
+        "trio-daily-schoolyard-sora-saku-nami": "校庭でなわとび（sora・saku・namiの3人）",
+        "pair-daily-goinghome-tsuki-kai": "下校（tsuki・kaiの2人）",
+        "pair-daily-class-saku-sora": "授業で手を挙げる（saku・soraの2人）",
+        "trio-daily-music-riku-kai-nami": "音楽の時間（riku・kai・namiの3人）",
+        "pair-daily-morning-tsuki-saku": "朝の会のスピーチ（tsuki・sakuの2人）",
+        "pair-daily-lunch-kai-tsuki": "給食の配膳（kai・tsukiの2人）",
+        "trio-daily-bye-riku-sora-nami": "下校のバイバイ（riku・sora・namiの3人）"
       }
     },
     "learning": {
