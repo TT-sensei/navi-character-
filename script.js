@@ -198,7 +198,7 @@ monsterFilters.addEventListener('click',e=>{
 });
 assetGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 monsterGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
-const sceneState={cat:'all',char:'all',q:''};
+const sceneState={cat:'all',char:'all',subject:'all',q:''};
 let sceneItems=[];
 const sceneCharIds=['riku','sora','kai','saku','tsuki','nami'];
 const sceneCharsOf=stem=>sceneCharIds.filter(id=>stem.split('-').includes(id));
@@ -207,12 +207,13 @@ function catalogSceneItems(cat){
   const add=(section,category)=>{
     (section.files||[]).forEach(f=>{
       const stem=f.replace(/\.[^.]+$/,'');
-      const noWebpFiles=['group-daily-gymnasium.jpeg','group-daily-recess-play.jpeg','group-daily-outdoor-pe.png'];const labelOverrides={'group-daily-gymnasium':'体育館での体育','group-daily-recess-play':'休み時間・外遊び','group-daily-outdoor-pe':'校庭での体育'};items.push({web:noWebpFiles.includes(f)?`${section.basePath}/${f}`:`${section.webBasePath||'assets/web/groups'}/${stem}.webp`,original:`${section.basePath}/${f}`,label:(section.usage&&(section.usage[stem]||section.usage[stem.replace(/^group-/,'')]))||labelOverrides[stem]||stem,category,chars:category==='集合'?sceneCharIds.slice():sceneCharsOf(stem)});
+      const noWebpFiles=['group-daily-gymnasium.jpeg','group-daily-recess-play.jpeg','group-daily-outdoor-pe.png'];const labelOverrides={'group-daily-gymnasium':'体育館での体育','group-daily-recess-play':'休み時間・外遊び','group-daily-outdoor-pe':'校庭での体育'};items.push({web:noWebpFiles.includes(f)?`${section.basePath}/${f}`:`${section.webBasePath||'assets/web/groups'}/${stem}.webp`,original:`${section.basePath}/${f}`,label:(section.usage&&(section.usage[stem]||section.usage[stem.replace(/^group-/,'')]))||labelOverrides[stem]||stem,category,chars:(category==='集合'||(category!=='学習'&&stem.startsWith('group-')))?sceneCharIds.slice():sceneCharsOf(stem),subject:(section.subjects&&section.subjects[stem])||''});
     });
   };
   add({files:g.files,usage:g.usage,basePath:g.basePath,webBasePath:g.webBasePath},'集合');
   add(g.daily,'日常');
   add(g.learning,'学習');
+  if(cat.fantasy&&cat.fantasy.groups)add(cat.fantasy.groups,'ファンタジー');
   return items;
 }
 function fallbackSceneItems(){
@@ -221,10 +222,10 @@ function fallbackSceneItems(){
 function renderScenes(){
   if(!groupGrid)return;
   const q=sceneState.q.trim();
-  const list=sceneItems.filter(it=>(sceneState.cat==='all'||it.category===sceneState.cat)&&(sceneState.char==='all'||it.chars.includes(sceneState.char))&&(!q||it.label.includes(q)));
+  const list=sceneItems.filter(it=>(sceneState.cat==='all'||it.category===sceneState.cat)&&(sceneState.char==='all'||it.chars.includes(sceneState.char))&&(sceneState.subject==='all'||it.subject===sceneState.subject)&&(!q||it.label.includes(q)));
   const countEl=document.querySelector('#groupCount');if(countEl)countEl.textContent=sceneItems.length+' files';
   const status=document.querySelector('#sceneStatus');if(status)status.textContent=list.length+'件の場面を表示中';
-  groupGrid.innerHTML=list.length?list.map(it=>`<button class="group-item scene-item" data-path="${it.web}" data-original="${it.original}" data-label="${esc(it.label)}"><img src="${it.web}" alt="${esc(it.label)}" loading="lazy"><span>${esc(it.label)}<small>${it.category}シーン</small></span></button>`).join(''):'<p class="scene-empty">見つかりませんでした。検索のことばを変えてみてください。</p>';
+  groupGrid.innerHTML=list.length?list.map(it=>`<button class="group-item scene-item" data-path="${it.web}" data-original="${it.original}" data-label="${esc(it.label)}"><img src="${it.web}" alt="${esc(it.label)}" loading="lazy"><span>${esc(it.label)}<small>${it.category}${it.subject?'・'+it.subject:''}シーン</small></span></button>`).join(''):'<p class="scene-empty">見つかりませんでした。検索のことばを変えてみてください。</p>';
 }
 async function initScenes(){
   try{const res=await fetch('catalog.json');if(!res.ok)throw new Error('catalog');sceneItems=catalogSceneItems(await res.json());}catch(e){sceneItems=fallbackSceneItems();}
@@ -232,6 +233,7 @@ async function initScenes(){
 }
 document.querySelectorAll('[data-scene-cat]').forEach(b=>b.addEventListener('click',()=>{sceneState.cat=b.dataset.sceneCat;document.querySelectorAll('[data-scene-cat]').forEach(x=>x.classList.toggle('active',x===b));renderScenes();}));
 document.querySelectorAll('[data-scene-char]').forEach(b=>b.addEventListener('click',()=>{sceneState.char=b.dataset.sceneChar;document.querySelectorAll('[data-scene-char]').forEach(x=>x.classList.toggle('active',x===b));renderScenes();}));
+document.querySelectorAll('[data-scene-subject]').forEach(b=>b.addEventListener('click',()=>{sceneState.subject=b.dataset.sceneSubject;document.querySelectorAll('[data-scene-subject]').forEach(x=>x.classList.toggle('active',x===b));renderScenes();}));
 document.querySelector('#sceneSearch')?.addEventListener('input',e=>{sceneState.q=e.target.value;renderScenes();});
 initScenes();
 groupGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
