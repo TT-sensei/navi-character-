@@ -1247,14 +1247,22 @@
         "group-fantasy-adventure.png",
         "group-fantasy-battle.png",
         "group-fantasy-celebration.png",
-        "group-fantasy-training.png"
+        "group-fantasy-training.png",
+        "trio-fantasy-forest-riku-sora-tsuki.png",
+        "pair-fantasy-treasure-kai-nami.png",
+        "pair-fantasy-magicbook-saku-tsuki.png",
+        "trio-fantasy-starcamp-riku-nami-sora.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
         "group-fantasy-adventure": "森の探索・冒険",
         "group-fantasy-battle": "遺跡・戦闘準備",
         "group-fantasy-celebration": "クエスト成功・お祝い",
-        "group-fantasy-training": "練習場・作戦会議"
+        "group-fantasy-training": "練習場・作戦会議",
+        "trio-fantasy-forest-riku-sora-tsuki": "森の冒険（riku・sora・tsukiの3人）",
+        "pair-fantasy-treasure-kai-nami": "宝箱を開ける（kai・namiの2人）",
+        "pair-fantasy-magicbook-saku-tsuki": "魔法の本（saku・tsukiの2人）",
+        "trio-fantasy-starcamp-riku-nami-sora": "星空のキャンプ（riku・nami・soraの3人）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
