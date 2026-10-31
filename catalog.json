@@ -1251,7 +1251,10 @@
         "trio-fantasy-forest-riku-sora-tsuki.png",
         "pair-fantasy-treasure-kai-nami.png",
         "pair-fantasy-magicbook-saku-tsuki.png",
-        "trio-fantasy-starcamp-riku-nami-sora.png"
+        "trio-fantasy-starcamp-riku-nami-sora.png",
+        "trio-fantasy-cave-kai-riku-sora.png",
+        "pair-fantasy-skyisland-tsuki-nami.png",
+        "pair-fantasy-meetnavian-sora-saku.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
@@ -1262,7 +1265,10 @@
         "trio-fantasy-forest-riku-sora-tsuki": "森の冒険（riku・sora・tsukiの3人）",
         "pair-fantasy-treasure-kai-nami": "宝箱を開ける（kai・namiの2人）",
         "pair-fantasy-magicbook-saku-tsuki": "魔法の本（saku・tsukiの2人）",
-        "trio-fantasy-starcamp-riku-nami-sora": "星空のキャンプ（riku・nami・soraの3人）"
+        "trio-fantasy-starcamp-riku-nami-sora": "星空のキャンプ（riku・nami・soraの3人）",
+        "trio-fantasy-cave-kai-riku-sora": "洞窟の探検（kai・riku・soraの3人）",
+        "pair-fantasy-skyisland-tsuki-nami": "空の島（tsuki・namiの2人）",
+        "pair-fantasy-meetnavian-sora-saku": "ナビアンと出会う（sora・sakuの2人）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
