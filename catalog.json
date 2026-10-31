@@ -303,7 +303,11 @@
         "trio-daily-hinamatsuri-saku-nami-tsuki.png",
         "pair-daily-hatsumode-riku-kai.png",
         "pair-daily-suikawari-sora-tsuki.png",
-        "pair-daily-watering-nami-riku.png"
+        "pair-daily-watering-nami-riku.png",
+        "trio-daily-bigcleaning-sora-riku-nami.png",
+        "pair-daily-feeding-tsuki-saku.png",
+        "trio-daily-cheering-kai-nami-sora.png",
+        "trio-daily-campfire-riku-tsuki-nami.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -365,7 +369,11 @@
         "trio-daily-hinamatsuri-saku-nami-tsuki": "ひな祭り（saku・nami・tsukiの3人）",
         "pair-daily-hatsumode-riku-kai": "初詣（riku・kaiの2人）",
         "pair-daily-suikawari-sora-tsuki": "スイカ割り（sora・tsukiの2人）",
-        "pair-daily-watering-nami-riku": "朝顔の水やり（nami・rikuの2人）"
+        "pair-daily-watering-nami-riku": "朝顔の水やり（nami・rikuの2人）",
+        "trio-daily-bigcleaning-sora-riku-nami": "大掃除（sora・riku・namiの3人）",
+        "pair-daily-feeding-tsuki-saku": "飼育当番（tsuki・sakuの2人）",
+        "trio-daily-cheering-kai-nami-sora": "運動会の応援（kai・nami・soraの3人）",
+        "trio-daily-campfire-riku-tsuki-nami": "キャンプファイヤー（riku・tsuki・namiの3人）"
       }
     },
     "learning": {
