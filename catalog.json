@@ -440,7 +440,8 @@
         "pair-learning-shapes-kai-tsuki.png",
         "pair-learning-wordcards-sora-saku.png",
         "pair-learning-kanji-saku-riku.png",
-        "pair-learning-melodica-riku-kai.png"
+        "pair-learning-melodica-riku-kai.png",
+        "pair-learning-clay-sora-nami.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -499,7 +500,8 @@
         "pair-learning-shapes-kai-tsuki": "図形を組み立てる（kai・tsukiの2人）",
         "pair-learning-wordcards-sora-saku": "絵カードで学習（sora・sakuの2人）",
         "pair-learning-kanji-saku-riku": "漢字を練習する（saku・rikuの2人）",
-        "pair-learning-melodica-riku-kai": "鍵盤ハーモニカ（riku・kaiの2人）"
+        "pair-learning-melodica-riku-kai": "鍵盤ハーモニカ（riku・kaiの2人）",
+        "pair-learning-clay-sora-nami": "粘土づくり（sora・namiの2人）"
       }
     }
   },
