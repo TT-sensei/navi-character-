@@ -1273,7 +1273,11 @@
         "trio-fantasy-dragon-sora-nami-kai.png",
         "group-fantasy-standby.png",
         "group-fantasy-ending.png",
-        "group-fantasy-action.png"
+        "group-fantasy-action.png",
+        "group-fantasy-actionforest.png",
+        "group-fantasy-actionsky.png",
+        "group-fantasy-actioncave.png",
+        "group-fantasy-actiondash.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
@@ -1306,7 +1310,11 @@
         "trio-fantasy-dragon-sora-nami-kai": "ドラゴンボスに挑む（sora・nami・kaiの3人）",
         "group-fantasy-standby": "バトルスタンバイ（6人全員）",
         "group-fantasy-ending": "冒険の終わり（6人全員）",
-        "group-fantasy-action": "バトルアクション（6人全員）"
+        "group-fantasy-action": "バトルアクション（6人全員）",
+        "group-fantasy-actionforest": "森のアクション（6人全員）",
+        "group-fantasy-actionsky": "空の島のアクション（6人全員）",
+        "group-fantasy-actioncave": "洞窟のアクション（6人全員）",
+        "group-fantasy-actiondash": "夕日のダッシュ（6人全員）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
