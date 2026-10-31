@@ -1262,7 +1262,17 @@
         "group-fantasy-clear.png",
         "group-fantasy-departure.png",
         "group-fantasy-reward.png",
-        "group-fantasy-rest.png"
+        "group-fantasy-rest.png",
+        "trio-fantasy-battle-sora-tsuki-riku.png",
+        "trio-fantasy-ruins-riku-kai-nami.png",
+        "pair-fantasy-river-sora-tsuki.png",
+        "pair-fantasy-training-kai-saku.png",
+        "trio-fantasy-sea-nami-sora-riku.png",
+        "trio-fantasy-volcano-tsuki-kai-saku.png",
+        "pair-fantasy-snow-riku-nami.png",
+        "trio-fantasy-dragon-sora-nami-kai.png",
+        "group-fantasy-standby.png",
+        "group-fantasy-ending.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
@@ -1284,7 +1294,17 @@
         "group-fantasy-clear": "クエストクリア（6人全員）",
         "group-fantasy-departure": "冒険の出発（6人全員）",
         "group-fantasy-reward": "ごほうびの宝箱（6人全員）",
-        "group-fantasy-rest": "キャンプで休憩（6人全員）"
+        "group-fantasy-rest": "キャンプで休憩（6人全員）",
+        "trio-fantasy-battle-sora-tsuki-riku": "ナビアンとたたかう（sora・tsuki・rikuの3人）",
+        "trio-fantasy-ruins-riku-kai-nami": "遺跡の探検（riku・kai・namiの3人）",
+        "pair-fantasy-river-sora-tsuki": "川辺の冒険（sora・tsukiの2人）",
+        "pair-fantasy-training-kai-saku": "魔法の特訓（kai・sakuの2人）",
+        "trio-fantasy-sea-nami-sora-riku": "海辺の冒険（nami・sora・rikuの3人）",
+        "trio-fantasy-volcano-tsuki-kai-saku": "火山の冒険（tsuki・kai・sakuの3人）",
+        "pair-fantasy-snow-riku-nami": "雪山の冒険（riku・namiの2人）",
+        "trio-fantasy-dragon-sora-nami-kai": "ドラゴンボスに挑む（sora・nami・kaiの3人）",
+        "group-fantasy-standby": "バトルスタンバイ（6人全員）",
+        "group-fantasy-ending": "冒険の終わり（6人全員）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
