@@ -324,7 +324,11 @@
         "pair-learning-experiment-kai-sora.png",
         "pair-learning-sketch-saku-kai.png",
         "trio-learning-pendulum-sora-saku-tsuki.png",
-        "trio-learning-fieldtrip-riku-nami-sora.png"
+        "trio-learning-fieldtrip-riku-nami-sora.png",
+        "trio-learning-factory-kai-saku-tsuki.png",
+        "pair-learning-market-nami-riku.png",
+        "trio-learning-museum-sora-saku-nami.png",
+        "pair-learning-recycle-tsuki-kai.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -351,7 +355,11 @@
         "pair-learning-experiment-kai-sora": "理科室で水溶液の実験（kai・soraの2人）",
         "pair-learning-sketch-saku-kai": "アサガオの観察スケッチ（saku・kaiの2人）",
         "trio-learning-pendulum-sora-saku-tsuki": "ふりこの実験（sora・saku・tsukiの3人）",
-        "trio-learning-fieldtrip-riku-nami-sora": "社会科見学・消防署（riku・nami・soraの3人）"
+        "trio-learning-fieldtrip-riku-nami-sora": "社会科見学・消防署（riku・nami・soraの3人）",
+        "trio-learning-factory-kai-saku-tsuki": "社会科見学・パン工場（kai・saku・tsukiの3人）",
+        "pair-learning-market-nami-riku": "社会科見学・スーパー（nami・rikuの2人）",
+        "trio-learning-museum-sora-saku-nami": "社会科見学・昔のくらしの博物館（sora・saku・namiの3人）",
+        "pair-learning-recycle-tsuki-kai": "社会科見学・リサイクルセンター（tsuki・kaiの2人）"
       }
     }
   },
