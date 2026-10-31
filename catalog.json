@@ -391,7 +391,10 @@
         "pair-learning-globe-sora-nami.png",
         "pair-learning-map-riku-tsuki.png",
         "pair-learning-timeline-kai-saku.png",
-        "pair-learning-english-tsuki-sora.png"
+        "pair-learning-english-tsuki-sora.png",
+        "pair-learning-interview-nami-riku.png",
+        "pair-learning-shapes-kai-tsuki.png",
+        "pair-learning-wordcards-sora-saku.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -445,7 +448,10 @@
         "pair-learning-globe-sora-nami": "地球儀を調べる（sora・namiの2人）",
         "pair-learning-map-riku-tsuki": "大きな地図を広げる（riku・tsukiの2人）",
         "pair-learning-timeline-kai-saku": "年表を作る（kai・sakuの2人）",
-        "pair-learning-english-tsuki-sora": "英語で自己紹介（tsuki・soraの2人）"
+        "pair-learning-english-tsuki-sora": "英語で自己紹介（tsuki・soraの2人）",
+        "pair-learning-interview-nami-riku": "インタビュー（nami・rikuの2人）",
+        "pair-learning-shapes-kai-tsuki": "図形を組み立てる（kai・tsukiの2人）",
+        "pair-learning-wordcards-sora-saku": "絵カードで学習（sora・sakuの2人）"
       }
     }
   },
