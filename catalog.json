@@ -267,7 +267,8 @@
         "trio-daily-bye-riku-sora-nami.png",
         "pair-daily-sprint-tsuki-riku.png",
         "pair-daily-bar-nami-kai.png",
-        "trio-daily-soccer-sora-saku-tsuki.png"
+        "trio-daily-soccer-sora-saku-tsuki.png",
+        "trio-daily-picnic-nami-tsuki-riku.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -293,7 +294,8 @@
         "trio-daily-bye-riku-sora-nami": "下校のバイバイ（riku・sora・namiの3人）",
         "pair-daily-sprint-tsuki-riku": "体育・短距離走（tsuki・rikuの2人）",
         "pair-daily-bar-nami-kai": "体育・鉄棒（nami・kaiの2人）",
-        "trio-daily-soccer-sora-saku-tsuki": "体育・サッカー（sora・saku・tsukiの3人）"
+        "trio-daily-soccer-sora-saku-tsuki": "体育・サッカー（sora・saku・tsukiの3人）",
+        "trio-daily-picnic-nami-tsuki-riku": "遠足のお弁当（nami・tsuki・rikuの3人）"
       }
     },
     "learning": {
@@ -328,7 +330,10 @@
         "trio-learning-factory-kai-saku-tsuki.png",
         "pair-learning-market-nami-riku.png",
         "trio-learning-museum-sora-saku-nami.png",
-        "pair-learning-recycle-tsuki-kai.png"
+        "pair-learning-recycle-tsuki-kai.png",
+        "pair-learning-art-saku-nami.png",
+        "trio-learning-english-riku-sora-kai.png",
+        "pair-learning-calligraphy-tsuki-saku.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -359,7 +364,10 @@
         "trio-learning-factory-kai-saku-tsuki": "社会科見学・パン工場（kai・saku・tsukiの3人）",
         "pair-learning-market-nami-riku": "社会科見学・スーパー（nami・rikuの2人）",
         "trio-learning-museum-sora-saku-nami": "社会科見学・昔のくらしの博物館（sora・saku・namiの3人）",
-        "pair-learning-recycle-tsuki-kai": "社会科見学・リサイクルセンター（tsuki・kaiの2人）"
+        "pair-learning-recycle-tsuki-kai": "社会科見学・リサイクルセンター（tsuki・kaiの2人）",
+        "pair-learning-art-saku-nami": "図工（saku・namiの2人）",
+        "trio-learning-english-riku-sora-kai": "外国語（riku・sora・kaiの3人）",
+        "pair-learning-calligraphy-tsuki-saku": "書写（tsuki・sakuの2人）"
       }
     }
   },
