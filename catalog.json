@@ -251,7 +251,10 @@
         "group-daily-cleanup.png",
         "group-daily-gymnasium.jpeg",
         "group-daily-recess-play.jpeg",
-        "group-daily-outdoor-pe.png"
+        "group-daily-outdoor-pe.png",
+        "pair-daily-library-nami-kai.png",
+        "pair-daily-cleaning-riku-saku.png",
+        "pair-daily-study-sora-tsuki.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -261,7 +264,10 @@
         "group-daily-cleanup": "掃除・協力",
         "group-daily-gymnasium": "体育館での体育・運動",
         "group-daily-recess-play": "休み時間・外遊び",
-        "group-daily-outdoor-pe": "校庭など屋外での体育・運動"
+        "group-daily-outdoor-pe": "校庭など屋外での体育・運動",
+        "pair-daily-library-nami-kai": "図書室で調べもの（nami・kaiの2人）",
+        "pair-daily-cleaning-riku-saku": "掃除の時間（riku・sakuの2人）",
+        "pair-daily-study-sora-tsuki": "教室で勉強を教え合う（sora・tsukiの2人）"
       }
     },
     "learning": {
