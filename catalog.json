@@ -283,7 +283,11 @@
         "pair-daily-checkup-tsuki-saku.png",
         "trio-daily-endurance-riku-sora-tsuki.png",
         "trio-daily-seatchange-kai-saku-nami.png",
-        "pair-daily-broadcast-nami-sora.png"
+        "pair-daily-broadcast-nami-sora.png",
+        "pair-daily-goclub-kai-riku.png",
+        "pair-daily-reading-saku-tsuki.png",
+        "trio-daily-tanabata-nami-saku-tsuki.png",
+        "trio-daily-setsubun-riku-sora-nami.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -325,7 +329,11 @@
         "pair-daily-checkup-tsuki-saku": "身体測定（tsuki・sakuの2人）",
         "trio-daily-endurance-riku-sora-tsuki": "持久走（riku・sora・tsukiの3人）",
         "trio-daily-seatchange-kai-saku-nami": "席替え（kai・saku・namiの3人）",
-        "pair-daily-broadcast-nami-sora": "放送委員会（nami・soraの2人）"
+        "pair-daily-broadcast-nami-sora": "放送委員会（nami・soraの2人）",
+        "pair-daily-goclub-kai-riku": "囲碁クラブ（kai・rikuの2人）",
+        "pair-daily-reading-saku-tsuki": "読書の時間（saku・tsukiの2人）",
+        "trio-daily-tanabata-nami-saku-tsuki": "七夕（nami・saku・tsukiの3人）",
+        "trio-daily-setsubun-riku-sora-nami": "節分の豆まき（riku・sora・namiの3人）"
       }
     },
     "learning": {
