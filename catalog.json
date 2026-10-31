@@ -264,7 +264,10 @@
         "trio-daily-music-riku-kai-nami.png",
         "pair-daily-morning-tsuki-saku.png",
         "pair-daily-lunch-kai-tsuki.png",
-        "trio-daily-bye-riku-sora-nami.png"
+        "trio-daily-bye-riku-sora-nami.png",
+        "pair-daily-sprint-tsuki-riku.png",
+        "pair-daily-bar-nami-kai.png",
+        "trio-daily-soccer-sora-saku-tsuki.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -287,7 +290,10 @@
         "trio-daily-music-riku-kai-nami": "音楽の時間（riku・kai・namiの3人）",
         "pair-daily-morning-tsuki-saku": "朝の会のスピーチ（tsuki・sakuの2人）",
         "pair-daily-lunch-kai-tsuki": "給食の配膳（kai・tsukiの2人）",
-        "trio-daily-bye-riku-sora-nami": "下校のバイバイ（riku・sora・namiの3人）"
+        "trio-daily-bye-riku-sora-nami": "下校のバイバイ（riku・sora・namiの3人）",
+        "pair-daily-sprint-tsuki-riku": "体育・短距離走（tsuki・rikuの2人）",
+        "pair-daily-bar-nami-kai": "体育・鉄棒（nami・kaiの2人）",
+        "trio-daily-soccer-sora-saku-tsuki": "体育・サッカー（sora・saku・tsukiの3人）"
       }
     },
     "learning": {
@@ -317,7 +323,8 @@
         "trio-learning-observe-riku-tsuki-nami.png",
         "pair-learning-experiment-kai-sora.png",
         "pair-learning-sketch-saku-kai.png",
-        "trio-learning-pendulum-sora-saku-tsuki.png"
+        "trio-learning-pendulum-sora-saku-tsuki.png",
+        "trio-learning-fieldtrip-riku-nami-sora.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -343,7 +350,8 @@
         "trio-learning-observe-riku-tsuki-nami": "校庭で自然観察（riku・tsuki・namiの3人）",
         "pair-learning-experiment-kai-sora": "理科室で水溶液の実験（kai・soraの2人）",
         "pair-learning-sketch-saku-kai": "アサガオの観察スケッチ（saku・kaiの2人）",
-        "trio-learning-pendulum-sora-saku-tsuki": "ふりこの実験（sora・saku・tsukiの3人）"
+        "trio-learning-pendulum-sora-saku-tsuki": "ふりこの実験（sora・saku・tsukiの3人）",
+        "trio-learning-fieldtrip-riku-nami-sora": "社会科見学・消防署（riku・nami・soraの3人）"
       }
     }
   },
