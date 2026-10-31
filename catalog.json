@@ -1255,7 +1255,14 @@
         "trio-fantasy-cave-kai-riku-sora.png",
         "pair-fantasy-skyisland-tsuki-nami.png",
         "pair-fantasy-meetnavian-sora-saku.png",
-        "trio-fantasy-boss-nami-sora-kai.png"
+        "trio-fantasy-boss-nami-sora-kai.png",
+        "pair-fantasy-petnavian-saku-nami.png",
+        "pair-fantasy-walknavian-kai-riku.png",
+        "pair-fantasy-treatnavian-tsuki-sora.png",
+        "group-fantasy-clear.png",
+        "group-fantasy-departure.png",
+        "group-fantasy-reward.png",
+        "group-fantasy-rest.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
@@ -1270,7 +1277,14 @@
         "trio-fantasy-cave-kai-riku-sora": "洞窟の探検（kai・riku・soraの3人）",
         "pair-fantasy-skyisland-tsuki-nami": "空の島（tsuki・namiの2人）",
         "pair-fantasy-meetnavian-sora-saku": "ナビアンと出会う（sora・sakuの2人）",
-        "trio-fantasy-boss-nami-sora-kai": "ボスに挑む（nami・sora・kaiの3人）"
+        "trio-fantasy-boss-nami-sora-kai": "ボスに挑む（nami・sora・kaiの3人）",
+        "pair-fantasy-petnavian-saku-nami": "ナビアンを可愛がる（saku・namiの2人）",
+        "pair-fantasy-walknavian-kai-riku": "ナビアンとお散歩（kai・rikuの2人）",
+        "pair-fantasy-treatnavian-tsuki-sora": "ナビアンにおやつ（tsuki・soraの2人）",
+        "group-fantasy-clear": "クエストクリア（6人全員）",
+        "group-fantasy-departure": "冒険の出発（6人全員）",
+        "group-fantasy-reward": "ごほうびの宝箱（6人全員）",
+        "group-fantasy-rest": "キャンプで休憩（6人全員）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
