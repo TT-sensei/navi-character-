@@ -291,7 +291,11 @@
         "trio-daily-choir-riku-nami-tsuki.png",
         "pair-daily-recorder-sora-kai.png",
         "pair-daily-closing-tsuki-saku.png",
-        "pair-daily-encourage-sora-nami.png"
+        "pair-daily-encourage-sora-nami.png",
+        "pair-daily-handout-kai-nami.png",
+        "pair-daily-helpup-tsuki-riku.png",
+        "pair-daily-crosswalk-sora-saku.png",
+        "pair-daily-showart-tsuki-saku.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -341,7 +345,11 @@
         "trio-daily-choir-riku-nami-tsuki": "合唱（riku・nami・tsukiの3人）",
         "pair-daily-recorder-sora-kai": "リコーダー演奏（sora・kaiの2人）",
         "pair-daily-closing-tsuki-saku": "帰りの会（tsuki・sakuの2人）",
-        "pair-daily-encourage-sora-nami": "友達を励ます（sora・namiの2人）"
+        "pair-daily-encourage-sora-nami": "友達を励ます（sora・namiの2人）",
+        "pair-daily-handout-kai-nami": "プリント配り（kai・namiの2人）",
+        "pair-daily-helpup-tsuki-riku": "転んだ友達を助ける（tsuki・rikuの2人）",
+        "pair-daily-crosswalk-sora-saku": "横断歩道を渡る（sora・sakuの2人）",
+        "pair-daily-showart-tsuki-saku": "作品を見せ合う（tsuki・sakuの2人）"
       }
     },
     "learning": {
