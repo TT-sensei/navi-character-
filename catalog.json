@@ -312,7 +312,8 @@
         "pair-daily-riceharvest-kai-tsuki.png",
         "pair-daily-hydration-sora-tsuki.png",
         "pair-daily-cough-riku-nami.png",
-        "trio-daily-underdesk-kai-saku-riku.png"
+        "trio-daily-underdesk-kai-saku-riku.png",
+        "pair-daily-corridor-saku-kai.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -383,7 +384,8 @@
         "pair-daily-riceharvest-kai-tsuki": "稲刈り体験（kai・tsukiの2人）",
         "pair-daily-hydration-sora-tsuki": "水分補給（sora・tsukiの2人）",
         "pair-daily-cough-riku-nami": "咳エチケット（riku・namiの2人）",
-        "trio-daily-underdesk-kai-saku-riku": "地震で机の下に隠れる（kai・saku・rikuの3人）"
+        "trio-daily-underdesk-kai-saku-riku": "地震で机の下に隠れる（kai・saku・rikuの3人）",
+        "pair-daily-corridor-saku-kai": "廊下を歩く（saku・kaiの2人）"
       }
     },
     "learning": {
