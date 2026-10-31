@@ -387,7 +387,11 @@
         "pair-learning-writing-nami-saku.png",
         "pair-learning-ruler-sora-riku.png",
         "trio-learning-graph-kai-tsuki-nami.png",
-        "pair-learning-solids-kai-saku.png"
+        "pair-learning-solids-kai-saku.png",
+        "pair-learning-globe-sora-nami.png",
+        "pair-learning-map-riku-tsuki.png",
+        "pair-learning-timeline-kai-saku.png",
+        "pair-learning-english-tsuki-sora.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -437,7 +441,11 @@
         "pair-learning-writing-nami-saku": "作文を書く（nami・sakuの2人）",
         "pair-learning-ruler-sora-riku": "定規で長さを測る（sora・rikuの2人）",
         "trio-learning-graph-kai-tsuki-nami": "グラフを読み取る（kai・tsuki・namiの3人）",
-        "pair-learning-solids-kai-saku": "立体模型を観察（kai・sakuの2人）"
+        "pair-learning-solids-kai-saku": "立体模型を観察（kai・sakuの2人）",
+        "pair-learning-globe-sora-nami": "地球儀を調べる（sora・namiの2人）",
+        "pair-learning-map-riku-tsuki": "大きな地図を広げる（riku・tsukiの2人）",
+        "pair-learning-timeline-kai-saku": "年表を作る（kai・sakuの2人）",
+        "pair-learning-english-tsuki-sora": "英語で自己紹介（tsuki・soraの2人）"
       }
     }
   },
