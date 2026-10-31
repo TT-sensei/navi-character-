@@ -313,7 +313,11 @@
         "group-learning-pair-measure-length.png",
         "group-learning-pair-carry-tools.png",
         "group-learning-pair-balance.png",
-        "group-learning-pair-measure-shadow.png"
+        "group-learning-pair-measure-shadow.png",
+        "trio-learning-observe-riku-tsuki-nami.png",
+        "pair-learning-experiment-kai-sora.png",
+        "pair-learning-sketch-saku-kai.png",
+        "trio-learning-pendulum-sora-saku-tsuki.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -335,7 +339,11 @@
         "group-learning-pair-measure-length": "二人組⑨・長さを測る",
         "group-learning-pair-carry-tools": "二人組⑩・学習道具を運ぶ",
         "group-learning-pair-balance": "二人組⑪・はかりで重さを測る",
-        "group-learning-pair-measure-shadow": "二人組⑫・影の長さを測る"
+        "group-learning-pair-measure-shadow": "二人組⑫・影の長さを測る",
+        "trio-learning-observe-riku-tsuki-nami": "校庭で自然観察（riku・tsuki・namiの3人）",
+        "pair-learning-experiment-kai-sora": "理科室で水溶液の実験（kai・soraの2人）",
+        "pair-learning-sketch-saku-kai": "アサガオの観察スケッチ（saku・kaiの2人）",
+        "trio-learning-pendulum-sora-saku-tsuki": "ふりこの実験（sora・saku・tsukiの3人）"
       }
     }
   },
