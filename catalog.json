@@ -394,7 +394,8 @@
         "pair-learning-english-tsuki-sora.png",
         "pair-learning-interview-nami-riku.png",
         "pair-learning-shapes-kai-tsuki.png",
-        "pair-learning-wordcards-sora-saku.png"
+        "pair-learning-wordcards-sora-saku.png",
+        "pair-learning-kanji-saku-riku.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -451,7 +452,8 @@
         "pair-learning-english-tsuki-sora": "英語で自己紹介（tsuki・soraの2人）",
         "pair-learning-interview-nami-riku": "インタビュー（nami・rikuの2人）",
         "pair-learning-shapes-kai-tsuki": "図形を組み立てる（kai・tsukiの2人）",
-        "pair-learning-wordcards-sora-saku": "絵カードで学習（sora・sakuの2人）"
+        "pair-learning-wordcards-sora-saku": "絵カードで学習（sora・sakuの2人）",
+        "pair-learning-kanji-saku-riku": "漢字を練習する（saku・rikuの2人）"
       }
     }
   },
