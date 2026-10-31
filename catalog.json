@@ -362,7 +362,8 @@
         "pair-learning-sewing-saku-kai.png",
         "pair-learning-blackboard-riku-kai.png",
         "trio-learning-newspaper-tsuki-saku-riku.png",
-        "pair-learning-painting-tsuki-kai.png"
+        "pair-learning-painting-tsuki-kai.png",
+        "pair-learning-tablet-sora-nami.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -401,7 +402,8 @@
         "pair-learning-sewing-saku-kai": "家庭科・裁縫（saku・kaiの2人）",
         "pair-learning-blackboard-riku-kai": "黒板で発表（riku・kaiの2人）",
         "trio-learning-newspaper-tsuki-saku-riku": "新聞づくり（tsuki・saku・rikuの3人）",
-        "pair-learning-painting-tsuki-kai": "絵の具で描く（tsuki・kaiの2人）"
+        "pair-learning-painting-tsuki-kai": "絵の具で描く（tsuki・kaiの2人）",
+        "pair-learning-tablet-sora-nami": "タブレット学習（sora・namiの2人）"
       }
     }
   },
