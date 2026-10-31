@@ -379,7 +379,11 @@
         "pair-learning-painting-tsuki-kai.png",
         "pair-learning-tablet-sora-nami.png",
         "pair-learning-carving-sora-nami.png",
-        "trio-learning-discussion-riku-saku-kai.png"
+        "trio-learning-discussion-riku-saku-kai.png",
+        "pair-learning-readaloud-saku-nami.png",
+        "pair-learning-dictionary-kai-riku.png",
+        "pair-learning-compass-tsuki-sora.png",
+        "pair-learning-protractor-riku-kai.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -421,7 +425,11 @@
         "pair-learning-painting-tsuki-kai": "絵の具で描く（tsuki・kaiの2人）",
         "pair-learning-tablet-sora-nami": "タブレット学習（sora・namiの2人）",
         "pair-learning-carving-sora-nami": "版画づくり（sora・namiの2人）",
-        "trio-learning-discussion-riku-saku-kai": "班で話し合い（riku・saku・kaiの3人）"
+        "trio-learning-discussion-riku-saku-kai": "班で話し合い（riku・saku・kaiの3人）",
+        "pair-learning-readaloud-saku-nami": "音読（saku・namiの2人）",
+        "pair-learning-dictionary-kai-riku": "辞書を引く（kai・rikuの2人）",
+        "pair-learning-compass-tsuki-sora": "コンパスで円を描く（tsuki・soraの2人）",
+        "pair-learning-protractor-riku-kai": "分度器で角度を測る（riku・kaiの2人）"
       }
     }
   },
