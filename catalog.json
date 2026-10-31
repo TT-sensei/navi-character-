@@ -271,7 +271,11 @@
         "trio-daily-picnic-nami-tsuki-riku.png",
         "trio-daily-stage-sora-nami-tsuki.png",
         "trio-daily-relay-riku-sora-tsuki.png",
-        "trio-daily-pool-nami-kai-sora.png"
+        "trio-daily-pool-nami-kai-sora.png",
+        "trio-daily-christmas-sora-saku-nami.png",
+        "trio-daily-halloween-tsuki-riku-kai.png",
+        "pair-daily-rain-nami-riku.png",
+        "trio-daily-snow-kai-tsuki-saku.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -301,7 +305,11 @@
         "trio-daily-picnic-nami-tsuki-riku": "遠足のお弁当（nami・tsuki・rikuの3人）",
         "trio-daily-stage-sora-nami-tsuki": "学習発表会（sora・nami・tsukiの3人）",
         "trio-daily-relay-riku-sora-tsuki": "運動会のリレー（riku・sora・tsukiの3人）",
-        "trio-daily-pool-nami-kai-sora": "プール（nami・kai・soraの3人）"
+        "trio-daily-pool-nami-kai-sora": "プール（nami・kai・soraの3人）",
+        "trio-daily-christmas-sora-saku-nami": "クリスマス会（sora・saku・namiの3人）",
+        "trio-daily-halloween-tsuki-riku-kai": "ハロウィン（tsuki・riku・kaiの3人）",
+        "pair-daily-rain-nami-riku": "雨の日の帰り道（nami・rikuの2人）",
+        "trio-daily-snow-kai-tsuki-saku": "雪だるま作り（kai・tsuki・sakuの3人）"
       }
     },
     "learning": {
