@@ -81,7 +81,7 @@ const fantasyGroups=[
   {id:'initial/group-fantasy-celebration',label:'初期案｜クエスト成功・お祝い'},
   {id:'initial/group-fantasy-training',label:'初期案｜練習場・作戦会議'}
 ];
-const grid=document.querySelector('#characterGrid'),library=document.querySelector('#libraryCard'),assetGrid=document.querySelector('#assetGrid'),groupGrid=document.querySelector('#groupGrid'),backgroundLibrary=document.querySelector('#backgroundLibrary'),backgroundGrid=document.querySelector('#backgroundGrid'),backgroundCount=document.querySelector('#backgroundCount'),usage=document.querySelector('#usageCard'),usageImage=document.querySelector('#usageImage'),usageTitle=document.querySelector('#usageTitle'),usageCode=document.querySelector('#usageCode'),copyButton=document.querySelector('#copyButton'),copyStatus=document.querySelector('#copyStatus'),webDownload=document.querySelector('#webDownload'),originalDownload=document.querySelector('#originalDownload'),title=document.querySelector('#libraryTitle'),count=document.querySelector('#libraryCount'),modeTabs=document.querySelector('.mode-tabs'),tabs=document.querySelector('.tabs'),monsterLibrary=document.querySelector('#monsterLibrary'),monsterGrid=document.querySelector('#monsterGrid'),monsterCount=document.querySelector('#monsterCount'),monsterFilters=document.querySelector('#monsterFilters'),monsterGroups=document.querySelector('#monsterGroups'),groupLibrary=document.querySelector('#groupLibrary');
+const grid=document.querySelector('#characterGrid'),library=document.querySelector('#libraryCard'),assetGrid=document.querySelector('#assetGrid'),groupGrid=document.querySelector('#groupGrid'),backgroundLibrary=document.querySelector('#backgroundLibrary'),backgroundGrid=document.querySelector('#backgroundGrid'),backgroundCount=document.querySelector('#backgroundCount'),usage=document.querySelector('#usageModal'),usageImage=document.querySelector('#usageImage'),usageTitle=document.querySelector('#usageTitle'),usageCode=document.querySelector('#usageCode'),copyButton=document.querySelector('#copyButton'),copyStatus=document.querySelector('#copyStatus'),webDownload=document.querySelector('#webDownload'),originalDownload=document.querySelector('#originalDownload'),title=document.querySelector('#libraryTitle'),count=document.querySelector('#libraryCount'),modeTabs=document.querySelector('.mode-tabs'),tabs=document.querySelector('.tabs'),monsterLibrary=document.querySelector('#monsterLibrary'),monsterGrid=document.querySelector('#monsterGrid'),monsterCount=document.querySelector('#monsterCount'),monsterFilters=document.querySelector('#monsterFilters'),monsterGroups=document.querySelector('#monsterGroups'),groupLibrary=document.querySelector('#groupLibrary');
 const fantasyGroupLibrary=document.querySelector('#fantasyGroupLibrary'),fantasyGroupGrid=document.querySelector('#fantasyGroupGrid'),fantasyGroupCount=document.querySelector('#fantasyGroupCount');
 let mode='standard',selected=null,tab='fullbody',monsterFilter='all',monsterGroup='all';
 
@@ -112,7 +112,7 @@ const webAssetPath=(id,type,name)=>`${webBase}/${id}/${type}/${name}.webp`;
 const originalAssetPath=(id,type,name)=>`${base}/${id}/${type}/${name}.png`;
 function renderCards(){if(mode==='monsters'||mode==='backgrounds'){grid.innerHTML='';return;}const list=mode==='fantasy'?fantasyCharacters:characters;grid.innerHTML=list.map((c,i)=>{const image=mode==='fantasy'?`assets/web/fantasy/${c.standing}.webp`:webAssetPath(c.id,'fullbody','waving');const detail=mode==='fantasy'?`${c.job} / 立ち絵・ATTACK・DAMAGE・SPECIAL`:`${c.fullbody.length}ポーズ / ${c.expressions.length}表情`;return`<article class="character-card ${selected?.id===c.id?'selected':''}" data-id="${c.id}"><button class="character-button" type="button"><img class="character-image" src="${image}" alt="${c.label}"><div class="character-info"><div class="character-index">${mode==='fantasy'?'FANTASY':'CHARACTER'} ${String(i+1).padStart(2,'0')}</div><h3>${c.label}</h3><p>${detail}</p></div></button></article>`}).join('');}
 function renderAssets(){if(!selected)return;const names=mode==='fantasy'?['立ち絵','ATTACK','DAMAGE','SPECIAL']:selected[tab].map(name=>name);assetGrid.innerHTML=names.map(name=>{const type=mode==='fantasy'?(name==='立ち絵'?'standing':name.toLowerCase()):tab;const fileBase=mode==='fantasy'&&type==='standing'?selected.standing:selected.base;const suffix=type==='standing'?'':`-${type}`;const webPath=mode==='fantasy'?(type==='standing'?`assets/web/fantasy/${fileBase}.webp`:`assets/web/fantasy/${type}/${fileBase}${suffix}.webp`):webAssetPath(selected.id,type,name);const originalPath=mode==='fantasy'?`assets/fantasy/${type==='standing'?'':`${type}/`}${fileBase}${suffix}.png`:originalAssetPath(selected.id,type,name);return`<button class="asset-item ${mode==='fantasy'?'fantasy-asset':''}" data-path="${webPath}" data-original="${originalPath}" data-label="${selected.label}・${name}"><img src="${webPath}" alt="${selected.label} ${name}"><span>${esc(name)}</span></button>`}).join('');count.textContent=`${names.length} files`;tabs.hidden=mode==='fantasy';}
-function renderBackgrounds(){if(!backgroundGrid)return;backgroundCount.textContent=`${dailyBackgrounds.length} files`;backgroundGrid.innerHTML=dailyBackgrounds.map(item=>{const webPath=`assets/web/backgrounds/daily/${item.id}.webp`;const originalPath=`assets/backgrounds/daily/${item.id}.png`;return`<button class="background-item" data-path="${webPath}" data-original="${originalPath}" data-label="${item.label}"><img src="${webPath}" alt="${item.label}"><span>${item.label}</span><small>日常背景 / 16:9 / WebP・PNG</small></button>`}).join('');}
+function renderBackgrounds(){if(!backgroundGrid)return;backgroundCount.textContent=`${dailyBackgrounds.length} files`;backgroundGrid.innerHTML=dailyBackgrounds.map(item=>{const webPath=`assets/web/backgrounds/daily/${item.id}.webp`;const originalPath=`assets/backgrounds/daily/${item.id}.png`;return`<button class="background-item" data-path="${webPath}" data-original="${originalPath}" data-label="${item.label}"><img src="${webPath}" alt="${item.label}"><span>${item.label}</span><small>日常背景 / 16:9 / WebP・PNG</small></button>`}).join('');const fantasyBgGrid=document.querySelector('#fantasyBackgroundGrid');if(fantasyBgGrid){fantasyBgGrid.innerHTML=fantasyBackgrounds.map(([id,label])=>{const webPath=`assets/web/fantasy/backgrounds/${id}.webp`;const originalPath=`assets/fantasy/backgrounds/${id}.png`;return`<button class="background-item" data-path="${webPath}" data-original="${originalPath}" data-label="${label}"><img src="${webPath}" alt="${label}"><span>${label}</span><small>ファンタジー背景 / 16:9 / WebP・PNG</small></button>`}).join('');}backgroundCount.textContent=`${dailyBackgrounds.length+fantasyBackgrounds.length} files`;}
 function renderFantasyGroups(){if(!fantasyGroupGrid)return;fantasyGroupCount.textContent=`${fantasyGroups.length} files`;fantasyGroupGrid.innerHTML=fantasyGroups.map(item=>{const webPath=`assets/web/fantasy/groups/${item.id}.webp`;const originalPath=`assets/fantasy/groups/${item.id}.png`;return`<button class="group-item fantasy-group-item" data-path="${webPath}" data-original="${originalPath}" data-label="${item.label}"><img src="${webPath}" alt="${item.label}"><span>${item.label}<small>ファンタジー集合 / WebP・PNG</small></span></button>`}).join('');}
 function renderMonsterCards(filter=monsterFilter,group=monsterGroup){
   const sets=filter==='all'?fantasyMonsterSets:fantasyMonsterSets.filter(set=>set.id===filter);
@@ -137,7 +137,7 @@ function renderMonsterCards(filter=monsterFilter,group=monsterGroup){
 }
 function selectCharacter(id){const list=mode==='fantasy'?fantasyCharacters:characters;selected=list.find(c=>c.id===id);if(!selected)return;renderCards();library.hidden=false;title.textContent=mode==='fantasy'?`${selected.label}｜${selected.job}のファンタジー素材`:`${selected.label}の素材`;tab=mode==='fantasy'?'standing':'fullbody';renderAssets();library.scrollIntoView({behavior:'smooth',block:'start'});}
 function setDownload(link,path){link.href=path;link.download=path.split('/').pop();}
-function selectAsset(path,label,originalPath){usage.hidden=false;usageImage.src=path;usageImage.alt=label;usageTitle.textContent=label;usageCode.textContent=`<img src="${new URL(path,document.baseURI).href}" class="navi-character" alt="${label}">`;setDownload(webDownload,path);setDownload(originalDownload,originalPath);copyStatus.textContent='';usage.scrollIntoView({behavior:'smooth',block:'nearest'});}
+function selectAsset(path,label,originalPath){usage.hidden=false;usageImage.src=path;usageImage.alt=label;usageTitle.textContent=label;usageCode.textContent=`<img src="${new URL(path,document.baseURI).href}" class="navi-character" alt="${label}">`;setDownload(webDownload,path);setDownload(originalDownload,originalPath);copyStatus.textContent='';document.body.style.overflow='hidden';}
 grid.addEventListener('click',e=>{const card=e.target.closest('[data-id]');if(card)selectCharacter(card.dataset.id);});
 tabs.addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;tab=b.dataset.tab;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));renderAssets();});
 modeTabs.addEventListener('click',e=>{
@@ -174,8 +174,8 @@ modeTabs.addEventListener('click',e=>{
     introHeading.textContent='ファンタジーキャラとバトル素材を確認できます。';
     introText.textContent='ファンタジーキャラクターの立ち絵・動作・集合絵と、背景・ナビアンを組み合わせるプレビューを確認できます。';
   }else if(isBackgrounds){
-    introHeading.textContent='ナビキャラを重ねて使える日常背景です。';
-    introText.textContent='教室・体育館・カフェ・街・部屋など、通常版ナビキャラの日常シーンに合わせた横長背景を確認できます。画像を選ぶとWeb用コードをコピーできます。';
+    introHeading.textContent='ナビキャラを重ねて使える背景です。';
+    introText.textContent='教室・体育館・カフェ・街・部屋などの日常背景と、森・洞窟・火山・浮島などのファンタジー背景を確認できます。画像を選ぶとWeb用コードをコピーできます。';
   }else{
     introHeading.textContent='基本画像だけでなく、全ポーズ・全表情を見られます。';
     introText.innerHTML='キャラクターを選び、全身ポーズ・表情アップ・集合画像を一覧から確認できます。画像を選ぶと、教材に貼り付けるコードをコピーできます。AIで使うときは、まず<a href="AI-GUIDE.md">AI向けガイド</a>を確認してください。';
@@ -198,18 +198,45 @@ monsterFilters.addEventListener('click',e=>{
 });
 assetGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 monsterGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
-groups.forEach(group=>{const webPath='assets/web/groups/'+group.path+'.webp';const originalPath='assets/groups/'+group.path+'.'+(group.originalExt||'png');groupGrid.insertAdjacentHTML('beforeend','<button class="group-item" data-path="'+webPath+'" data-original="'+originalPath+'" data-label="'+group.label+'"><img src="'+webPath+'" alt="'+group.label+'"><span>'+group.label+'<small>'+group.category+' / '+group.path+'.webp / 原本をダウンロード可</small></span></button>');});
-const dailyGroupImages=[
-  {file:'group-daily-gymnasium.jpeg',label:'体育館での体育',usage:'体育館で運動する6人',ext:'jpeg'},
-  {file:'group-daily-recess-play.jpeg',label:'休み時間・外遊び',usage:'休み時間の様子',ext:'jpeg'},
-  {file:'group-daily-outdoor-pe.png',label:'校庭での体育',usage:'屋外で運動する様子',ext:'png'}
-];
-dailyGroupImages.forEach(item=>{
-  const originalPath='assets/groups/daily/'+item.file;
-  groupGrid.insertAdjacentHTML('beforeend','<button class="group-item" data-path="'+originalPath+'" data-original="'+originalPath+'" data-label="'+item.label+'"><img src="'+originalPath+'" alt="'+item.label+'" loading="lazy"><span>'+item.label+'<small>日常・体育 / '+item.usage+' / 原本</small></span></button>');
-});
+const sceneState={cat:'all',char:'all',q:''};
+let sceneItems=[];
+const sceneCharIds=['riku','sora','kai','saku','tsuki','nami'];
+const sceneCharsOf=stem=>sceneCharIds.filter(id=>stem.split('-').includes(id));
+function catalogSceneItems(cat){
+  const g=cat.groups;const items=[];
+  const add=(section,category)=>{
+    (section.files||[]).forEach(f=>{
+      const stem=f.replace(/\.[^.]+$/,'');
+      const noWebpFiles=['group-daily-gymnasium.jpeg','group-daily-recess-play.jpeg','group-daily-outdoor-pe.png'];const labelOverrides={'group-daily-gymnasium':'体育館での体育','group-daily-recess-play':'休み時間・外遊び','group-daily-outdoor-pe':'校庭での体育'};items.push({web:noWebpFiles.includes(f)?`${section.basePath}/${f}`:`${section.webBasePath||'assets/web/groups'}/${stem}.webp`,original:`${section.basePath}/${f}`,label:(section.usage&&(section.usage[stem]||section.usage[stem.replace(/^group-/,'')]))||labelOverrides[stem]||stem,category,chars:category==='集合'?sceneCharIds.slice():sceneCharsOf(stem)});
+    });
+  };
+  add({files:g.files,usage:g.usage,basePath:g.basePath,webBasePath:g.webBasePath},'集合');
+  add(g.daily,'日常');
+  add(g.learning,'学習');
+  return items;
+}
+function fallbackSceneItems(){
+  return groups.map(g=>({web:'assets/web/groups/'+g.path+'.webp',original:'assets/groups/'+g.path+'.'+(g.originalExt||'png'),label:g.label,category:g.category,chars:g.category==='集合'?sceneCharIds.slice():sceneCharsOf(g.path)}));
+}
+function renderScenes(){
+  if(!groupGrid)return;
+  const q=sceneState.q.trim();
+  const list=sceneItems.filter(it=>(sceneState.cat==='all'||it.category===sceneState.cat)&&(sceneState.char==='all'||it.chars.includes(sceneState.char))&&(!q||it.label.includes(q)));
+  const countEl=document.querySelector('#groupCount');if(countEl)countEl.textContent=sceneItems.length+' files';
+  const status=document.querySelector('#sceneStatus');if(status)status.textContent=list.length+'件の場面を表示中';
+  groupGrid.innerHTML=list.length?list.map(it=>`<button class="group-item scene-item" data-path="${it.web}" data-original="${it.original}" data-label="${esc(it.label)}"><img src="${it.web}" alt="${esc(it.label)}" loading="lazy"><span>${esc(it.label)}<small>${it.category}シーン</small></span></button>`).join(''):'<p class="scene-empty">見つかりませんでした。検索のことばを変えてみてください。</p>';
+}
+async function initScenes(){
+  try{const res=await fetch('catalog.json');if(!res.ok)throw new Error('catalog');sceneItems=catalogSceneItems(await res.json());}catch(e){sceneItems=fallbackSceneItems();}
+  renderScenes();
+}
+document.querySelectorAll('[data-scene-cat]').forEach(b=>b.addEventListener('click',()=>{sceneState.cat=b.dataset.sceneCat;document.querySelectorAll('[data-scene-cat]').forEach(x=>x.classList.toggle('active',x===b));renderScenes();}));
+document.querySelectorAll('[data-scene-char]').forEach(b=>b.addEventListener('click',()=>{sceneState.char=b.dataset.sceneChar;document.querySelectorAll('[data-scene-char]').forEach(x=>x.classList.toggle('active',x===b));renderScenes();}));
+document.querySelector('#sceneSearch')?.addEventListener('input',e=>{sceneState.q=e.target.value;renderScenes();});
+initScenes();
 groupGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
-backgroundGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
+backgroundGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});document.querySelector('#fantasyBackgroundGrid')?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 fantasyGroupGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
+const closeUsage=()=>{usage.hidden=true;document.body.style.overflow='';};document.querySelector('#usageClose')?.addEventListener('click',closeUsage);document.querySelector('#usageBackdrop')?.addEventListener('click',closeUsage);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!usage.hidden)closeUsage();});
 copyButton.addEventListener('click',async()=>{if(!usageCode.textContent)return;try{await navigator.clipboard.writeText(usageCode.textContent);copyStatus.textContent='コードをコピーしました。';}catch{copyStatus.textContent='コピーできませんでした。コードを選択してください。';}});
 renderCards();

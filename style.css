@@ -52,3 +52,32 @@ main,.site-header,footer{width:100%;min-width:0}
 .monster-group.active{background:#172033;color:#fff}
 .monster-group:hover{filter:none;background:#e9eefc;color:var(--blue)}
 .monster-group.active:hover{background:#172033;color:#fff}
+
+/* --- picker improvements (2026-10-31) --- */
+.scene-filters{display:grid;gap:10px;margin-bottom:6px}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:800;cursor:pointer;min-height:40px}
+.chip:hover{border-color:#aabcfb;color:var(--blue)}
+.chip.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.scene-search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:15px;background:#fbfcfe;color:var(--ink)}
+.scene-search:focus{outline:2px solid #aabcfb;border-color:var(--blue)}
+.scene-status{margin:10px 2px 12px;color:var(--muted);font-size:12px;font-weight:800}
+.scene-empty{grid-column:1/-1;color:var(--muted);padding:24px 4px}
+.scene-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+.scene-item img{height:auto;aspect-ratio:3/2;object-fit:cover}
+.scene-item span{font-size:13px}
+.bg-subtitle{margin:22px 0 12px;font-size:16px}
+.bg-subtitle:first-of-type{margin-top:4px}
+.usage-modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px}
+.usage-modal[hidden]{display:none}
+.usage-backdrop{position:absolute;inset:0;background:rgba(23,32,51,.55)}
+.usage-modal .usage-card{position:relative;margin-top:0;width:min(900px,100%);max-height:92vh;overflow:auto}
+.usage-close{position:absolute;top:10px;right:10px;z-index:2;width:40px;height:40px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:20px;line-height:1;padding:0}
+.usage-close:hover{border-color:var(--blue);color:var(--blue)}
+@media(max-width:900px){.scene-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.scene-grid{grid-template-columns:1fr}}
+.usage-modal .usage-card{grid-template-columns:260px minmax(0,1fr)}
+.usage-modal .usage-copy{min-width:0}
+.usage-modal .code-row{min-width:0}
+.usage-modal .usage-preview img{height:auto;max-height:300px}
+@media(max-width:760px){.usage-modal .usage-card{grid-template-columns:1fr}}
