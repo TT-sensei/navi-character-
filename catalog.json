@@ -275,7 +275,9 @@
         "trio-daily-christmas-sora-saku-nami.png",
         "trio-daily-halloween-tsuki-riku-kai.png",
         "pair-daily-rain-nami-riku.png",
-        "trio-daily-snow-kai-tsuki-saku.png"
+        "trio-daily-snow-kai-tsuki-saku.png",
+        "trio-daily-entrance-riku-saku-nami.png",
+        "trio-daily-graduation-sora-tsuki-kai.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -309,7 +311,9 @@
         "trio-daily-christmas-sora-saku-nami": "クリスマス会（sora・saku・namiの3人）",
         "trio-daily-halloween-tsuki-riku-kai": "ハロウィン（tsuki・riku・kaiの3人）",
         "pair-daily-rain-nami-riku": "雨の日の帰り道（nami・rikuの2人）",
-        "trio-daily-snow-kai-tsuki-saku": "雪だるま作り（kai・tsuki・sakuの3人）"
+        "trio-daily-snow-kai-tsuki-saku": "雪だるま作り（kai・tsuki・sakuの3人）",
+        "trio-daily-entrance-riku-saku-nami": "入学式（riku・saku・namiの3人）",
+        "trio-daily-graduation-sora-tsuki-kai": "卒業式（sora・tsuki・kaiの3人）"
       }
     },
     "learning": {
