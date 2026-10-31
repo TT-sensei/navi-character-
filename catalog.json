@@ -295,7 +295,10 @@
         "pair-daily-handout-kai-nami.png",
         "pair-daily-helpup-tsuki-riku.png",
         "pair-daily-crosswalk-sora-saku.png",
-        "pair-daily-showart-tsuki-saku.png"
+        "pair-daily-showart-tsuki-saku.png",
+        "pair-daily-brushteeth-nami-tsuki.png",
+        "pair-daily-moonviewing-kai-saku.png",
+        "trio-daily-koinobori-riku-tsuki-nami.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -349,7 +352,10 @@
         "pair-daily-handout-kai-nami": "プリント配り（kai・namiの2人）",
         "pair-daily-helpup-tsuki-riku": "転んだ友達を助ける（tsuki・rikuの2人）",
         "pair-daily-crosswalk-sora-saku": "横断歩道を渡る（sora・sakuの2人）",
-        "pair-daily-showart-tsuki-saku": "作品を見せ合う（tsuki・sakuの2人）"
+        "pair-daily-showart-tsuki-saku": "作品を見せ合う（tsuki・sakuの2人）",
+        "pair-daily-brushteeth-nami-tsuki": "歯みがき（nami・tsukiの2人）",
+        "pair-daily-moonviewing-kai-saku": "お月見（kai・sakuの2人）",
+        "trio-daily-koinobori-riku-tsuki-nami": "こいのぼり（riku・tsuki・namiの3人）"
       }
     },
     "learning": {
