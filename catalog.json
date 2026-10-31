@@ -1272,7 +1272,8 @@
         "pair-fantasy-snow-riku-nami.png",
         "trio-fantasy-dragon-sora-nami-kai.png",
         "group-fantasy-standby.png",
-        "group-fantasy-ending.png"
+        "group-fantasy-ending.png",
+        "group-fantasy-action.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
@@ -1304,7 +1305,8 @@
         "pair-fantasy-snow-riku-nami": "雪山の冒険（riku・namiの2人）",
         "trio-fantasy-dragon-sora-nami-kai": "ドラゴンボスに挑む（sora・nami・kaiの3人）",
         "group-fantasy-standby": "バトルスタンバイ（6人全員）",
-        "group-fantasy-ending": "冒険の終わり（6人全員）"
+        "group-fantasy-ending": "冒険の終わり（6人全員）",
+        "group-fantasy-action": "バトルアクション（6人全員）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
