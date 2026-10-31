@@ -299,7 +299,11 @@
         "pair-daily-brushteeth-nami-tsuki.png",
         "pair-daily-moonviewing-kai-saku.png",
         "trio-daily-koinobori-riku-tsuki-nami.png",
-        "pair-daily-handwash-kai-sora.png"
+        "pair-daily-handwash-kai-sora.png",
+        "trio-daily-hinamatsuri-saku-nami-tsuki.png",
+        "pair-daily-hatsumode-riku-kai.png",
+        "pair-daily-suikawari-sora-tsuki.png",
+        "pair-daily-watering-nami-riku.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -357,7 +361,11 @@
         "pair-daily-brushteeth-nami-tsuki": "歯みがき（nami・tsukiの2人）",
         "pair-daily-moonviewing-kai-saku": "お月見（kai・sakuの2人）",
         "trio-daily-koinobori-riku-tsuki-nami": "こいのぼり（riku・tsuki・namiの3人）",
-        "pair-daily-handwash-kai-sora": "手洗い（kai・soraの2人）"
+        "pair-daily-handwash-kai-sora": "手洗い（kai・soraの2人）",
+        "trio-daily-hinamatsuri-saku-nami-tsuki": "ひな祭り（saku・nami・tsukiの3人）",
+        "pair-daily-hatsumode-riku-kai": "初詣（riku・kaiの2人）",
+        "pair-daily-suikawari-sora-tsuki": "スイカ割り（sora・tsukiの2人）",
+        "pair-daily-watering-nami-riku": "朝顔の水やり（nami・rikuの2人）"
       }
     },
     "learning": {
