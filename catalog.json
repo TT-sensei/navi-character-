@@ -615,7 +615,19 @@
       "note.png",
       "kyoukasho.png",
       "tablet.png",
-      "fudebako.png"
+      "fudebako.png",
+      "kokuban-keshi.png",
+      "chalk.png",
+      "tokei.png",
+      "chikyugi.png",
+      "mushimegane.png",
+      "suitou.png",
+      "kasa.png",
+      "bousai-zukin.png",
+      "gyunyu-bin.png",
+      "recorder.png",
+      "nawatobi.png",
+      "houki.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -629,7 +641,19 @@
       "note": "ノート",
       "kyoukasho": "教科書",
       "tablet": "タブレット",
-      "fudebako": "筆箱"
+      "fudebako": "筆箱",
+      "kokuban-keshi": "黒板消し",
+      "chalk": "チョーク",
+      "tokei": "時計",
+      "chikyugi": "地球儀",
+      "mushimegane": "虫めがね",
+      "suitou": "水筒",
+      "kasa": "傘",
+      "bousai-zukin": "防災頭巾",
+      "gyunyu-bin": "牛乳瓶",
+      "recorder": "リコーダー",
+      "nawatobi": "なわとび",
+      "houki": "ほうき"
     }
   },
   "backgrounds": {

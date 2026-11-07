@@ -100,7 +100,19 @@ const schoolItems=[
   {id:'note',label:'ノート'},
   {id:'kyoukasho',label:'教科書'},
   {id:'tablet',label:'タブレット'},
-  {id:'fudebako',label:'筆箱'}
+  {id:'fudebako',label:'筆箱'},
+  {id:'kokuban-keshi',label:'黒板消し'},
+  {id:'chalk',label:'チョーク'},
+  {id:'tokei',label:'時計'},
+  {id:'chikyugi',label:'地球儀'},
+  {id:'mushimegane',label:'虫めがね'},
+  {id:'suitou',label:'水筒'},
+  {id:'kasa',label:'傘'},
+  {id:'bousai-zukin',label:'防災頭巾'},
+  {id:'gyunyu-bin',label:'牛乳瓶'},
+  {id:'recorder',label:'リコーダー'},
+  {id:'nawatobi',label:'なわとび'},
+  {id:'houki',label:'ほうき'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},
