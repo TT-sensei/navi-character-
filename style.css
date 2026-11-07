@@ -81,3 +81,5 @@ main,.site-header,footer{width:100%;min-width:0}
 .usage-modal .code-row{min-width:0}
 .usage-modal .usage-preview img{height:auto;max-height:300px}
 @media(max-width:760px){.usage-modal .usage-card{grid-template-columns:1fr}}
+
+.item-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.item-card{min-width:0;border:1px solid var(--line);border-radius:14px;background:#fff;padding:8px;cursor:pointer;text-align:left;color:inherit}.item-card:hover{border-color:#aabcfb;box-shadow:0 8px 20px rgba(35,51,88,.1)}.item-card img{display:block;width:100%;height:150px;object-fit:contain;background:#fbfcfe;border-radius:10px}.item-card span{display:block;padding:8px 3px 2px;font-size:13px;font-weight:800}.item-card small{display:block;padding:0 3px 2px;color:var(--muted);font-size:10px}@media(max-width:900px){.item-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:430px){.item-grid{grid-template-columns:repeat(2,1fr)}}

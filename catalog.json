@@ -600,6 +600,38 @@
       }
     }
   },
+  "items": {
+    "basePath": "assets/items",
+    "webBasePath": "assets/web/items",
+    "files": [
+      "randoseru.png",
+      "uwabaki.png",
+      "kouhaku-boshi.png",
+      "enpitsu.png",
+      "keshigomu.png",
+      "jougi.png",
+      "hasami.png",
+      "nori.png",
+      "note.png",
+      "kyoukasho.png",
+      "tablet.png",
+      "fudebako.png"
+    ],
+    "usage": {
+      "randoseru": "ランドセル",
+      "uwabaki": "上履き",
+      "kouhaku-boshi": "紅白帽子",
+      "enpitsu": "鉛筆",
+      "keshigomu": "消しゴム",
+      "jougi": "定規",
+      "hasami": "はさみ",
+      "nori": "のり",
+      "note": "ノート",
+      "kyoukasho": "教科書",
+      "tablet": "タブレット",
+      "fudebako": "筆箱"
+    }
+  },
   "backgrounds": {
     "daily": {
       "basePath": "assets/backgrounds/daily",
