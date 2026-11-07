@@ -193,6 +193,20 @@
         "09-frustrated",
         "10-confident"
       ]
+    },
+    "shin": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "standing"
+      ],
+      "expressions": []
+    },
+    "rin": {
+      "reference": "reference.jpeg",
+      "fullbody": [
+        "standing"
+      ],
+      "expressions": []
     }
   },
   "expressionNames": [
