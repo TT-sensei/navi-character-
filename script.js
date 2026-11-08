@@ -136,7 +136,19 @@ const schoolItems=[
   {id:'momiji',label:'紅葉'},
   {id:'pumpkin',label:'ハロウィンかぼちゃ'},
   {id:'christmas-tree',label:'クリスマスツリー'},
-  {id:'yukidaruma',label:'雪だるま'}
+  {id:'yukidaruma',label:'雪だるま'},
+  {id:'shikenkan',label:'試験管'},
+  {id:'beaker',label:'ビーカー'},
+  {id:'alcohol-lamp',label:'アルコールランプ'},
+  {id:'tenbin',label:'上皿てんびん'},
+  {id:'soroban',label:'そろばん'},
+  {id:'bundoki',label:'分度器'},
+  {id:'compass',label:'コンパス'},
+  {id:'sankaku-jougi',label:'三角定規'},
+  {id:'pianica',label:'ピアニカ'},
+  {id:'tambourine',label:'タンバリン'},
+  {id:'mokkin',label:'木琴'},
+  {id:'enogu',label:'絵の具'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},

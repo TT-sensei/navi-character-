@@ -651,7 +651,19 @@
       "momiji.png",
       "pumpkin.png",
       "christmas-tree.png",
-      "yukidaruma.png"
+      "yukidaruma.png",
+      "shikenkan.png",
+      "beaker.png",
+      "alcohol-lamp.png",
+      "tenbin.png",
+      "soroban.png",
+      "bundoki.png",
+      "compass.png",
+      "sankaku-jougi.png",
+      "pianica.png",
+      "tambourine.png",
+      "mokkin.png",
+      "enogu.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -701,7 +713,19 @@
       "momiji": "紅葉",
       "pumpkin": "ハロウィンかぼちゃ",
       "christmas-tree": "クリスマスツリー",
-      "yukidaruma": "雪だるま"
+      "yukidaruma": "雪だるま",
+      "shikenkan": "試験管",
+      "beaker": "ビーカー",
+      "alcohol-lamp": "アルコールランプ",
+      "tenbin": "上皿てんびん",
+      "soroban": "そろばん",
+      "bundoki": "分度器",
+      "compass": "コンパス",
+      "sankaku-jougi": "三角定規",
+      "pianica": "ピアニカ",
+      "tambourine": "タンバリン",
+      "mokkin": "木琴",
+      "enogu": "絵の具"
     }
   },
   "backgrounds": {
