@@ -112,7 +112,19 @@ const schoolItems=[
   {id:'gyunyu-bin',label:'牛乳瓶'},
   {id:'recorder',label:'リコーダー'},
   {id:'nawatobi',label:'なわとび'},
-  {id:'houki',label:'ほうき'}
+  {id:'houki',label:'ほうき'},
+  {id:'oudan-ki',label:'横断旗'},
+  {id:'kyukyu-bako',label:'救急箱'},
+  {id:'helmet',label:'ヘルメット'},
+  {id:'mask',label:'マスク'},
+  {id:'taionkei',label:'体温計'},
+  {id:'haburashi',label:'歯ブラシ'},
+  {id:'hand-soap',label:'ハンドソープ'},
+  {id:'whistle',label:'ホイッスル'},
+  {id:'megaphone',label:'メガホン'},
+  {id:'bucket',label:'バケツ'},
+  {id:'chiritori',label:'ちりとり'},
+  {id:'mop',label:'モップ'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},

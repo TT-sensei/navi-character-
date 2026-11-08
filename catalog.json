@@ -627,7 +627,19 @@
       "gyunyu-bin.png",
       "recorder.png",
       "nawatobi.png",
-      "houki.png"
+      "houki.png",
+      "oudan-ki.png",
+      "kyukyu-bako.png",
+      "helmet.png",
+      "mask.png",
+      "taionkei.png",
+      "haburashi.png",
+      "hand-soap.png",
+      "whistle.png",
+      "megaphone.png",
+      "bucket.png",
+      "chiritori.png",
+      "mop.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -653,7 +665,19 @@
       "gyunyu-bin": "牛乳瓶",
       "recorder": "リコーダー",
       "nawatobi": "なわとび",
-      "houki": "ほうき"
+      "houki": "ほうき",
+      "oudan-ki": "横断旗",
+      "kyukyu-bako": "救急箱",
+      "helmet": "ヘルメット",
+      "mask": "マスク",
+      "taionkei": "体温計",
+      "haburashi": "歯ブラシ",
+      "hand-soap": "ハンドソープ",
+      "whistle": "ホイッスル",
+      "megaphone": "メガホン",
+      "bucket": "バケツ",
+      "chiritori": "ちりとり",
+      "mop": "モップ"
     }
   },
   "backgrounds": {
