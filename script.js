@@ -124,7 +124,19 @@ const schoolItems=[
   {id:'megaphone',label:'メガホン'},
   {id:'bucket',label:'バケツ'},
   {id:'chiritori',label:'ちりとり'},
-  {id:'mop',label:'モップ'}
+  {id:'mop',label:'モップ'},
+  {id:'koinobori',label:'こいのぼり'},
+  {id:'kagami-mochi',label:'鏡餅'},
+  {id:'kadomatsu',label:'門松'},
+  {id:'tanabata',label:'七夕の笹飾り'},
+  {id:'furin',label:'風鈴'},
+  {id:'suika',label:'スイカ'},
+  {id:'asagao',label:'朝顔'},
+  {id:'sakura',label:'桜'},
+  {id:'momiji',label:'紅葉'},
+  {id:'pumpkin',label:'ハロウィンかぼちゃ'},
+  {id:'christmas-tree',label:'クリスマスツリー'},
+  {id:'yukidaruma',label:'雪だるま'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},

@@ -639,7 +639,19 @@
       "megaphone.png",
       "bucket.png",
       "chiritori.png",
-      "mop.png"
+      "mop.png",
+      "koinobori.png",
+      "kagami-mochi.png",
+      "kadomatsu.png",
+      "tanabata.png",
+      "furin.png",
+      "suika.png",
+      "asagao.png",
+      "sakura.png",
+      "momiji.png",
+      "pumpkin.png",
+      "christmas-tree.png",
+      "yukidaruma.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -677,7 +689,19 @@
       "megaphone": "メガホン",
       "bucket": "バケツ",
       "chiritori": "ちりとり",
-      "mop": "モップ"
+      "mop": "モップ",
+      "koinobori": "こいのぼり",
+      "kagami-mochi": "鏡餅",
+      "kadomatsu": "門松",
+      "tanabata": "七夕の笹飾り",
+      "furin": "風鈴",
+      "suika": "スイカ",
+      "asagao": "朝顔",
+      "sakura": "桜",
+      "momiji": "紅葉",
+      "pumpkin": "ハロウィンかぼちゃ",
+      "christmas-tree": "クリスマスツリー",
+      "yukidaruma": "雪だるま"
     }
   },
   "backgrounds": {
