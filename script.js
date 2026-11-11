@@ -188,7 +188,7 @@ const wordItems=[
   {id:'kaeru',label:'かえる'},
   {id:'kinoko',label:'きのこ'},
   {id:'kuma',label:'くま'},
-  {id:'kemushi',label:'けむし'},
+  {id:'keito',label:'けいと'},
   {id:'koara',label:'こあら'},
   {id:'sakana',label:'さかな'},
   {id:'shika',label:'しか'},
