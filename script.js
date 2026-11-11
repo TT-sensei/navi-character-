@@ -86,6 +86,7 @@ const fantasyGroups=[
 const grid=document.querySelector('#characterGrid'),library=document.querySelector('#libraryCard'),assetGrid=document.querySelector('#assetGrid'),groupGrid=document.querySelector('#groupGrid'),backgroundLibrary=document.querySelector('#backgroundLibrary'),backgroundGrid=document.querySelector('#backgroundGrid'),backgroundCount=document.querySelector('#backgroundCount'),usage=document.querySelector('#usageModal'),usageImage=document.querySelector('#usageImage'),usageTitle=document.querySelector('#usageTitle'),usageCode=document.querySelector('#usageCode'),copyButton=document.querySelector('#copyButton'),copyStatus=document.querySelector('#copyStatus'),webDownload=document.querySelector('#webDownload'),originalDownload=document.querySelector('#originalDownload'),title=document.querySelector('#libraryTitle'),count=document.querySelector('#libraryCount'),modeTabs=document.querySelector('.mode-tabs'),tabs=document.querySelector('.tabs'),monsterLibrary=document.querySelector('#monsterLibrary'),monsterGrid=document.querySelector('#monsterGrid'),monsterCount=document.querySelector('#monsterCount'),monsterFilters=document.querySelector('#monsterFilters'),monsterGroups=document.querySelector('#monsterGroups'),groupLibrary=document.querySelector('#groupLibrary');
 const fantasyGroupLibrary=document.querySelector('#fantasyGroupLibrary'),fantasyGroupGrid=document.querySelector('#fantasyGroupGrid'),fantasyGroupCount=document.querySelector('#fantasyGroupCount');
 const itemsLibrary=document.querySelector('#itemsLibrary'),itemsGrid=document.querySelector('#itemsGrid'),itemsCount=document.querySelector('#itemsCount');
+const wordsLibrary=document.querySelector('#wordsLibrary'),wordsGrid=document.querySelector('#wordsGrid'),wordsCount=document.querySelector('#wordsCount');
 let mode='standard',selected=null,tab='fullbody',monsterFilter='all',monsterGroup='all';
 
 const schoolItems=[
@@ -175,9 +176,56 @@ const base='assets/characters';
 const webBase='assets/web/characters';
 const webAssetPath=(id,type,name)=>`${webBase}/${id}/${type}/${name}.webp`;
 const originalAssetPath=(id,type,name)=>`${base}/${id}/${type}/${name}.png`;
-function renderCards(){if(mode==='monsters'||mode==='backgrounds'||mode==='items'){grid.innerHTML='';return;}const list=mode==='fantasy'?fantasyCharacters:characters;grid.innerHTML=list.map((c,i)=>{const image=mode==='fantasy'?`assets/web/fantasy/${c.standing}.webp`:webAssetPath(c.id,'fullbody',c.fullbody.includes('waving')?'waving':c.fullbody[0]);const detail=mode==='fantasy'?`${c.job} / 立ち絵・ATTACK・DAMAGE・SPECIAL`:`${c.fullbody.length}ポーズ / ${c.expressions.length}表情`;return`<article class="character-card ${selected?.id===c.id?'selected':''}" data-id="${c.id}"><button class="character-button" type="button"><img class="character-image" src="${image}" alt="${c.label}"><div class="character-info"><div class="character-index">${mode==='fantasy'?'FANTASY':'CHARACTER'} ${String(i+1).padStart(2,'0')}</div><h3>${c.label}</h3><p>${detail}</p></div></button></article>`}).join('');}
+function renderCards(){if(mode==='monsters'||mode==='backgrounds'||mode==='items'||mode==='words'){grid.innerHTML='';return;}const list=mode==='fantasy'?fantasyCharacters:characters;grid.innerHTML=list.map((c,i)=>{const image=mode==='fantasy'?`assets/web/fantasy/${c.standing}.webp`:webAssetPath(c.id,'fullbody',c.fullbody.includes('waving')?'waving':c.fullbody[0]);const detail=mode==='fantasy'?`${c.job} / 立ち絵・ATTACK・DAMAGE・SPECIAL`:`${c.fullbody.length}ポーズ / ${c.expressions.length}表情`;return`<article class="character-card ${selected?.id===c.id?'selected':''}" data-id="${c.id}"><button class="character-button" type="button"><img class="character-image" src="${image}" alt="${c.label}"><div class="character-info"><div class="character-index">${mode==='fantasy'?'FANTASY':'CHARACTER'} ${String(i+1).padStart(2,'0')}</div><h3>${c.label}</h3><p>${detail}</p></div></button></article>`}).join('');}
 function renderAssets(){if(!selected)return;const names=mode==='fantasy'?['立ち絵','ATTACK','DAMAGE','SPECIAL']:selected[tab].map(name=>name);assetGrid.innerHTML=names.map(name=>{const type=mode==='fantasy'?(name==='立ち絵'?'standing':name.toLowerCase()):tab;const fileBase=mode==='fantasy'&&type==='standing'?selected.standing:selected.base;const suffix=type==='standing'?'':`-${type}`;const webPath=mode==='fantasy'?(type==='standing'?`assets/web/fantasy/${fileBase}.webp`:`assets/web/fantasy/${type}/${fileBase}${suffix}.webp`):webAssetPath(selected.id,type,name);const originalPath=mode==='fantasy'?`assets/fantasy/${type==='standing'?'':`${type}/`}${fileBase}${suffix}.png`:originalAssetPath(selected.id,type,name);return`<button class="asset-item ${mode==='fantasy'?'fantasy-asset':''}" data-path="${webPath}" data-original="${originalPath}" data-label="${selected.label}・${name}"><img src="${webPath}" alt="${selected.label} ${name}"><span>${esc(name)}</span></button>`}).join('');count.textContent=`${names.length} files`;tabs.hidden=mode==='fantasy';}
 function renderItems(){if(!itemsGrid)return;itemsCount.textContent=`${schoolItems.length} files`;itemsGrid.innerHTML=schoolItems.map(item=>{const webPath=`assets/web/items/${item.id}.webp`;const originalPath=`assets/items/${item.id}.png`;return`<button class="item-card" data-path="${webPath}" data-original="${originalPath}" data-label="${item.label}"><img src="${webPath}" alt="${item.label}" loading="lazy"><span>${item.label}</span><small>学用品 / WebP・PNG</small></button>`}).join('');}
+const wordItems=[
+  {id:'ame',label:'あめ'},
+  {id:'inu',label:'いぬ'},
+  {id:'uma',label:'うま'},
+  {id:'ehon',label:'えほん'},
+  {id:'ousama',label:'おうさま'},
+  {id:'kaeru',label:'かえる'},
+  {id:'kinoko',label:'きのこ'},
+  {id:'kuma',label:'くま'},
+  {id:'kemushi',label:'けむし'},
+  {id:'koara',label:'こあら'},
+  {id:'sakana',label:'さかな'},
+  {id:'shika',label:'しか'},
+  {id:'semi',label:'せみ'},
+  {id:'sora',label:'そら'},
+  {id:'tamago',label:'たまご'},
+  {id:'chou',label:'ちょう'},
+  {id:'tsuki',label:'つき'},
+  {id:'tebukuro',label:'てぶくろ'},
+  {id:'tora',label:'とら'},
+  {id:'nashi',label:'なし'},
+  {id:'niji',label:'にじ'},
+  {id:'nuigurumi',label:'ぬいぐるみ'},
+  {id:'neko',label:'ねこ'},
+  {id:'norimono',label:'のりもの'},
+  {id:'hana',label:'はな'},
+  {id:'himawari',label:'ひまわり'},
+  {id:'fune',label:'ふね'},
+  {id:'hebi',label:'へび'},
+  {id:'hoshi',label:'ほし'},
+  {id:'mame',label:'まめ'},
+  {id:'mimi',label:'みみ'},
+  {id:'mushi',label:'むし'},
+  {id:'megane',label:'めがね'},
+  {id:'momo',label:'もも'},
+  {id:'yama',label:'やま'},
+  {id:'yuki',label:'ゆき'},
+  {id:'yoru',label:'よる'},
+  {id:'lion',label:'らいおん'},
+  {id:'ribbon',label:'りぼん'},
+  {id:'saru',label:'さる'},
+  {id:'reizouko',label:'れいぞうこ'},
+  {id:'rousoku',label:'ろうそく'},
+  {id:'waffle',label:'わっふる'},
+  {id:'ringo',label:'りんご'}
+];
+function renderWords(){if(!wordsGrid)return;wordsCount.textContent=`${wordItems.length} files`;wordsGrid.innerHTML=wordItems.map(item=>{const webPath=`assets/web/words/${item.id}.webp`;const originalPath=`assets/words/${item.id}.png`;return`<button class="item-card" data-path="${webPath}" data-original="${originalPath}" data-label="${item.label}"><img src="${webPath}" alt="${item.label}" loading="lazy"><span>${item.label}</span><small>ことば / WebP・PNG</small></button>`}).join('');}
 function renderBackgrounds(){if(!backgroundGrid)return;backgroundCount.textContent=`${dailyBackgrounds.length} files`;backgroundGrid.innerHTML=dailyBackgrounds.map(item=>{const webPath=`assets/web/backgrounds/daily/${item.id}.webp`;const originalPath=`assets/backgrounds/daily/${item.id}.png`;return`<button class="background-item" data-path="${webPath}" data-original="${originalPath}" data-label="${item.label}"><img src="${webPath}" alt="${item.label}"><span>${item.label}</span><small>日常背景 / 16:9 / WebP・PNG</small></button>`}).join('');const fantasyBgGrid=document.querySelector('#fantasyBackgroundGrid');if(fantasyBgGrid){fantasyBgGrid.innerHTML=fantasyBackgrounds.map(([id,label])=>{const webPath=`assets/web/fantasy/backgrounds/${id}.webp`;const originalPath=`assets/fantasy/backgrounds/${id}.png`;return`<button class="background-item" data-path="${webPath}" data-original="${originalPath}" data-label="${label}"><img src="${webPath}" alt="${label}"><span>${label}</span><small>ファンタジー背景 / 16:9 / WebP・PNG</small></button>`}).join('');}backgroundCount.textContent=`${dailyBackgrounds.length+fantasyBackgrounds.length} files`;}
 let fantasySceneItems=[];
 function renderFantasyGroups(){if(!fantasyGroupGrid)return;const catItems=fantasySceneItems.map(it=>({web:it.web,original:it.original,label:it.label}));const initialItems=fantasyGroups.filter(g=>g.id.startsWith('initial/')).map(item=>({web:`assets/web/fantasy/groups/${item.id}.webp`,original:`assets/fantasy/groups/${item.id}.png`,label:item.label}));const items=catItems.length?[...catItems,...initialItems]:fantasyGroups.map(item=>({web:`assets/web/fantasy/groups/${item.id}.webp`,original:`assets/fantasy/groups/${item.id}.png`,label:item.label}));fantasyGroupCount.textContent=`${items.length} files`;fantasyGroupGrid.innerHTML=items.map(it=>`<button class="group-item fantasy-group-item" data-path="${it.web}" data-original="${it.original}" data-label="${esc(it.label)}"><img src="${it.web}" alt="${esc(it.label)}" loading="lazy"><span>${esc(it.label)}<small>ファンタジー集合 / WebP・PNG</small></span></button>`).join('');}
@@ -216,15 +264,17 @@ modeTabs.addEventListener('click',e=>{
   const isMonsters=mode==='monsters';
   const isBackgrounds=mode==='backgrounds';
   const isItems=mode==='items';
+  const isWords=mode==='words';
   document.querySelectorAll('.mode-tab').forEach(x=>x.classList.toggle('active',x===b));
   previewStage.hidden=!isFantasy;
-  grid.hidden=isMonsters||isBackgrounds||isItems;
+  grid.hidden=isMonsters||isBackgrounds||isItems||isWords;
   library.hidden=true;
   usage.hidden=true;
   groupLibrary.hidden=mode!=='standard';
   monsterLibrary.hidden=!isMonsters;
   backgroundLibrary.hidden=!isBackgrounds;
   itemsLibrary.hidden=!isItems;
+  wordsLibrary.hidden=!isWords;
   fantasyGroupLibrary.hidden=!isFantasy;
   if(isMonsters){
     monsterFilter='all';
@@ -235,6 +285,7 @@ modeTabs.addEventListener('click',e=>{
   if(isFantasy)renderFantasyGroups();
   if(isBackgrounds)renderBackgrounds();
   if(isItems)renderItems();
+  if(isWords)renderWords();
   const introHeading=document.querySelector('.intro-card h2');
   const introText=document.querySelector('.intro-card p:not(.section-label)');
   if(isMonsters){
@@ -312,7 +363,7 @@ document.querySelector('#sceneSearch')?.addEventListener('input',e=>{sceneState.
 initScenes();
 groupGrid.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 backgroundGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});document.querySelector('#fantasyBackgroundGrid')?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
-itemsGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});fantasyGroupGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
+itemsGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});wordsGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});fantasyGroupGrid?.addEventListener('click',e=>{const b=e.target.closest('[data-path]');if(b)selectAsset(b.dataset.path,b.dataset.label,b.dataset.original);});
 const closeUsage=()=>{usage.hidden=true;document.body.style.overflow='';};document.querySelector('#usageClose')?.addEventListener('click',closeUsage);document.querySelector('#usageBackdrop')?.addEventListener('click',closeUsage);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!usage.hidden)closeUsage();});
 copyButton.addEventListener('click',async()=>{if(!usageCode.textContent)return;try{await navigator.clipboard.writeText(usageCode.textContent);copyStatus.textContent='コードをコピーしました。';}catch{copyStatus.textContent='コピーできませんでした。コードを選択してください。';}});
 renderCards();
