@@ -174,7 +174,15 @@ const schoolItems=[
   {id:'chocolate',label:'チョコレート'},
   {id:'firetruck',label:'消防車'},
   {id:'ambulance',label:'救急車'},
-  {id:'policecar',label:'パトカー'}
+  {id:'policecar',label:'パトカー'},
+  {id:'tetsubo',label:'鉄棒'},
+  {id:'buranko',label:'ブランコ'},
+  {id:'suberidai',label:'すべり台'},
+  {id:'hula-hoop',label:'フラフープ'},
+  {id:'badminton-racket',label:'バドミントンラケット'},
+  {id:'takkyu-racket',label:'卓球ラケット'},
+  {id:'baseball-glove',label:'野球グローブ'},
+  {id:'kendama',label:'けん玉'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},

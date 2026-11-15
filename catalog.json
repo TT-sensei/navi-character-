@@ -688,7 +688,15 @@
       "chocolate.png",
       "firetruck.png",
       "ambulance.png",
-      "policecar.png"
+      "policecar.png",
+      "tetsubo.png",
+      "buranko.png",
+      "suberidai.png",
+      "hula-hoop.png",
+      "badminton-racket.png",
+      "takkyu-racket.png",
+      "baseball-glove.png",
+      "kendama.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -775,7 +783,15 @@
       "chocolate": "チョコレート",
       "firetruck": "消防車",
       "ambulance": "救急車",
-      "policecar": "パトカー"
+      "policecar": "パトカー",
+      "tetsubo": "鉄棒",
+      "buranko": "ブランコ",
+      "suberidai": "すべり台",
+      "hula-hoop": "フラフープ",
+      "badminton-racket": "バドミントンラケット",
+      "takkyu-racket": "卓球ラケット",
+      "baseball-glove": "野球グローブ",
+      "kendama": "けん玉"
     }
   },
   "words": {
