@@ -673,7 +673,11 @@
       "ukiwa.png",
       "triangle.png",
       "castanet.png",
-      "dodgeball.png"
+      "dodgeball.png",
+      "mat.png",
+      "bat.png",
+      "harmonica.png",
+      "volleyball.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -745,7 +749,11 @@
       "ukiwa": "浮き輪",
       "triangle": "トライアングル",
       "castanet": "カスタネット",
-      "dodgeball": "ドッジボール"
+      "dodgeball": "ドッジボール",
+      "mat": "マット",
+      "bat": "バット",
+      "harmonica": "ハーモニカ",
+      "volleyball": "バレーボール"
     }
   },
   "words": {
