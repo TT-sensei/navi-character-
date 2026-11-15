@@ -470,7 +470,14 @@
         "pair-learning-clay-sora-nami.png",
         "pair-learning-kakizome-saku-riku.png",
         "pair-learning-recorder-sora-kai.png",
-        "trio-learning-choir-riku-nami-tsuki.png"
+        "trio-learning-choir-riku-nami-tsuki.png",
+      "group-learning-science-lab.png",
+      "group-learning-math-room.png",
+      "group-learning-japanese-story.png",
+      "group-learning-research-book.png",
+      "group-learning-roundtable.png",
+      "group-learning-magic-library.png",
+      "group-learning-social-globe.png"
       ],
       "usage": {
         "group-learning-japanese-reading": "国語①・みんなで文章を読む",
@@ -533,7 +540,14 @@
         "pair-learning-clay-sora-nami": "粘土づくり（sora・namiの2人）",
         "pair-learning-kakizome-saku-riku": "書き初め（saku・rikuの2人）",
         "pair-learning-recorder-sora-kai": "リコーダー演奏（sora・kaiの2人）",
-        "trio-learning-choir-riku-nami-tsuki": "合唱（riku・nami・tsukiの3人）"
+        "trio-learning-choir-riku-nami-tsuki": "合唱（riku・nami・tsukiの3人）",
+      "group-learning-science-lab": "理科③・未来のラボで実験（6人全員）",
+      "group-learning-math-room": "算数③・図形の部屋（6人全員）",
+      "group-learning-japanese-story": "国語③・物語の世界へ（6人全員）",
+      "group-learning-research-book": "調べ学習・大きな図鑑（6人全員）",
+      "group-learning-roundtable": "グループ学習・円卓で学び合い（6人全員）",
+      "group-learning-magic-library": "図書館・魔法の本の世界（6人全員）",
+      "group-learning-social-globe": "社会③・地球儀で世界を調べる（6人全員）"
       },
       "subjects": {
         "group-learning-japanese-reading": "国語",
@@ -596,7 +610,14 @@
         "pair-learning-clay-sora-nami": "図工",
         "pair-learning-kakizome-saku-riku": "国語",
         "pair-learning-recorder-sora-kai": "音楽",
-        "trio-learning-choir-riku-nami-tsuki": "音楽"
+        "trio-learning-choir-riku-nami-tsuki": "音楽",
+      "group-learning-science-lab": "理科",
+      "group-learning-math-room": "算数",
+      "group-learning-japanese-story": "国語",
+      "group-learning-research-book": "その他",
+      "group-learning-roundtable": "その他",
+      "group-learning-magic-library": "国語",
+      "group-learning-social-globe": "社会"
       }
     }
   },
