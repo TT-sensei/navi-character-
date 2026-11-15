@@ -169,7 +169,12 @@ const schoolItems=[
   {id:'fude',label:'筆'},
   {id:'suzuri',label:'すずり'},
   {id:'shitajiki',label:'下敷き'},
-  {id:'kokugo-jiten',label:'国語辞典'}
+  {id:'kokugo-jiten',label:'国語辞典'},
+  {id:'candy',label:'キャンディ'},
+  {id:'chocolate',label:'チョコレート'},
+  {id:'firetruck',label:'消防車'},
+  {id:'ambulance',label:'救急車'},
+  {id:'policecar',label:'パトカー'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},

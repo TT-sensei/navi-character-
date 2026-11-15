@@ -683,7 +683,12 @@
       "fude.png",
       "suzuri.png",
       "shitajiki.png",
-      "kokugo-jiten.png"
+      "kokugo-jiten.png",
+      "candy.png",
+      "chocolate.png",
+      "firetruck.png",
+      "ambulance.png",
+      "policecar.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -765,7 +770,12 @@
       "fude": "筆",
       "suzuri": "すずり",
       "shitajiki": "下敷き",
-      "kokugo-jiten": "国語辞典"
+      "kokugo-jiten": "国語辞典",
+      "candy": "キャンディ",
+      "chocolate": "チョコレート",
+      "firetruck": "消防車",
+      "ambulance": "救急車",
+      "policecar": "パトカー"
     }
   },
   "words": {
