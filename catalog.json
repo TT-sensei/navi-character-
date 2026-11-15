@@ -663,7 +663,13 @@
       "pianica.png",
       "tambourine.png",
       "mokkin.png",
-      "enogu.png"
+      "enogu.png",
+      "tobibako.png",
+      "shoukaki.png",
+      "soccer-ball.png",
+      "basketball.png",
+      "beatban.png",
+      "postbox.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -725,7 +731,13 @@
       "pianica": "ピアニカ",
       "tambourine": "タンバリン",
       "mokkin": "木琴",
-      "enogu": "絵の具"
+      "enogu": "絵の具",
+      "tobibako": "跳び箱",
+      "shoukaki": "消火器",
+      "soccer-ball": "サッカーボール",
+      "basketball": "バスケットボール",
+      "beatban": "ビート板",
+      "postbox": "ポスト"
     }
   },
   "words": {

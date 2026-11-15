@@ -149,7 +149,13 @@ const schoolItems=[
   {id:'pianica',label:'ピアニカ'},
   {id:'tambourine',label:'タンバリン'},
   {id:'mokkin',label:'木琴'},
-  {id:'enogu',label:'絵の具'}
+  {id:'enogu',label:'絵の具'},
+  {id:'tobibako',label:'跳び箱'},
+  {id:'shoukaki',label:'消火器'},
+  {id:'soccer-ball',label:'サッカーボール'},
+  {id:'basketball',label:'バスケットボール'},
+  {id:'beatban',label:'ビート板'},
+  {id:'postbox',label:'ポスト'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},
