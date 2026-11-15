@@ -677,7 +677,13 @@
       "mat.png",
       "bat.png",
       "harmonica.png",
-      "volleyball.png"
+      "volleyball.png",
+      "crayon.png",
+      "iro-enpitsu.png",
+      "fude.png",
+      "suzuri.png",
+      "shitajiki.png",
+      "kokugo-jiten.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -753,7 +759,13 @@
       "mat": "マット",
       "bat": "バット",
       "harmonica": "ハーモニカ",
-      "volleyball": "バレーボール"
+      "volleyball": "バレーボール",
+      "crayon": "クレヨン",
+      "iro-enpitsu": "色鉛筆",
+      "fude": "筆",
+      "suzuri": "すずり",
+      "shitajiki": "下敷き",
+      "kokugo-jiten": "国語辞典"
     }
   },
   "words": {
