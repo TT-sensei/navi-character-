@@ -696,7 +696,14 @@
       "badminton-racket.png",
       "takkyu-racket.png",
       "baseball-glove.png",
-      "kendama.png"
+      "kendama.png",
+      "taiko.png",
+      "maracas.png",
+      "handbell.png",
+      "kenbikyo.png",
+      "jogo.png",
+      "jishaku.png",
+      "sougankyo.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -791,7 +798,14 @@
       "badminton-racket": "バドミントンラケット",
       "takkyu-racket": "卓球ラケット",
       "baseball-glove": "野球グローブ",
-      "kendama": "けん玉"
+      "kendama": "けん玉",
+      "taiko": "太鼓",
+      "maracas": "マラカス",
+      "handbell": "ハンドベル",
+      "kenbikyo": "顕微鏡",
+      "jogo": "じょうご",
+      "jishaku": "磁石",
+      "sougankyo": "双眼鏡"
     }
   },
   "words": {

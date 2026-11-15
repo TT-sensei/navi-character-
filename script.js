@@ -182,7 +182,14 @@ const schoolItems=[
   {id:'badminton-racket',label:'バドミントンラケット'},
   {id:'takkyu-racket',label:'卓球ラケット'},
   {id:'baseball-glove',label:'野球グローブ'},
-  {id:'kendama',label:'けん玉'}
+  {id:'kendama',label:'けん玉'},
+  {id:'taiko',label:'太鼓'},
+  {id:'maracas',label:'マラカス'},
+  {id:'handbell',label:'ハンドベル'},
+  {id:'kenbikyo',label:'顕微鏡'},
+  {id:'jogo',label:'じょうご'},
+  {id:'jishaku',label:'磁石'},
+  {id:'sougankyo',label:'双眼鏡'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},
