@@ -669,7 +669,11 @@
       "soccer-ball.png",
       "basketball.png",
       "beatban.png",
-      "postbox.png"
+      "postbox.png",
+      "ukiwa.png",
+      "triangle.png",
+      "castanet.png",
+      "dodgeball.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -737,7 +741,11 @@
       "soccer-ball": "サッカーボール",
       "basketball": "バスケットボール",
       "beatban": "ビート板",
-      "postbox": "ポスト"
+      "postbox": "ポスト",
+      "ukiwa": "浮き輪",
+      "triangle": "トライアングル",
+      "castanet": "カスタネット",
+      "dodgeball": "ドッジボール"
     }
   },
   "words": {

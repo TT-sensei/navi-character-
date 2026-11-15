@@ -155,7 +155,11 @@ const schoolItems=[
   {id:'soccer-ball',label:'サッカーボール'},
   {id:'basketball',label:'バスケットボール'},
   {id:'beatban',label:'ビート板'},
-  {id:'postbox',label:'ポスト'}
+  {id:'postbox',label:'ポスト'},
+  {id:'ukiwa',label:'浮き輪'},
+  {id:'triangle',label:'トライアングル'},
+  {id:'castanet',label:'カスタネット'},
+  {id:'dodgeball',label:'ドッジボール'}
 ];
 const fantasyPresets=[
   {id:'forest-zako',label:'森のザコ戦',background:'forest',characterMode:'random',action:'attack',monsterMode:'selected',monster:'purun-little-magic-slime'},
