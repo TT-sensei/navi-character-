@@ -329,7 +329,11 @@
         "pair-daily-potatodig-sora-tsuki.png",
         "trio-daily-fallenleaves-riku-nami-kai.png",
         "pair-daily-newtextbooks-nami-sora.png",
-        "group-daily-lunch.png"
+        "group-daily-lunch.png",
+      "group-daily-spring.png",
+      "group-daily-summer.png",
+      "group-daily-autumn.png",
+      "group-daily-winter.png"
       ],
       "usage": {
         "group-daily-arrival": "登校・朝の出会い",
@@ -403,7 +407,11 @@
         "pair-daily-potatodig-sora-tsuki": "芋掘り（sora・tsukiの2人）",
         "trio-daily-fallenleaves-riku-nami-kai": "落ち葉集め（riku・nami・kaiの3人）",
         "pair-daily-newtextbooks-nami-sora": "新しい教科書（nami・soraの2人）",
-        "group-daily-lunch": "給食を食べる（6人全員）"
+        "group-daily-lunch": "給食を食べる（6人全員）",
+      "group-daily-spring": "春・桜とチューリップ（6人全員）",
+      "group-daily-summer": "夏・スイカと水遊び（6人全員）",
+      "group-daily-autumn": "秋・紅葉とどんぐり（6人全員）",
+      "group-daily-winter": "冬・雪遊びと雪だるま（6人全員）"
       }
     },
     "learning": {
