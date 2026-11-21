@@ -2370,7 +2370,9 @@
         "group-fantasy-actionforest.png",
         "group-fantasy-actionsky.png",
         "group-fantasy-actioncave.png",
-        "group-fantasy-actiondash.png"
+        "group-fantasy-actiondash.png",
+      "group-fantasy-festival.png",
+      "group-fantasy-academy.png"
       ],
       "usage": {
         "group-fantasy-town": "ファンタジーの町・出発",
@@ -2407,7 +2409,9 @@
         "group-fantasy-actionforest": "森のアクション（6人全員）",
         "group-fantasy-actionsky": "空の島のアクション（6人全員）",
         "group-fantasy-actioncave": "洞窟のアクション（6人全員）",
-        "group-fantasy-actiondash": "夕日のダッシュ（6人全員）"
+        "group-fantasy-actiondash": "夕日のダッシュ（6人全員）",
+      "group-fantasy-festival": "町のお祭り（6人全員）",
+      "group-fantasy-academy": "魔法学園の教室（6人全員）"
       },
       "initial": {
         "basePath": "assets/fantasy/groups/initial",
