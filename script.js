@@ -90,7 +90,6 @@ const fantasyGroups=[
   {id:'group-fantasy-celebration',label:'クエスト成功・お祝い'},
   {id:'group-fantasy-training',label:'練習場・作戦会議'},
   {id:'group-fantasy-festival',label:'町のお祭り'},
-  {id:'group-fantasy-academy',label:'魔法学園の教室'},
   {id:'initial/group-fantasy-town',label:'初期案｜ファンタジーの町・出発'},
   {id:'initial/group-fantasy-adventure',label:'初期案｜森の探索・冒険'},
   {id:'initial/group-fantasy-battle',label:'初期案｜遺跡・戦闘準備'},
