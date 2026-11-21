@@ -732,7 +732,12 @@
       "kenbikyo.png",
       "jogo.png",
       "jishaku.png",
-      "sougankyo.png"
+      "sougankyo.png",
+      "bento-bako.png",
+      "zokin.png",
+      "apron.png",
+      "hina-ningyo.png",
+      "tako.png"
     ],
     "usage": {
       "randoseru": "ランドセル",
@@ -834,7 +839,12 @@
       "kenbikyo": "顕微鏡",
       "jogo": "じょうご",
       "jishaku": "磁石",
-      "sougankyo": "双眼鏡"
+      "sougankyo": "双眼鏡",
+      "bento-bako": "弁当箱",
+      "zokin": "雑巾",
+      "apron": "エプロン",
+      "hina-ningyo": "ひな人形",
+      "tako": "凧"
     }
   },
   "words": {
