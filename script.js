@@ -393,7 +393,7 @@ modeTabs.addEventListener('click',e=>{
     introText.textContent='教室・体育館・カフェ・街・部屋などの日常背景と、森・洞窟・火山・浮島などのファンタジー背景を確認できます。画像を選ぶとWeb用コードをコピーできます。';
   }else{
     introHeading.textContent='基本画像だけでなく、全ポーズ・全表情を見られます。';
-    introText.innerHTML='キャラクターを選び、全身ポーズ・表情アップ・集合画像を一覧から確認できます。画像を選ぶと、教材に貼り付けるコードをコピーできます。AIで使うときは、まず<a href="AI-GUIDE.md">AI向けガイド</a>を確認してください。';
+    introText.innerHTML='キャラクターを選び、全身ポーズ・表情アップ・集合画像を一覧から確認できます。画像を選ぶと、教材に貼り付けるコードをコピーできます。AIで使うときは、まず<a href="#" data-guide="AI-GUIDE.md">AI向けガイド</a>を確認してください。';
   }
   renderCards();
   window.scrollTo({top:0,behavior:'smooth'});
@@ -502,6 +502,94 @@ wordItems.forEach(it=>{idx.push({kind:'ことば',label:it.label,sub:'ことば'
 dailyBackgrounds.forEach(it=>{idx.push({kind:'背景',label:it.label,sub:'日常背景',web:'assets/web/backgrounds/daily/'+it.id+'.webp',original:'assets/backgrounds/daily/'+it.id+'.png',wide:true,id:it.id});});
 fantasyBackgrounds.forEach(pair=>{idx.push({kind:'背景',label:pair[1],sub:'ファンタジー背景',web:'assets/web/fantasy/backgrounds/'+pair[0]+'.webp',original:'assets/fantasy/backgrounds/'+pair[0]+'.png',wide:true,id:pair[0]});});
 return idx;}
-function renderGlobalSearch(q){const sr=document.querySelector('#searchResults');const box=document.querySelector('#searchGroups');const sum=document.querySelector('#searchSummary');if(!sr||!box)return;if(!q){sr.hidden=true;box.innerHTML='';syncQuickCats();return;}const ql=q.toLowerCase();const hits=buildSearchIndex().filter(e=>e.label.indexOf(q)>=0||(e.id&&e.id.toLowerCase().indexOf(ql)>=0));searchHits=hits;sr.hidden=false;const qc=document.querySelector('#quickCats');if(qc)qc.hidden=true;sum.textContent=hits.length+'件';if(!hits.length){box.innerHTML='<p class="search-empty">見つかりませんでした。別のことばで試してみてください。</p>';return;}const order=['キャラクター','場面','モンスター','道具・学用品','ことば','背景'];box.innerHTML=order.map(kind=>{const group=hits.map((e,i)=>({e:e,i:i})).filter(x=>x.e.kind===kind);if(!group.length)return '';const shown=group.slice(0,18);return '<h3 class="search-group-title">'+kind+'（'+group.length+'件）</h3><div class="search-grid">'+shown.map(x=>'<button class="search-item'+(x.e.wide?' wide':'')+'" data-hit="'+x.i+'" type="button"><img src="'+x.e.web+'" alt="" loading="lazy"><span>'+esc(x.e.label)+'</span><small>'+esc(x.e.sub)+'</small></button>').join('')+'</div>'+(group.length>18?'<p class="search-empty">ほか'+(group.length-18)+'件あります。ことばを足すと絞り込めます。</p>':'');}).join('');}
+function renderGlobalSearch(q){const sr=document.querySelector('#searchResults');const box=document.querySelector('#searchGroups');const sum=document.querySelector('#searchSummary');if(!sr||!box)return;if(!q){sr.hidden=true;box.innerHTML='';syncQuickCats();return;}const ql=q.toLowerCase();const qf=foldKana(q);const hits=buildSearchIndex().filter(e=>e.label.indexOf(q)>=0||foldKana(e.label).indexOf(qf)>=0||(e.reading&&foldKana(e.reading).indexOf(qf)>=0)||(e.id&&e.id.toLowerCase().indexOf(ql)>=0));searchHits=hits;sr.hidden=false;const qc=document.querySelector('#quickCats');if(qc)qc.hidden=true;sum.textContent=hits.length+'件';if(!hits.length){box.innerHTML='<p class="search-empty">見つかりませんでした。別のことばで試してみてください。</p>';return;}const order=['キャラクター','場面','モンスター','道具・学用品','ことば','背景'];box.innerHTML=order.map(kind=>{const group=hits.map((e,i)=>({e:e,i:i})).filter(x=>x.e.kind===kind);if(!group.length)return '';const shown=group.slice(0,18);return '<h3 class="search-group-title">'+kind+'（'+group.length+'件）</h3><div class="search-grid">'+shown.map(x=>'<button class="search-item'+(x.e.wide?' wide':'')+'" data-hit="'+x.i+'" type="button"><img src="'+x.e.web+'" alt="" loading="lazy"><span>'+esc(x.e.label)+'</span><small>'+esc(x.e.sub)+'</small></button>').join('')+'</div>'+(group.length>18?'<p class="search-empty">ほか'+(group.length-18)+'件あります。ことばを足すと絞り込めます。</p>':'');}).join('');}
 document.querySelector('#globalSearch')?.addEventListener('input',e=>{renderGlobalSearch(e.target.value.trim());});
 document.querySelector('#searchGroups')?.addEventListener('click',e=>{const b=e.target.closest('[data-hit]');if(!b)return;const hit=searchHits[Number(b.getAttribute('data-hit'))];if(!hit)return;if(hit.charId){const t=document.querySelector('.mode-tab[data-mode="'+hit.charMode+'"]');if(t)t.click();selectCharacter(hit.charId);}else{selectAsset(hit.web,hit.label,hit.original);}});
+
+/* ===== prototype rebuild additions (2026-11-21) ===== */
+function foldKana(s){return String(s||'').replace(/[ァ-ヶ]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-0x60);});}
+
+/* quick-cat counts, computed from catalog.json (shape unchanged) */
+(function(){
+  var spans=document.querySelectorAll('[data-cat-count]');
+  if(!spans.length)return;
+  fetch('catalog.json').then(function(r){return r.json();}).then(function(c){
+    var chars=0;Object.keys(c.characters||{}).forEach(function(k){var ch=c.characters[k];chars+=(ch.fullbody||[]).length+(ch.expressions||[]).length;});
+    var g=c.groups||{};var scenes=((g.files)||[]).length+((g.daily&&g.daily.files)||[]).length+((g.learning&&g.learning.files)||[]).length;
+    var bgd=(c.backgrounds&&c.backgrounds.daily&&c.backgrounds.daily.files)||[];var bgn=bgd.length+(typeof fantasyBackgrounds!=='undefined'?fantasyBackgrounds.length:0);
+    var fg=(c.fantasy&&c.fantasy.groups&&c.fantasy.groups.files)||[];
+    var mons=(typeof fantasyMonsterSets!=='undefined')?fantasyMonsterSets.reduce(function(a,set){return a+set.names.length;},0):336;
+    var fch=(typeof fantasyCharacters!=='undefined')?fantasyCharacters.length:0;
+    var vals={characters:chars+'点',scenes:scenes+'点',items:((c.items&&c.items.files)||[]).length+'点',words:((c.words&&c.words.files)||[]).length+'点',backgrounds:bgn+'点',monsters:mons+'体',fantasy:(fg.length+fch)+'点'};
+    spans.forEach(function(sp){var v=vals[sp.getAttribute('data-cat-count')];if(v)sp.textContent=v;});
+  }).catch(function(){});
+})();
+
+/* quick-cat anchor scrolling (scene section / sticker LAB) */
+document.querySelectorAll('.quick-cat[data-goto-anchor]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var id=btn.getAttribute('data-goto-anchor');
+    setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},120);
+  });
+});
+
+/* in-site guide viewer: renders the existing .md files without leaving the site */
+(function(){
+  var modal=document.getElementById('guideModal'),body=document.getElementById('guideBody'),title=document.getElementById('guideTitle'),closeBtn=document.getElementById('guideClose');
+  if(!modal)return;
+  var titles={'AI-GUIDE.md':'AI向けガイド','NAVI-USAGE.md':'運用ガイド','README.md':'README'};
+  var cache={};
+  function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function inline(s){
+    s=escHtml(s);
+    s=s.replace(/`([^`]+)`/g,'<code>$1</code>');
+    s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+    s=s.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+    return s;
+  }
+  function render(md){
+    var lines=md.split('\n'),out=[],inCode=false,inList=false,inTable=false;
+    function closeBlocks(){if(inList){out.push('</ul>');inList=false;}if(inTable){out.push('</tbody></table>');inTable=false;}}
+    lines.forEach(function(ln){
+      if(ln.trim().indexOf('```')===0){if(inCode){out.push('</code></pre>');inCode=false;}else{closeBlocks();out.push('<pre><code>');inCode=true;}return;}
+      if(inCode){out.push(escHtml(ln));return;}
+      var m;
+      if((m=ln.match(/^(#{1,4})\s+(.*)$/))){closeBlocks();var lv=Math.min(m[1].length+2,6);out.push('<h'+lv+'>'+inline(m[2])+'</h'+lv+'>');return;}
+      if(/^\s*(-{3,}|\*{3,})\s*$/.test(ln)){closeBlocks();out.push('<hr>');return;}
+      if((m=ln.match(/^\s*[-*]\s+(.*)$/))){if(!inList){out.push('<ul>');inList=true;}out.push('<li>'+inline(m[1])+'</li>');return;}
+      if((m=ln.match(/^\s*\d+[.)]\s+(.*)$/))){if(!inList){out.push('<ul>');inList=true;}out.push('<li>'+inline(m[1])+'</li>');return;}
+      if(ln.trim().indexOf('|')===0&&ln.trim().slice(-1)==='|'){
+        var cells=ln.trim().slice(1,-1).split('|').map(function(x){return x.trim();});
+        if(cells.every(function(x){return /^:?-{2,}:?$/.test(x);}))return;
+        if(!inTable){out.push('<table><tbody>');inTable=true;}
+        out.push('<tr>'+cells.map(function(x){return '<td>'+inline(x)+'</td>';}).join('')+'</tr>');return;
+      }
+      if(ln.trim().indexOf('>')===0){closeBlocks();out.push('<blockquote>'+inline(ln.replace(/^\s*>\s?/,''))+'</blockquote>');return;}
+      if(!ln.trim()){closeBlocks();return;}
+      closeBlocks();out.push('<p>'+inline(ln)+'</p>');
+    });
+    if(inCode)out.push('</code></pre>');closeBlocks();
+    return out.join('\n');
+  }
+  function openGuide(file){
+    title.textContent=titles[file]||'ガイド';
+    modal.hidden=false;document.body.style.overflow='hidden';
+    if(cache[file]){body.innerHTML=cache[file];return;}
+    body.innerHTML='<p>読み込み中…</p>';
+    fetch(file).then(function(r){return r.text();}).then(function(md){cache[file]=render(md);body.innerHTML=cache[file];body.scrollTop=0;})
+    .catch(function(){body.innerHTML='<p>読み込めませんでした。</p>';});
+  }
+  function closeGuide(){modal.hidden=true;document.body.style.overflow='';}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-guide]');
+    if(a){e.preventDefault();openGuide(a.getAttribute('data-guide'));}
+  });
+  closeBtn.addEventListener('click',closeGuide);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeGuide();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeGuide();});
+})();
+
+/* item readings for hiragana search */
+var ITEM_READINGS={randoseru:'らんどせる',uwabaki:'うわばき','kouhaku-boshi':'こうはくぼうし',enpitsu:'えんぴつ',keshigomu:'けしごむ',jougi:'じょうぎ',hasami:'はさみ',nori:'のり',note:'のーと',kyoukasho:'きょうかしょ',tablet:'たぶれっと',fudebako:'ふでばこ','kokuban-keshi':'こくばんけし',chalk:'ちょーく',tokei:'とけい',chikyugi:'ちきゅうぎ',mushimegane:'むしめがね',suitou:'すいとう',kasa:'かさ','bousai-zukin':'ぼうさいずきん','gyunyu-bin':'ぎゅうにゅうびん',recorder:'りこーだー',nawatobi:'なわとび',houki:'ほうき','oudan-ki':'おうだんき','kyukyu-bako':'きゅうきゅうばこ',helmet:'へるめっと',mask:'ますく',taionkei:'たいおんけい',haburashi:'はぶらし','hand-soap':'はんどそーぷ',whistle:'ほいっする',megaphone:'めがほん',bucket:'ばけつ',chiritori:'ちりとり',mop:'もっぷ',koinobori:'こいのぼり','kagami-mochi':'かがみもち',kadomatsu:'かどまつ',tanabata:'たなばたのささかざり',furin:'ふうりん',suika:'すいか',asagao:'あさがお',sakura:'さくら',momiji:'もみじ',pumpkin:'はろうぃんかぼちゃ','christmas-tree':'くりすますつりー',yukidaruma:'ゆきだるま',shikenkan:'しけんかん',beaker:'びーかー','alcohol-lamp':'あるこーるらんぷ',tenbin:'うわざらてんびん',soroban:'そろばん',bundoki:'ぶんどき',compass:'こんぱす','sankaku-jougi':'さんかくじょうぎ',pianica:'ぴあにか',tambourine:'たんばりん',mokkin:'もっきん',enogu:'えのぐ',tobibako:'とびばこ',shoukaki:'しょうかき','soccer-ball':'さっかーぼーる',basketball:'ばすけっとぼーる',beatban:'びーとばん',postbox:'ぽすと',ukiwa:'うきわ',triangle:'とらいあんぐる',castanet:'かすたねっと',dodgeball:'どっじぼーる',mat:'まっと',bat:'ばっと',harmonica:'はーもにか',volleyball:'ばれーぼーる',crayon:'くれよん','iro-enpitsu':'いろえんぴつ',fude:'ふで',suzuri:'すずり',shitajiki:'したじき','kokugo-jiten':'こくごじてん',candy:'きゃんでぃ',chocolate:'ちょこれーと',firetruck:'しょうぼうしゃ',ambulance:'きゅうきゅうしゃ',policecar:'ぱとかー',tetsubo:'てつぼう',buranko:'ぶらんこ',suberidai:'すべりだい','hula-hoop':'ふらふーぷ','badminton-racket':'ばどみんとんらけっと','takkyu-racket':'たっきゅうらけっと','baseball-glove':'やきゅうぐろーぶ',kendama:'けんだま',taiko:'たいこ',maracas:'まらかす',handbell:'はんどべる',kenbikyo:'けんびきょう',jogo:'じょうご',jishaku:'じしゃく',sougankyo:'そうがんきょう'};
+var _origBuildSearchIndex=buildSearchIndex;
+buildSearchIndex=function(){var idx=_origBuildSearchIndex();idx.forEach(function(e){if(e.kind==='道具・学用品'&&ITEM_READINGS[e.id])e.reading=ITEM_READINGS[e.id];});return idx;};
