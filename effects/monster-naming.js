@@ -2,6 +2,7 @@
   const names = {
     zako: 'ナビアン',
     zakoEvolved: 'エボナビ',
+    zakoLastevo: 'ラスエボ',
     boss: 'ボスナビ'
   };
 
@@ -63,9 +64,10 @@
     observer.disconnect();
     document.querySelectorAll('[data-monster-filter="zako"]').forEach(el => setText(el, names.zako));
     document.querySelectorAll('[data-monster-filter="zakoEvolved"]').forEach(el => setText(el, names.zakoEvolved));
+    document.querySelectorAll('[data-monster-filter="zakoLastevo"]').forEach(el => setText(el, names.zakoLastevo));
     document.querySelectorAll('[data-monster-filter="boss"]').forEach(el => setText(el, names.boss));
     setText(document.querySelector('#monsterLibrary .library-head h2'), 'ナビアン図鑑');
-    setText(document.querySelector('#monsterLibrary .library-head p:not(.section-label)'), 'ナビアン・エボナビ・ボスナビを分類ごとに確認できます。');
+    setText(document.querySelector('#monsterLibrary .library-head p:not(.section-label)'), 'ナビアン・エボナビ・ラスエボ・ボスナビを分類ごとに確認できます。「進化で見る」では、ナビアン→エボナビ→ラスエボの進化の流れを並べて見られます。');
     document.querySelector('#monsterFilters')?.setAttribute('aria-label', 'ナビアン分類');
     document.querySelectorAll('#monsterGrid .monster-item small').forEach(el => {
       const replaced = el.textContent.replace('ザコ進化系', names.zakoEvolved).replace('ザコモンスター', names.zako).replace('ボスモンスター', names.boss);
