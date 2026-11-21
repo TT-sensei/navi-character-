@@ -1293,6 +1293,13 @@
         "onsen-capybara-evolved",
         "korogari-armadillo-evolved"
       ],
+      "zakoLastevo": [
+        "happa-squirrel-leafy-lastevo",
+        "hinoko-ember-newt-lastevo",
+        "koro-golem-pebble-golem-lastevo",
+        "mofu-wolf-frost-pup-lastevo",
+        "purun-little-magic-slime-lastevo"
+      ],
       "evolutionMap": {
         "happa-squirrel-leafy-evolved": "happa-squirrel-leafy",
         "hinoko-ember-newt-evolved": "hinoko-ember-newt",
@@ -1389,6 +1396,13 @@
         "taiyo-meerkat-evolved": "taiyo-meerkat",
         "onsen-capybara-evolved": "onsen-capybara",
         "korogari-armadillo-evolved": "korogari-armadillo"
+      },
+      "lastEvolutionMap": {
+        "happa-squirrel-leafy-lastevo": "happa-squirrel-leafy-evolved",
+        "hinoko-ember-newt-lastevo": "hinoko-ember-newt-evolved",
+        "koro-golem-pebble-golem-lastevo": "koro-golem-pebble-golem-evolved",
+        "mofu-wolf-frost-pup-lastevo": "mofu-wolf-frost-pup-evolved",
+        "purun-little-magic-slime-lastevo": "purun-little-magic-slime-evolved"
       },
       "displayNamesJa": {
         "happa-squirrel-leafy": "はっぱリス",
@@ -1619,6 +1633,11 @@
         "taiyo-meerkat-evolved": "たいようミーアキャット・エボル",
         "onsen-capybara-evolved": "おんせんカピバラ・エボル",
         "korogari-armadillo-evolved": "ころがりアルマジロ・エボル",
+        "happa-squirrel-leafy-lastevo": "はっぱリス・ラスエボ",
+        "hinoko-ember-newt-lastevo": "ひのこイモリ・ラスエボ",
+        "koro-golem-pebble-golem-lastevo": "ころゴーレム・ラスエボ",
+        "mofu-wolf-frost-pup-lastevo": "もふウルフ・ラスエボ",
+        "purun-little-magic-slime-lastevo": "ぷるんスライム・ラスエボ",
         "moon-rabbit-queen": "👑つきうさぎ女王",
         "volcano-turtle-king": "👑ようがんガメ王",
         "aurora-sky-whale": "👑オーロラクジラ",
@@ -1827,6 +1846,13 @@
           "taiyo-meerkat-evolved": 4,
           "onsen-capybara-evolved": 4,
           "korogari-armadillo-evolved": 4
+        },
+        "zakoLastevo": {
+          "happa-squirrel-leafy-lastevo": 1,
+          "hinoko-ember-newt-lastevo": 2,
+          "koro-golem-pebble-golem-lastevo": 2,
+          "mofu-wolf-frost-pup-lastevo": 3,
+          "purun-little-magic-slime-lastevo": 1
         },
         "boss": {
           "aqua-slime-king": 1,
